@@ -363,6 +363,7 @@ nav li.page-.home,nav ul ul,nav li.ancestor ul ul{display:none;}
 
 article{border-top: 1px solid #b7b7b7;padding-top:1.5em;margin-bottom:1.5em;clear:both;}
 article.first{border-top:0;padding-top:0;}
+article:only-child{border-top:0;padding-top:0;}
 article.last{margin-bottom:0;}
 
 article h1 .date{color:#A4A4A4;font-size:0.3em;}
@@ -372,6 +373,29 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 .notes header h1{display:block;margin-bottom:0;}
 .notes header,.notes #main{width:100%;}
 
+.pg-gistio #description.loading {
+  -webkit-animation: throb 1s infinite alternate linear;
+  -moz-animation: throb 1s infinite alternate linear;
+  -ms-animation: throb 1s infinite alternate linear;
+  -o-animation: throb 1s infinite alternate linear
+}
+
+@-webkit-keyframes throb {
+  0%   { opacity: 0.33; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes throb {
+  0%   { opacity: 0.33; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes throb {
+  0%   { opacity: 0.33; }
+  100% { opacity: 1; }
+}
+@-o-keyframes throb {
+  0%   { opacity: 0.33; }
+  100% { opacity: 1; }
+}
 
 /**
  * Media queries for responsive design.
