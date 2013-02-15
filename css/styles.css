@@ -312,8 +312,6 @@ nav li.page-.home,nav ul ul,nav li.ancestor ul ul{display:none;}
 .pg-work #main img {
 	float: left;
 	-webkit-box-shadow: 1px 2px 4px rgba(33, 33, 33, 0.55);
-	   -moz-box-shadow: 1px 2px 4px rgba(33, 33, 33, 0.55);
-	     -o-box-shadow: 1px 2px 4px rgba(33, 33, 33, 0.55);
 	        box-shadow: 1px 2px 4px rgba(33, 33, 33, 0.55);
 	margin-right:2.857142857142857142%;
 	margin-bottom:1.5em;
@@ -678,8 +676,6 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 	.pg-work #main img {
 		float: left;
 		-webkit-box-shadow: 1px 2px 4px rgba(33, 33, 33, 0.55);
-		   -moz-box-shadow: 1px 2px 4px rgba(33, 33, 33, 0.55);
-		     -o-box-shadow: 1px 2px 4px rgba(33, 33, 33, 0.55);
 		        box-shadow: 1px 2px 4px rgba(33, 33, 33, 0.55);
 		margin-right:2.857142857142857142%;
 		margin-bottom:1.5em;
