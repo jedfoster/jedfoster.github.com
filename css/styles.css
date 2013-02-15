@@ -180,7 +180,7 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
   display: block;
   float: left;
   width: 1em;
-  height: 1em;  
+  height: 1em;
   border: 0;
   margin-right: 4.190909090909090909%;/* 9/220 */
   color: #999;
@@ -303,7 +303,7 @@ nav li.page-.home,nav ul ul,nav li.ancestor ul ul{display:none;}
 	width:100%;
 	float:left;
 	clear:both;
-	margin-bottom:1.5em;	
+	margin-bottom:1.5em;
 	border-top:1px solid #b7b7b7;
 	padding-top:2.95em;
 }
@@ -442,7 +442,7 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 	#sidebar {
 		padding-top:1.5em;
 		border-top: 1px solid #b7b7b7;
-	}	
+	}
 }
 
 @media screen and (max-width: 360px), screen and (max-width:640px) {
@@ -482,7 +482,7 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 	}
 	.pg-work #main li {
 		float:none;clear:both;
-	}	
+	}
 	.pg-contact form {
 		width: 100%;
 		float: none;
@@ -521,7 +521,7 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 @media screen and (max-width: 480px) {
 	#main .span-half th {
 		padding:.375em .25em .375em .375em;
-	}	
+	}
 	.notes th{
 		font-size:0.8em;
 		line-height:1.625;
@@ -562,7 +562,7 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 	header nav ul{font-size:2.5em;}
 	.pg-work #main img {
 		margin-bottom:1.5em;
-	}	
+	}
 	.pg-work #main ul, .pg-work #main li {
 		float:left;
 		clear:none;
@@ -604,12 +604,12 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 	}
 	.pg-contact button[type="submit"] {
 		float:left; /* same as default */
-		margin-left:34.285714285714285714%; /* same as default */ 
+		margin-left:34.285714285714285714%; /* same as default */
 	}
 
 	.pg-work #main section {
-		margin-bottom:1.5em; /* same as default */ 
-		padding-top:2.95em; /* same as default */ 
+		margin-bottom:1.5em; /* same as default */
+		padding-top:2.95em; /* same as default */
 	}
 	.pg-work #main img {
 		float: left; /* same as default */
@@ -653,7 +653,7 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 	header h2 span:last-child {
 		display: block;
 	}
-	
+
 	nav {width:100%;float:left;margin-bottom:1.5em;}
 	nav ul {list-style:none;float:left;margin:0;padding:0;width:100%;}
 	nav li {display:block;float:left;margin-right:2.5em;}
@@ -667,7 +667,7 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 		width:100%;
 		float:left;
 		clear:both;
-		margin-bottom:1.5em;	
+		margin-bottom:1.5em;
 		border-top:1px solid #b7b7b7;
 		padding-top:2.95em;
 	}
@@ -703,7 +703,7 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 	header h1 {
 		font-size: 5.0em;
 	}
-	
+
 	header h2 {
 		font-size: 1em;
 		line-height:1.5;
@@ -724,8 +724,8 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 		line-height: 1.33;
 		margin: 0 0 0.625em;
 		font-size: 1.2em;
-	}	
-	
+	}
+
 	#socialLinks a {display:block;float:left;width:48px;height:48px;margin:0 12.096774193548387096% 1.5em;
 		background-color:#006EB2;
 		text-indent:-9999px;
@@ -741,7 +741,7 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-device-width: 480px) {
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
-   html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
+   html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
 }
 
 
