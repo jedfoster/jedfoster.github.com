@@ -149,6 +149,7 @@ button:hover,a.button:hover{background-color:#dff4ff;border:1px solid #c2e1ef;co
 a.button:active,button:active{background-color:#6299c5;border-color:#6299c5;color:#fff;text-shadow:1px 1px 0 #444;text-shadow:1px 1px 0 rgba(68,68,68,0.7);}
 a.positive:active,button.positive:active{background-color:#529214;border-color:#529214;}
 a.negative:active,button.negative:active{background-color:#d12f19;border-color:#d12f19;}
+h2 a{display:inline-block;}
 
 /* default grid */
 body {padding:0 1.5em;}
