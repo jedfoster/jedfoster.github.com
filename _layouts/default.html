@@ -20,10 +20,10 @@
 
 	<!-- CSS: implied media="all" -->
 	<link rel="stylesheet" href="/css/styles.css">
-
+	
+	{{ page.css }}
 	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="/js/modernizr.js"></script>
-
 </head>
 
 <body class="pg-{{ page.slug }}">
@@ -53,9 +53,7 @@
 	</div>
 
 
-	<!-- JavaScript at the bottom for fast page loading -->
-	<script src="/js/prototaculous.js"></script>
-
-	<script src="/js/script.js"></script>	
+	<!-- JavaScript at the bottom for fast page loading -->  
+  {{ page.js }}
 </body>
 </html>
