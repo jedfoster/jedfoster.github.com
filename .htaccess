@@ -497,13 +497,13 @@ php_value session.cookie_httponly true
 	
 	RewriteRule ^ping/close /js/ping_close.html [L]
 		
-	RewriteRule ^login										/index.php/users/login							[L,QSA]
-	RewriteRule ^logout										/index.php/users/logout							[L,QSA]
-	RewriteRule ^request_reset						/index.php/users/request_reset			[L,QSA]
-	RewriteRule ^reset_password/(.*)$			/index.php/users/reset_password/$1	[L,QSA]
+	RewriteRule ^login										/kohana.php/users/login							[L,QSA]
+	RewriteRule ^logout										/kohana.php/users/logout							[L,QSA]
+	RewriteRule ^request_reset						/kohana.php/users/request_reset			[L,QSA]
+	RewriteRule ^reset_password/(.*)$			/kohana.php/users/reset_password/$1	[L,QSA]
 	
 	# Protect application and system files from being viewed
-	RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
+	RewriteRule ^(?:application|modules|system)\b.* kohana.php/$0 [L]
 	
 	# Route requests for FILES in sub-directories of /downloads directly to the file,
 	# but don't reveal the "/downloads" segment. 
@@ -526,5 +526,5 @@ php_value session.cookie_httponly true
 	RewriteCond %{REQUEST_URI} !^/pw/protected/.*
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule .* index.php/$0 [PT]
+	RewriteRule .* kohana.php/$0 [PT]
 </IfModule>
