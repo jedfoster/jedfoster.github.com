@@ -1,7 +1,15 @@
 safe: true
 # source: <your pages repo>
-# destination: <the build dir>
+destination: _site
 lsi: false
 pygments: true
 url: http://jedfoster.com
-exclude: config.ru, Gemfile, Gemfile.lock, Readme.textile, html5-WP-audio-player/, AudioJS/, Readmore.js/, Sass-Deck/
+exclude: config.ru, Gemfile, Gemfile.lock, Rakefile, html5-WP-audio-player/, AudioJS/, Readmore.js/, Sass-Deck/
+environments:
+  github:
+    url: http://jedfoster.github.com
+  production:
+    url: http://jedfoster.com
+    remote:
+      connection: jedfoste@jedfoster.com
+      path: public_html/
