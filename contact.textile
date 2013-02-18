@@ -2,6 +2,10 @@
 layout: default
 title: Contact
 slug: contact
+js: |
+  <script src="/js/prototaculous.min.js"></script>
+
+  <script src="/js/script.js"></script>
 ---
 
 h1. Contact
