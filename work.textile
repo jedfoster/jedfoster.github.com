@@ -151,63 +151,6 @@ A custom CRM web app. Captive Audience uses Sales to track new leads through the
   </section>
 
 
-<?/*  <section id="sw-heart">
-
-
-  !/img/portfolio/sites/sw-heart-sm.jpg!
-
-h1. "Southwest Heart":http://swheart.com/
-
-Customized CSS, based on a template design. Installed an open-source CMS.
-
-<ul>
-	<li class="CSS">CSS</li>
-	<li class="HTML">HTML</li>
-	<li class="PHP">PHP</li>
-</ul>
-
-
-  </section>
-
-
-  <section id="platinum-business-strategies">
-
-
-  !/img/portfolio/sites/platinum-business-strategies-sm.jpg!
-
-h1. "Platinum Business Strategies":http://platinumbusinessstrategies.com/
-
-Customized CSS, based on a template design. Installed an open-source CMS.
-
-<ul>
-	<li class="CSS">CSS</li>
-	<li class="HTML">HTML</li>
-	<li class="PHP">PHP</li>
-</ul>
-
-
-  </section>
-
-
-  <section id="anacon-labs">
-
-
-  !/img/portfolio/sites/anacon-labs-sm.jpg!
-
-h1. "Anacon Labs":http://anaconlabs.com/
-
-Customized CSS, based on a template design.
-
-<ul>
-	<li class="CSS">CSS</li>
-	<li class="HTML">HTML</li>
-	<li class="PHP">PHP</li>
-</ul>
-
-
-  </section>
-*/?>
-
   <section id="buds-treewell">
 
 
@@ -290,26 +233,6 @@ An original layout incorporating another designer's graphics. Handcoded HTML5 an
   </section>
 
 
-<?/*  <section id="platinum-circle-solutions">
-
-
-  !/img/portfolio/sites/platinum-circle-solutions-sm.jpg!
-
-h1. Platinum Circle Solutions
-
-Customized CSS, based on a template design. Installed an open-source CMS.
-
-<ul>
-	<li class="CSS">CSS</li>
-	<li class="HTML">HTML</li>
-	<li class="PHP">PHP</li>
-	<li class="Refreshed">Refreshed, "newer version":#platinum-business-strategies </li>
-</ul>
-
-
-  </section> */?>
-
-
   <section id="east-highlands-dentistry-v2">
 
 
@@ -328,24 +251,6 @@ Rendered another designer's layout.
 
 
   </section>
-
-
-<?/*  <section id="perfect-form">
-
-
-  !/img/portfolio/sites/perfect-form-sm.jpg!
-
-h1. "Perfect Form":http://myperfectform.com/
-
-Customized CSS, based on a template design.
-
-<ul>
-	<li class="CSS">CSS</li>
-	<li class="HTML">HTML</li>
-</ul>
-
-
-  </section> */?>
 
 
   <section id="pink-ribbon">
@@ -427,23 +332,6 @@ Inspired by a CSS template. Custom graphics. Handcoded HTML and CSS.
   </section>
 
 
-<?/*  <section id="jed-michelle">
-
-  !/img/portfolio/sites/jed-michelle-sm.jpg!
-
-h1. "Jed & Michelle":http://jedandmichelle.com
-
-Customized CSS, based on a template design.
-
-<ul>
-	<li class="CSS">CSS</li>
-	<li class="HTML">HTML</li>
-</ul>
-
-
-  </section> */?>
-
-
   <section id="east-highlands-dentistry-v1">
 
 
@@ -471,8 +359,6 @@ Customized CSS, based on a template design.
 h1. Voice Over Cafe
 
 An original design built with Photoshop/ImageReady.
-
-<?/*Even though it was built with evil, evil tables this is one of my favorite designs.*/?>
 
 <ul>
 	<li class="Design">Design</li>
@@ -527,49 +413,3 @@ Customized CSS, based on a template design.
 
 
   </section>
-
-
-<?/*  <section id="just-for-fun">
-
-
-  !/img/portfolio/sites/just-for-fun-sm.jpg!
-
-h1. Just for Fun, v.1
-
-An original design built with Photoshop/ImageReady.
-
-<ul>
-	<li class="Design">Design</li>
-	<li class="PSD">Photoshop</li>
-	<li class="HTML">HTML</li>
-	<li class="CSS">CSS</li>
-	<li class="PHP">PHP/MySQL</li>
-	<li class="e-Commerce">e-Commerce</li>
-	<li class="Refreshed">Refreshed</li>
-</ul>
-
-
-  </section>
-
-
-  <section id="little-dog-heaven">
-
-
-  !/img/portfolio/sites/little-dog-heaven-sm.jpg!
-
-h1. "Little Dog Heaven":http://littledogheaven.com
-
-An original design built with Photoshop/ImageReady.
-
-<ul>
-	<li class="Design">Design</li>
-	<li class="PSD">Photoshop</li>
-	<li class="HTML">HTML</li>
-	<li class="CSS">CSS</li>
-	<li class="PHP">PHP/MySQL</li>
-	<li class="e-Commerce">e-Commerce</li>
-</ul>
-
-
-  </section> */?>
-
