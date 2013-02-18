@@ -1,0 +1,39 @@
+---
+layout: notes
+title: Notes
+slug: notes
+---
+
+
+  <article class="first">
+
+
+h1. Transit Schedules
+
+{% include transit-schedules.textile %}
+
+
+  </article>
+
+
+  <article class="">
+
+
+h1. Sumner Library Hours
+
+{% include sumner-library-hours.textile %}
+
+
+  </article>
+
+
+  <article class="last">
+
+
+h1. Al-Pac Library Hours
+
+{% include al-pac-library-hours.textile %}
+
+
+  </article>
+

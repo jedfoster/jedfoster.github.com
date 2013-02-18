@@ -1,0 +1,27 @@
+h1. About
+
+Currently under construction. 
+
+<?/*
+
+Creative to Practical
+
+As a web developer I believe my primary role is to help organizations look more professional and achieve their objectives, with an emphasis on usability and simplicity. I have a working knowledge of graphic arts principles, various design software, typography and layout. With these skills I’ve developed the ability to understand and translate practical business requirements and objectives into creative designs.
+
+Partnership
+
+Many businesses have come to the conclusion that it’s not just a website they need, but a partner to guide them through emerging technologies. To me, this means not just creating a site, but working with clients to grow and promote their site, and connect with their customers using all the tools and technology available.
+
+Forward-thinking
+
+I enjoy keeping current on trends in the Internet industry. Maintaining this interest helps me anticipate a client’s needs, often before the client realizes they had a need. By working with clients I get a sense of what basic functions the website must serve, and help clients formulate plans on how to keep web pages most approachable, and graphically interesting.
+
+Self-taught
+
+I’ve always been interested in figuring out what makes things work. Especially electronic devices; I’d take them apart and put them back together just for fun. In 2001, I found myself fascinated with web design, the Internet, and computers in general. I bought a book on HTML and read it cover to cover; I was hooked. I spent countless hours learning HTML and CSS syntax and browser-side scripting with JavaScript, and later, server-side programming with PHP/MySQL.
+
+Print Design
+
+Over the years I have produced a number of print pieces including brochures, business cards, product manuals, postcards, trade show displays, and direct-mail letters. As a result, I have experience in setting up projects according to specifications, and preparing artwork for printing in a range of formats.
+
+*/?>

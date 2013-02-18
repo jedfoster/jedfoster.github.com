@@ -1,0 +1,67 @@
+---
+layout: default
+title: Code
+slug: code
+---
+
+h1. Code
+
+Here are just a few of the open-source projects I've been working on recently.
+
+
+h2. "SassMeister":http://sassmeister.com
+
+A playground for Sass. Type or paste some Sass into the text area and SassMeister will show you the rendered CSS. Works with both SCSS and Sass syntaxes, and includes several popular Sass libraries like Bourbon and Compass.
+
+
+
+h2. "(fork)Readmore.js":http://github.com/jedfoster/Readmore.js
+
+A smooth, lightweight jQuery plugin for collapsing and expanding long blocks of text with “Read more” and “Close” links.
+
+
+
+h2. "(fork)HTML5 WP Audio Player":https://github.com/jedfoster/html5-WP-audio-player
+
+A version of the awesome WordPress Audio Player for browsers that support HTML5's @<audio>@ tag, with fallback to the original Flash player for browsers that don't.
+
+
+
+h2. "(fork)Toadstool":https://github.com/Anotheruiguy/toadstool
+
+Styleguides made awesome.
+
+
+
+h2. "(fork)Stipe":https://github.com/Anotheruiguy/stipe
+
+The core Sass Mixins that support the Toadstool Styleguide Framework
+
+
+
+h2. "(fork)AudioJS":https://github.com/jedfoster/AudioJS
+
+Fork of "VideoJS":http://videojs.com/ for audio, with support for themes.
+
+
+
+<!-- ? /*
+    h2. "(fork)accordion":https://github.com/jedfoster/accordion
+    An enhanced version of Kevin P. Millers Accordion v2 for Prototype and Scriptaculous
+
+    h2. "(fork)scriptaculous-sortabletree":
+    Forked from svenfuchs/scriptaculous-sortabletree
+
+    h2. "(fork)rollover":
+    Forked from jugend/rollover
+
+    h2. "(fork)cooltips":
+    Forked from okonet/cooltips
+
+    h2. "(fork)validated-fields":
+    Forked from alluniq/validated-fields
+
+    h2. "(fork)glider":
+    Forked from simplabs/glider
+
+*/ ? -->

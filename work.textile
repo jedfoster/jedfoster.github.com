@@ -1,0 +1,575 @@
+---
+layout: default
+title: Work
+slug: work
+---
+
+h1. Work
+
+  <section class="first" id="la-amistad-dental">
+
+
+  !/img/portfolio/sites/la-amistad-dental-sm.jpg!
+
+h1. La Amistad Dental Office
+
+An original design. Handcoded HTML5 and CSS3.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML5">HTML5</li>
+	<li class="CSS3">CSS3</li>
+	<li class="JavaScript">JavaScript</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="riverside-ymca">
+
+
+  !/img/portfolio/sites/riverside-ymca-sm.jpg!
+
+h1. "YMCA of Riverside City & County":http://riversideymca.org
+
+An original design based on corporate style guides. Handcoded HTML5 and CSS3. Custom-built CMS. 
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML5">HTML5</li>
+	<li class="CSS3">CSS3</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="captive-audience-v8">
+
+
+  !/img/portfolio/sites/captive-audience-v8-sm.jpg!
+
+h1. "Captive Audience":http://captive-audience.com, v.8
+
+An original design. Handcoded HTML5 and CSS3. Runs on a custom CMS.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="riverside-cardiology">
+
+
+  !/img/portfolio/sites/riverside-cardiology-sm.jpg!
+
+h1. "Riverside Cardiology":http://riversidecardiology.com/
+
+An original design. Handcoded HTML5 and CSS3.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML5">HTML5</li>
+	<li class="CSS3">CSS3</li>
+	<li class="JavaScript">JavaScript</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="making-every-dollar-count">
+
+
+  !/img/portfolio/sites/making-every-dollar-count-sm.jpg!
+
+h1. "Making Every Dollar Count":http://makingeverydollarcount.ucr.edu
+
+Rendered another designer's layout. Built a mini-CMS to manage over 250 sequential pages and 9 different layouts--in both English and Spanish.
+
+<ul>
+	<li class="PSD">Photoshop</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP & YAML</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="scripts">
+
+
+  !/img/portfolio/sites/scripts-sm.jpg!
+
+h1. Scripts
+
+A custom web app for Captive Audience, Scripts allows clients to create and edit advertising on hold scripts and place orders for new productions. 
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="sales">
+
+
+  !/img/portfolio/sites/sales-sm.jpg!
+
+h1. Sales
+
+A custom CRM web app. Captive Audience uses Sales to track new leads through the sales process.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>
+
+
+<?/*  <section id="sw-heart">
+
+
+  !/img/portfolio/sites/sw-heart-sm.jpg!
+
+h1. "Southwest Heart":http://swheart.com/
+
+Customized CSS, based on a template design. Installed an open-source CMS.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+	<li class="PHP">PHP</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="platinum-business-strategies">
+
+
+  !/img/portfolio/sites/platinum-business-strategies-sm.jpg!
+
+h1. "Platinum Business Strategies":http://platinumbusinessstrategies.com/
+
+Customized CSS, based on a template design. Installed an open-source CMS.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+	<li class="PHP">PHP</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="anacon-labs">
+
+
+  !/img/portfolio/sites/anacon-labs-sm.jpg!
+
+h1. "Anacon Labs":http://anaconlabs.com/
+
+Customized CSS, based on a template design.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+	<li class="PHP">PHP</li>
+</ul>
+
+
+  </section>
+*/?>
+
+  <section id="buds-treewell">
+
+
+  !/img/portfolio/sites/buds-treewell-sm.jpg!
+
+h1. Bud's Treewell
+
+Rendered another designer's layout.
+
+<ul>
+	<li class="PSD">Photoshop</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="Closed">Closed</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="gcc-edirectory-front">
+
+
+  !/img/portfolio/sites/gcc-edirectory-front-sm.jpg!
+
+h1. Grace Community Church e-Directory 
+
+h5. User view
+
+Integrated a custom member directory web app into the existing site.
+
+<ul>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="gcc-edirectory-back">
+
+
+  !/img/portfolio/sites/gcc-edirectory-back-sm.jpg!
+
+h1. Grace Community Church e-Directory
+
+h5. Administrative view
+
+Custom directory web app.
+
+<ul>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="riverside-car-show">
+
+
+  !/img/portfolio/sites/riverside-car-show-sm.jpg!
+
+h1. "Riverside Car Show":http://riversidecarshow.com
+
+An original layout incorporating another designer's graphics. Handcoded HTML5 and CSS3.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML5">HTML5</li>
+	<li class="CSS3">CSS3</li>
+</ul>
+
+
+  </section>
+
+
+<?/*  <section id="platinum-circle-solutions">
+
+
+  !/img/portfolio/sites/platinum-circle-solutions-sm.jpg!
+
+h1. Platinum Circle Solutions
+
+Customized CSS, based on a template design. Installed an open-source CMS.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+	<li class="PHP">PHP</li>
+	<li class="Refreshed">Refreshed, "newer version":#platinum-business-strategies </li>
+</ul>
+
+
+  </section> */?>
+
+
+  <section id="east-highlands-dentistry-v2">
+
+
+  !/img/portfolio/sites/east-highlands-dentistry-v2-sm.jpg!
+
+h1. "East Highlands Dentistry":http://easthighlandsdentistry.com, v.2
+
+Rendered another designer's layout.
+
+<ul>
+	<li class="PSD">Photoshop</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+</ul>
+
+
+  </section>
+
+
+<?/*  <section id="perfect-form">
+
+
+  !/img/portfolio/sites/perfect-form-sm.jpg!
+
+h1. "Perfect Form":http://myperfectform.com/
+
+Customized CSS, based on a template design.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+</ul>
+
+
+  </section> */?>
+
+
+  <section id="pink-ribbon">
+
+
+  !/img/portfolio/sites/pink-ribbon-sm.jpg!
+
+h1. "The Pink Ribbon Place":http://thepinkribbonplace.org/
+
+Customized CSS, based on a template design. Installed an open-source CMS.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="hssbv-v2">
+
+
+  !/img/portfolio/sites/hssbv-v2-sm.jpg!
+
+h1. "Humane Society of San Bernardino Valley":http://hssbv.org, v.2
+
+An original design. Handcoded HTML5 and CSS3.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="columbia-sinks">
+
+
+  !/img/portfolio/sites/columbia-sinks-sm.jpg!
+
+h1. "Columbia Sinks":http://columbiasinks.com
+
+Built and integrated a custom CMS into the existing site.
+
+<ul>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="captive-audience-v7">
+
+
+  !/img/portfolio/sites/captive-audience-v7-sm.jpg!
+
+h1. Captive Audience, v.7
+
+Inspired by a CSS template. Custom graphics. Handcoded HTML and CSS.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="Refreshed">Refreshed, "newer version":#captive-audience-v8 </li>
+</ul>
+
+
+  </section>
+
+
+<?/*  <section id="jed-michelle">
+
+  !/img/portfolio/sites/jed-michelle-sm.jpg!
+
+h1. "Jed & Michelle":http://jedandmichelle.com
+
+Customized CSS, based on a template design.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+</ul>
+
+
+  </section> */?>
+
+
+  <section id="east-highlands-dentistry-v1">
+
+
+  !/img/portfolio/sites/east-highlands-dentistry-v1-sm.jpg!
+
+h1. East Highlands Dentistry, v.1
+
+Customized CSS, based on a template design.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+	<li class="Refreshed">Refreshed, "newer version":#east-highlands-dentistry-v2 </li>
+</ul>
+
+
+  </section>
+
+
+  <section id="voice-over-cafe">
+
+
+  !/img/portfolio/sites/voice-over-cafe-sm.jpg!
+
+h1. Voice Over Cafe
+
+An original design built with Photoshop/ImageReady.
+
+<?/*Even though it was built with evil, evil tables this is one of my favorite designs.*/?>
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="PSD">Photoshop</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="PHP">PHP/MySQL</li>
+	<li class="e-Commerce">e-Commerce</li>
+	<li class="Closed">Closed</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="captive-audience-v6">
+
+
+  !/img/portfolio/sites/captive-audience-v6-sm.jpg!
+
+h1. Captive Audience, v.6
+
+An original design built with Photoshop/ImageReady.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="PSD">Photoshop</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="Refreshed">Refreshed, "newer version":#captive-audience-v7 </li>
+</ul>
+
+
+  </section>
+
+
+  <section id="hssbv-v1">
+
+
+  !/img/portfolio/sites/hssbv-v1-sm.jpg!
+
+h1. Humane Society of San Bernardino Valley, v.1
+
+Customized CSS, based on a template design.
+
+<ul>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
+	<li class="Refreshed">Refreshed, "newer version":#hssbv-v2 </li>
+</ul>
+
+
+  </section>
+
+
+<?/*  <section id="just-for-fun">
+
+
+  !/img/portfolio/sites/just-for-fun-sm.jpg!
+
+h1. Just for Fun, v.1
+
+An original design built with Photoshop/ImageReady.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="PSD">Photoshop</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="PHP">PHP/MySQL</li>
+	<li class="e-Commerce">e-Commerce</li>
+	<li class="Refreshed">Refreshed</li>
+</ul>
+
+
+  </section>
+
+
+  <section id="little-dog-heaven">
+
+
+  !/img/portfolio/sites/little-dog-heaven-sm.jpg!
+
+h1. "Little Dog Heaven":http://littledogheaven.com
+
+An original design built with Photoshop/ImageReady.
+
+<ul>
+	<li class="Design">Design</li>
+	<li class="PSD">Photoshop</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="PHP">PHP/MySQL</li>
+	<li class="e-Commerce">e-Commerce</li>
+</ul>
+
+
+  </section> */?>
+

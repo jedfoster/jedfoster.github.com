@@ -1,0 +1,33 @@
+  <div class="span-half">
+
+h3. Morning
+
+|_. #497 |_. Sumner |_. Auburn |_. Seattle |
+|4:51    |5:12      |5:20      |5:54       |
+|5:32    |5:52      |6:01      |6:34       |
+|5:57    |6:17      |6:26      |6:59       |
+|6:22    |6:42      |6:51      |7:24       |
+|6:47    |7:07      |7:16      |7:49       |
+|7:16    |7:37      |7:45      |8:19       |
+|7:56    |8:17      |8:25      |8:59       |
+
+  </div>
+
+  <div class="span-half">
+
+h3. Evening
+
+|_. Seattle |_. Tukwila |_. Kent |_. Auburn |_. #497* |_. Sumner |_. Puyallup |_. Tacoma |_. Lakewood |
+|3:15       |3:27       |3:34    |3:41      |4:06    |3:50      |3:54	       |4:14	    |--          |
+|3:50       |4:02       |4:09    |4:16      |4:43    |4:25      |4:29	       |4:49	    |--          |
+|4:20       |4:32       |4:39    |4:46      |5:11    |4:56      |5:00	       |5:12	    |5:32        |
+|4:45       |4:57       |5:04    |5:11      |5:36    |5:21      |5:25	       |5:37	    |5:57        |
+|5:12       |5:24       |5:31    |5:38      |6:03    |5:48      |5:52	       |6:04	    |6:24        |
+|5:40       |5:52       |5:59    |6:06      |6:31    |6:16      |6:20	       |6:32	    |6:52        |
+|6:15       |6:27       |6:34    |6:41      |7:08    |6:50      |6:54	       |7:06	    |7:26        |
+
+p. *These trips will wait for Sounder connections before departing
+
+  </div>
+
+p(clear small). Source: "soundtransit.org/Schedules/Sounder-Lakewood-Seattle.xml":http://www.soundtransit.org/Schedules/Sounder-Lakewood-Seattle.xml and "piercetransit.org/schedules/497/497.htm":http://www.piercetransit.org/schedules/497/497.htm
