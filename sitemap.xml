@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>/</loc>
+    <lastmod>2011-06-07T14:20:26-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>/work</loc>
+    <lastmod>2011-06-03T12:36:48-07:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+  </url>
+  <url>
+    <loc>/code</loc>
+    <lastmod>2012-07-03T16:15:13-07:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+  </url>
+  <url>
+    <loc>/blog</loc>
+    <lastmod>2012-07-03T16:15:13-07:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+  </url>
+  <url>
+    <loc>/contact</loc>
+    <lastmod>2012-07-03T16:15:13-07:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0</priority>
+  </url>
+</urlset>
