@@ -3,4 +3,5 @@ safe: true
 # destination: <the build dir>
 lsi: false
 pygments: true
+url: http://jedfoster.com
 exclude: config.ru, Gemfile, Gemfile.lock, Readme.textile, html5-WP-audio-player/
