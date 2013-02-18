@@ -1,0 +1,6 @@
+safe: true
+# source: <your pages repo>
+# destination: <the build dir>
+lsi: false
+pygments: true
+exclude: config.ru, Gemfile, Gemfile.lock, Readme.textile, html5-WP-audio-player/
