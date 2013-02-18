@@ -4,4 +4,4 @@ safe: true
 lsi: false
 pygments: true
 url: http://jedfoster.com
-exclude: config.ru, Gemfile, Gemfile.lock, Readme.textile, html5-WP-audio-player/
+exclude: config.ru, Gemfile, Gemfile.lock, Readme.textile, html5-WP-audio-player/, AudioJS/, Readmore.js/, Sass-Deck/
