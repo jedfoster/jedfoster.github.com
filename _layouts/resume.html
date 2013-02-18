@@ -19,20 +19,19 @@
 
   <!-- CSS: implied media="all" -->
   <link rel="stylesheet" href="/css/styles.css">
-
   {{ page.css }}
+
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="/js/modernizr.js"></script>
 </head>
 
 <body class="resume">
-
   <div class="container">
     <header>
 			<h1><a href="/">Jed Foster</a></h1>
-			
+
 			<h2><span>Code. </span><span>Design. </span><span>For the web.</span></h2>
-			
+
 			<nav>
 				{% include navigation.html %}
 			</nav>
@@ -41,14 +40,9 @@
     <div id="main" role="main">
 			{{ content }}
 		</div>
-
-    <footer>
-
-    </footer>
   </div>
 
-
-  <!-- JavaScript at the bottom for fast page loading -->  
+  <!-- JavaScript at the bottom for fast page loading -->
   {{ page.js }}
 
   <script>

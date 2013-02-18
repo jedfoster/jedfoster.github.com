@@ -20,14 +20,12 @@
 
 	<!-- CSS: implied media="all" -->
 	<link rel="stylesheet" href="/css/styles.css">
-
 	{{ page.css }}
 	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="/js/modernizr.js"></script>
 </head>
 
 <body class="pg-{{ page.slug }}">
-
 	<div class="container">
 		<header>
 			<h1><a href="http://jedfoster.com/">Jed Foster</a></h1>
@@ -46,12 +44,7 @@
 		<div id="sidebar">
 				{% include sidebar.html %}
 		</div>
-
-		<footer>
-
-		</footer>
 	</div>
-
 
 	<!-- JavaScript at the bottom for fast page loading -->
   {{ page.js }}

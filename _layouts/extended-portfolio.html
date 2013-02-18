@@ -28,7 +28,6 @@
 </head>
 
 <body class="pg-work">
-
   <div class="container">
     <header>
 			<h1><a href="http://jedfoster.com/">Jed Foster</a></h1>
@@ -41,18 +40,13 @@
     </header>
 
     <div id="main" role="main">
-			{{ page.content }}
+			{{ content }}
     </div>
 
 		<div id="sidebar">
 				{% include sidebar.html %}
 		</div>
-
-    <footer>
-
-    </footer>
   </div>
-
 
   <!-- JavaScript at the bottom for fast page loading -->
   {{ page.js }}
