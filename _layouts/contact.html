@@ -1,9 +1,10 @@
 <!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>{{ page.title }}</title>
 	{{ page.description }}
@@ -13,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-	<link rel="shortcut icon" href="http://jedfoster.com/favicon.ico">
+	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
@@ -21,9 +22,9 @@
 	<!-- CSS: implied media="all" -->
 	<link rel="stylesheet" href="/css/styles.css">
 
-	{{ page.css }}
 	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="/js/modernizr.js"></script>
+
 </head>
 
 <body class="pg-{{ page.slug }}">
@@ -56,7 +57,7 @@
 	<!-- JavaScript at the bottom for fast page loading -->
   {{ page.js }}
 
-  <script>
+	<script>
     var _gaq=[["_setAccount","UA-24822554-1"],["_trackPageview"],["_setDomainName", ".jedfoster.com"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";

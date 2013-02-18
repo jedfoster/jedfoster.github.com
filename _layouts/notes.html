@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html class="no-js" lang="en" manifest="/notes.manifest">
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ page.title }}</title>
+  {{ page.description }}
+  <link rel="author" href="/humans.txt">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+
+  <!-- CSS: implied media="all" -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="notes pg-{{ page.slug }}">
+
+  <div class="container">
+    <header>
+			<h1><a href="http://jedfoster.com/notes">Notes</a></h1>
+    </header>
+
+    <div id="main" role="main">
+			{{ content }}
+    </div>
+  </div>
+</body>
+</html>
