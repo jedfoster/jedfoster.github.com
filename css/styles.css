@@ -73,7 +73,7 @@ a:focus, a:hover, a:active {color:#E7BD36;}
 blockquote {margin:1.5em;font-style:italic;}
 strong, dfn {font-weight:bold;}
 em, dfn {font-style:italic;}
-sup, sub {line-height0;}
+sup, sub {line-height:0;}
 abbr, acronym {border-bottom:1px dotted #666;}
 address {margin:0 0 1.5em;font-style:italic;}
 del {color:#666;}
