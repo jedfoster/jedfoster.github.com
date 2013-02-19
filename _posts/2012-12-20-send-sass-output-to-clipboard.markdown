@@ -4,7 +4,7 @@ layout: post
 description: In response to a question on the Sass Google Group I came up with this one-liner to send the compiled CSS to your clipboard.
 categories: development
 tags: sass command-line
-permalink: /Send-sass-output-to-clipboard
+permalink: /blog/send-sass-output-to-clipboard
 ---
 
 In response to [this question][1] on the Sass Google Group I came up with this one-liner to send the compiled CSS to your clipboard.

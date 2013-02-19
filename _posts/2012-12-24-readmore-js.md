@@ -4,7 +4,7 @@ layout: post
 description: My first foray into jQuery plugins.
 categories: development
 tags: JavaScript
-permalink: /Readmore.js
+permalink: /blog/readmore.js
 ---
 
 This weekend was supposed to be a marathon coding session. 
