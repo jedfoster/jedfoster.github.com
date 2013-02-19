@@ -12,7 +12,7 @@ h1. Resume
 
 h2. Experience
 
-* 12 years of practical experience hand coding HTML, CSS, JavaScript, Ruby, PHP, and MySQL
+* 13 years of practical experience hand coding HTML, CSS, JavaScript, Ruby, PHP, and MySQL
 * Built numerous websites using "responsive" design, icon fonts to support HiDPI displays, HTML5 JavaScript APIs, CSS transforms, and other techniques
 * Developed numerous e-commerce/content management systems and custom web apps using PHP/MySQL and Ruby/RoR
 * Core contributor to several open-source projects
@@ -39,7 +39,7 @@ h3. Competent &amp; Improving
 
 * Responsive Web Design
 * Ruby
-* jQuery and vanilla JavaScript
+* JavaScript, including jQuery and Prototype/script.aculo.us
 * Sinatra
 * Ruby on Rails
 * Thor
@@ -75,16 +75,19 @@ h4. "SassMeister.com":http://sassmeister.com
 A web app for experimenting with Sass. Written in Ruby, using Sinatra. Deployed to Heroku.
 
 * Lead developer
-* Icon font
+* Icon fonts
 * GitHub OAuth
 * HTML5 localStorage
 * Packaged two Sass libraries as Compass extensions and published them as RubyGems
+
+h4. "Readmore.js":https://github.com/jedfoster/Readmore.js
+
+A smooth, lightweight jQuery plugin for collapsing and expanding long blocks of text with “Read more” and “Close” links.
 
 h4. "HTML5 WP Audio Player":https://github.com/jedfoster/html5-WP-audio-player
 
 An implementation of a popular WordPress audio player for browsers that support HTML5’s @audio@ tag, with fallback to the original Flash player for browsers that don’t.
 
-* Lead developer
 * CSS3 transitions
 * Icon font
 * Forked and improved an existing JavaScript library
@@ -126,7 +129,7 @@ _Getty Images_
 * Co-authored a next-generation style guide framework for a strategic Ruby on Rails initiative. Engineered the framework's modularized structure, dynamic routing, and the Ruby Gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
 * Coached co-workers on version control, HTML/CSS/JS best practices, troubleshooting, and other development techniques.
 * Wrote numerous automation scripts in Ruby to manipulate the hundreds--sometimes thousands--of HTML fragment files that constitute a single marketing web page, including localized versions in more than ten languages.
-* Migrated hundreds of pages content from a legacy CMS to a new one. Wrote a Ruby script to transform the hundreds of XML documents into HTML fragments that could be consumed by the new CMS, as well as locate and move thousands of graphics from the old system to the new one.
+* Migrated hundreds of pages of content from a legacy CMS to a new one. Wrote a Ruby script to transform the hundreds of XML documents into HTML fragments that could be consumed by the new CMS, as well as locate and move thousands of graphics from the old system to the new one.
 
 
 h3. 2005 – Present
@@ -146,7 +149,7 @@ h3. 1999 – 2007
 Production Director, Audio Editor, Graphic Designer, IT Manager
 _Captive Audience Marketing Inc._
 
-* Designed brochures, business cards, product manuals, postcards, trade show displays, and other marketing materials.
+* Designed brochures, business cards, product manuals, postcards, trade show displays, and other marketing collateral.
 * Maintained all office infrastructure including computer hardware, peripherals, network, operating systems, and business software.
 * Designed and implemented production workflows and order tracking systems.
 * Developed online knowledge base of office procedures, product data, and IT and production protocols for internal reference.
