@@ -6,7 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>{{ page.title }}</title>
-	{{ page.description }}
+	{% if page.description %}
+  <meta name="description" content="{{ page.description | escape }}">
+  {% endif %}
+  <meta name="author" lang="en" content="Jed Fdster">
 	<link rel="author" href="/humans.txt">
 
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
