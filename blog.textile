@@ -1,9 +1,0 @@
----
-layout: default
-title: Blog
-slug: blog
----
-
-h1. Blog
-
-Currently under construction. For now, you can find me on "Posterous":http://jedfoster.posterous.com

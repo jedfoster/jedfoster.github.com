@@ -1,0 +1,33 @@
+---
+layout: default
+title: Blog
+slug: blog
+---
+
+<h1>Blog</h1>
+
+<section class="posts hfeed">
+{% for post in site.posts %}
+  {% unless post.tags contains "dated" %}
+  <article class="hentry{% if post.link %} link{% elsif post.tags contains "featured" %} featured{% endif %}">
+    <header>
+      <time datetime="{{ post.date | date_to_xmlschema }}" class="published mod_date" pubdate>{{ post.date | date: "%b %d, %Y" }}</time>
+      
+      {% if post.link %}
+      <h2><a class="link-entry" href="{{ post.link | escape }}">{{ post.title }}</a></h2>
+      {% else %}
+      <h2><a rel="bookmark" href="{{ post.url }}">{{ post.title }}</a></h2>
+      {% endif %}
+      
+      {% if post.link %}· <a href="{{ post.url }}" rel="bookmark" title="permalink">∞</a>{% endif %}
+    </header>
+
+    {% if post.link %}
+      {{ post.content }}
+    {% else %}
+      {% if post.description %}<p class="entry-summary">{{ post.description }}</p>{% endif %}
+    {% endif %}
+  </article>
+  {% endunless %}
+{% endfor %}
+</section>
