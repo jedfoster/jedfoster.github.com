@@ -42,26 +42,3 @@ The core Sass Mixins that support the Toadstool Styleguide Framework
 h2. "(fork)AudioJS":https://github.com/jedfoster/AudioJS
 
 Fork of "VideoJS":http://videojs.com/ for audio, with support for themes.
-
-
-
-<!-- ? /*
-    h2. "(fork)accordion":https://github.com/jedfoster/accordion
-    An enhanced version of Kevin P. Millers Accordion v2 for Prototype and Scriptaculous
-
-    h2. "(fork)scriptaculous-sortabletree":
-    Forked from svenfuchs/scriptaculous-sortabletree
-
-    h2. "(fork)rollover":
-    Forked from jugend/rollover
-
-    h2. "(fork)cooltips":
-    Forked from okonet/cooltips
-
-    h2. "(fork)validated-fields":
-    Forked from alluniq/validated-fields
-
-    h2. "(fork)glider":
-    Forked from simplabs/glider
-
-*/ ? -->
