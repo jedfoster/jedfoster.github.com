@@ -3,6 +3,8 @@ safe: true
 destination: _site
 lsi: false
 pygments: true
+markdown:    rdiscount
+rdiscount:   { extensions: [smart] }
 url: http://jedfoster.com
 exclude: config.ru, Gemfile, Gemfile.lock, Rakefile, html5-WP-audio-player/, AudioJS/, Readmore.js/, Sass-Deck/
 environments:
