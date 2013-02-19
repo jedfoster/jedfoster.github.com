@@ -8,6 +8,7 @@ rdiscount:   { extensions: [smart] }
 permalink:   /:year/:month/:title/
 url: http://jedfoster.com
 exclude: config.ru, Gemfile, Gemfile.lock, Rakefile, html5-WP-audio-player/, AudioJS/, Readmore.js/, Sass-Deck/
+include: js/
 environments:
   github:
     url: http://jedfoster.github.com
