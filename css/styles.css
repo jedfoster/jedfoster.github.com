@@ -77,7 +77,7 @@ sup, sub {line-height0;}
 abbr, acronym {border-bottom:1px dotted #666;}
 address {margin:0 0 1.5em;font-style:italic;}
 del {color:#666;}
-pre {margin:1.5em 0;white-space:pre;}
+pre {margin:1.5em 0;white-space:pre;overflow:scroll;}
 pre, code, tt {font:1em "Menlo", Monaco, "Courier New", Courier, monospace;line-height:1.5;}
 li ul, li ol {margin:0;}
 ul, ol {margin:0 1.5em 1.5em 0;padding-left:1.5em;}
@@ -272,6 +272,35 @@ header h2 span {
 }
 header h2 span:last-child {display: block;}
 
+
+
+
+article header {
+	width: 100%;
+	float: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+article header h1 {
+	width: auto;
+	float: none;
+	font-size:3em;line-height:1;margin-bottom:0.5em;
+}
+article header a {
+	color: auto;
+	display: inline-block;
+	padding: 0;
+}
+article header h2 {
+	width: auto;
+	float: none;
+	text-align: left;
+	font-size:2em;margin-bottom:0.75em;
+	line-height: inherit;
+}
+
+
 footer{clear:both;width:100%;}
 nav {width:100%;float:left;margin-bottom:1.5em;}
 nav ul {list-style:none;float:left;margin:0;padding:0;width:100%;}
@@ -353,8 +382,9 @@ nav li.page-.home,nav ul ul,nav li.ancestor ul ul{display:none;}
 
 article{border-top: 1px solid #b7b7b7;padding-top:1.5em;margin-bottom:1.5em;clear:both;}
 article.first{border-top:0;padding-top:0;}
-article:only-child{border-top:0;padding-top:0;}
 article.last{margin-bottom:0;}
+article:only-child, article:first-child{border-top:0;padding-top:0;}
+article:last-child{margin-bottom:0;}
 
 article h1 .date{color:#A4A4A4;font-size:0.3em;}
 article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercase;letter-spacing:1px;font-weight:normal;color:#A4A4A4;font-size:0.875em;display:block;width:100%;line-height:1.71428571428571428571em;}
@@ -362,6 +392,27 @@ article .mod_date{font-family:"FuturaND-Bold",sans-serif;text-transform:uppercas
 .notes header,.notes header h1,.notes #main{float:none;}
 .notes header h1{display:block;margin-bottom:0;}
 .notes header,.notes #main, .resume #main{width:100%;}
+
+.pg-blog .link-entry:after {
+  font-family: 'Icons';
+  speak: none;
+  padding-left:0.4em;
+  
+/*  content: '\2192';*/
+  content: '\26e2'; /* rocket */
+  /* content: '\52'; /* heart */
+  /* content: '\4e'; /* star */
+  /* content: '\4b'; /* link */
+  /* content: '\67'; /* heart 2 */
+  /* content: '\68'; /* star 2 */
+}
+
+ol.posts {
+  list-style:none;
+  padding:0;
+}
+
+article.post{border-bottom: 1px solid #b7b7b7;padding-bottom:1.5em;margin-bottom:1.5em;clear:both;}
 
 .pg-gistio #description.loading {
   -webkit-animation: throb 1s infinite alternate linear;
