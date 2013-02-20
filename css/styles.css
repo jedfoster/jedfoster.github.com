@@ -413,6 +413,7 @@ ol.posts {
 }
 
 article.post{border-bottom: 1px solid #b7b7b7;padding-bottom:1.5em;margin-bottom:1.5em;clear:both;}
+.entry-content img{max-width:100%;}
 
 .pg-gistio #description.loading {
   -webkit-animation: throb 1s infinite alternate linear;
