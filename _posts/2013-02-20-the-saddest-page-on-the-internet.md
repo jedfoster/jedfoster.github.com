@@ -17,7 +17,7 @@ Please allow me to present, **"The Saddest Page on the Internet"**.
 
 In some ways this page shares eulogistic qualities of the tributes we saw to Steve Jobs. The past tense. The "birth" and "passing" dates. The spare layout. But where we praised and cherished Jobs, reflecting on all the many ways he shaped our world, here all we are left with is a tombstone.
 
-Thankfully, the people behind Sofa are still with us, but the unique synthesis that was Sofa is gone. They've been assimilated into the ironically faceless Facebook, and we will never again see the kind of work that was so unique to them as a team. If they are still working as a team, it's not on their own products, not on something that will bear their unique stamp. Next time we see anything from them it will be in Facebook blue next to a garish "Like" button.<sup id="fnr2">[1]</sup>
+Thankfully, the people behind Sofa are still with us, but the unique synthesis that was Sofa is gone. They've been assimilated into the ironically faceless Facebook, and we will never again see the kind of work that was so unique to them as a team. If they are still working as a team, it's not on their own products, not on something that will bear their unique stamp. Next time we see anything from them it will be in Facebook blue next to a garish "Like" button.<sup id="fnr1">[1]</sup>
 
 ## I miss Sofa.
 
