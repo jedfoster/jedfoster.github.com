@@ -7,6 +7,12 @@ tags:
 permalink: /blog/the-saddest-page-on-the-internet
 ---
 
+*Note: I've been writing and re-writing this post for more than a year and have finally decided it's finished enough.*
+
+---
+
+Please allow me to present, **"The Saddest Page on the Internet"**.
+
 <a href="http://madebysofa.com" target="_blank"><img src="/img/2013/02/We Were Sofa.png" alt="We Were Sofa"></a>
 
 In some ways this page shares eulogistic qualities of the tributes we saw to Steve Jobs. The past tense. The "birth" and "passing" dates. The spare layout. But where we praised and cherished Jobs, reflecting on all the many ways he shaped our world, here all we are left with is a tombstone.
