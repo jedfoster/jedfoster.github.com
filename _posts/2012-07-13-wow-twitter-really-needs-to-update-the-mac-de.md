@@ -8,4 +8,6 @@ tags: posterous
 date: 2012-07-13 08:24:00
 ---
 
-![](/img/blog/2012/07/42918295-image.jpg)
+<ul data-clearing>
+  <li><a href="/img/blog/2012/07/42918295-image.jpg"><img src="/img/blog/2012/07/42918295-image.jpg" data-caption=""></a></li>
+</ul>
