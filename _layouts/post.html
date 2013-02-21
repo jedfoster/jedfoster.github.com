@@ -3,32 +3,9 @@ layout: default
 js: | 
   <script src="/js/jquery-1.8.2.js"></script>
   <script src="/js/jquery.foundation.clearing.js"></script>
-  <script>
-    //var buildModal = function(content) {
-    //  if ($('#modal').length == 0) {
-    //    $('body').append('<div class="reveal-modal expand" id="modal"><a href="#" class="close-icon"><span class="alt">&#215;</span></a><span class="content">' + content + '</span></div>');
-    //  }
-    //  else {
-    //    $('#modal .content').empty();
-    //    $('#modal .content').append(content);
-    //  }
-    //
-    //  $('#modal').reveal({
-    //    animation: 'fade', //fade, fadeAndPop, none
-    //    animationSpeed: 200, //how fast animations are
-    //    closeOnBackgroundClick: true, //if you click background will modal close?
-    //    dismissModalClass: 'close-icon' //the class of a button or element that will close an open modal
-    //  });
-    //}
-    //
-    //$('.entry-content img').on('click', function() {       
-    //  buildModal(this.outerHTML);
-    //});
-    
-    var $doc = $(document);
-
+  <script>    
     $(document).ready(function() {
-      $.fn.foundationClearing         ? $doc.foundationClearing() : null;
+      $.fn.foundationClearing ? $(document).foundationClearing() : null;
     });
   </script>
 ---
@@ -45,17 +22,17 @@ js: |
 {% endif %}
 
 {% comment %}
-<p class="byline author vcard instapaper_ignore entry-unrelated">
-  {% unless page.link %}
-  By <a href="/" rel="author" lang="en" class="fn">Jed Foster</a>
-  {% endunless %}
-  {% if page.updated %}
-  on <time class="published" datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date_to_string }}</time>
-  <time class="updated" datetime="{{ page.updated }}"></time>
-  {% else %}
-  on <time class="updated" datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date_to_string }}</time>
-  {% endif %}
-</p>
+    <!-- <p class="byline author vcard instapaper_ignore entry-unrelated">
+      {% unless page.link %}
+      By <a href="/" rel="author" lang="en" class="fn">Jed Foster</a>
+      {% endunless %}
+      {% if page.updated %}
+      on <time class="published" datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date_to_string }}</time>
+      <time class="updated" datetime="{{ page.updated }}"></time>
+      {% else %}
+      on <time class="updated" datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date_to_string }}</time>
+      {% endif %}
+    </p> -->
 {% endcomment %}
 </header>
 
