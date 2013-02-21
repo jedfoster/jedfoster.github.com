@@ -8,4 +8,4 @@ tags: posterous
 date: 2011-06-05 11:21:00
 ---
 
-![](/img/2011/06/27280366-image.jpg)
+![](/img/blog/2011/06/27280366-image.jpg)
