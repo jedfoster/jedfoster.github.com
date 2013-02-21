@@ -1,5 +1,30 @@
 ---
 layout: default
+js: | 
+  <script src="/js/jquery-1.8.2.js"></script>
+  <script src="/js/jquery.foundation.reveal.js"></script>
+  <script>
+    var buildModal = function(content) {
+       if ($('#modal').length == 0) {
+         $('body').append('<div class="reveal-modal expand" id="modal"><a href="#" class="close-icon"><span class="alt">&#215;</span></a><span class="content">' + content + '</span></div>');
+       }
+       else {
+         $('#modal .content').empty();
+         $('#modal .content').append(content);
+       }
+
+       $('#modal').reveal({
+         animation: 'fade', //fade, fadeAndPop, none
+         animationSpeed: 200, //how fast animations are
+         closeOnBackgroundClick: true, //if you click background will modal close?
+         dismissModalClass: 'close-icon' //the class of a button or element that will close an open modal
+       });
+     }
+     
+     $('.entry-content img').on('click', function() {       
+       buildModal(this.outerHTML);
+     });
+  </script>
 ---
 
 <article class="post">
