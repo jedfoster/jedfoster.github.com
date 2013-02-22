@@ -3,18 +3,14 @@ layout: default
 js: | 
   <script src="/js/jquery-1.8.2.js"></script>
   <script src="/js/jquery.foundation.clearing.js"></script>
-  <script>    
-    $(document).ready(function() {
-      $.fn.foundationClearing ? $(document).foundationClearing() : null;
-    });
-  </script>
+  <script>$.fn.foundationClearing ? $(document).foundationClearing() : null;</script>
 ---
 
 <article class="post">
 
 <header>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="published mod_date" pubdate>{{ page.date | date: "%b %d, %Y" }}</time>
-  
+
 {% if page.link %}
 <h1><a class="entry-title" href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;→</h1>
 {% else %}
@@ -45,7 +41,7 @@ js: |
 <aside id="related">
   {% unless page.link %}
   <h2>Also on this site</h2>
-  
+
   <ol class="posts">
     {% for post in site.related_posts limit:3 %}
       <li>
@@ -55,10 +51,10 @@ js: |
     {% endfor %}
   </ol>
   {% endunless %}
-  
+
   <p>
   You should <a href="http://twitter.com/jed_foster" rel="me">follow me on Twitter: @jed_foster</a>.
   </p>
-  
+
   <nav><a class="home" href="/blog/">← all posts</a></nav>
 </aside>
