@@ -1,9 +1,35 @@
 ---
 layout: default
-js: | 
+css: |
+  <link rel="stylesheet" href="/css/prettify.tomorrow.css">
+js: |
   <script src="/js/jquery-1.8.2.js"></script>
+  <script src="/js/prettify.js"></script>
+  <script src="/js/lang-css.js"></script>
+  <script src="/js/lang-scss.js"></script>
+  <script src="/js/lang-sql.js"></script>
+  <script src="/js/lang-vim.js"></script>
+  <script src="/js/lang-yaml.js"></script>
   <script src="/js/jquery.foundation.clearing.js"></script>
-  <script>$.fn.foundationClearing ? $(document).foundationClearing() : null;</script>
+  <script>
+    $.fn.foundationClearing ? $(document).foundationClearing() : null;
+    
+    (function($, window) {
+
+      // Add pretty print to all pre and code tags.
+      $('pre, code').addClass("prettyprint");
+
+      // Remove prettify from code tags inside pre tags.
+      $('pre code').removeClass("prettyprint");
+
+      $('.highlight .prettyprint').addClass(function () {
+        return 'lang-' + $('code', $(this)).attr('class');
+      });
+
+      // Activate pretty presentation.
+      prettyPrint();
+    })(jQuery, this);
+  </script>
 ---
 
 <article class="post">
