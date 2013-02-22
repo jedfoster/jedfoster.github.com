@@ -7,7 +7,7 @@ markdown:    rdiscount
 rdiscount:   { extensions: [smart] }
 permalink:   /:year/:month/:title/
 url: http://jedfoster.com
-exclude: config.ru, Gemfile, Gemfile.lock, Rakefile, html5-WP-audio-player/, AudioJS/, Readmore.js/, Sass-Deck/
+exclude: config.ru, Gemfile, Gemfile.lock, Rakefile, html5-WP-audio-player/, AudioJS/, Readmore.js/, Sass-Deck/, public/
 include: js/
 environments:
   github:

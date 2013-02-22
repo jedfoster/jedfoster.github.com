@@ -1,0 +1,22 @@
+javascript_compressor: closure
+package_path: "../js/"
+gzip_assets: off
+
+javascripts:
+  prettify.min:
+    - _js/prettify.js
+    - _js/lang-css.js
+    - _js/lang-scss.js
+    - _js/lang-sql.js
+    - _js/lang-vim.js
+    - _js/lang-yaml.js
+    - _js/prettify-loader.js
+
+# stylesheets:
+#   common:
+#     - public/stylesheets/reset.css
+#     - public/stylesheets/widgets/*.css
+#   workspace:
+#     - public/stylesheets/pages/workspace.css
+#   empty:
+#     - public/stylesheets/pages/empty.css

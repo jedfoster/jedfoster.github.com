@@ -26,6 +26,7 @@ task :deploy do
 end
 
 task :build do
+  sh "bundle exec jammit --force"
   sh "jekyll --url"
 end
 
