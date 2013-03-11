@@ -312,10 +312,12 @@ FileETag None
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-
+  
   RewriteCond %{SCRIPT_FILENAME} !-d
   RewriteCond %{SCRIPT_FILENAME}.html -f
   RewriteRule ^([^\.]+)$ $1.html [NC,L]
+  
+
 </IfModule>
 
 # ----------------------------------------------------------------------
@@ -498,6 +500,8 @@ php_value session.cookie_httponly true
 	# RewriteRule ^(.*)$ http://example.com/$1 [R=301,L]
 	
 	RewriteRule ^ping/close /js/ping_close.html [L]
+	
+	RewriteRule ^Readmore.js Readmore.js.html [L]
 		
 	RewriteRule ^login										/kohana.php/users/login							[L,QSA]
 	RewriteRule ^logout										/kohana.php/users/logout							[L,QSA]
