@@ -70,6 +70,13 @@ h3. Intangibles
 
 h2. Open-source Projects
 
+h4. "Roughdraft.io":http://www.roughdraft.io
+
+A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinatra. Deployed to Heroku.
+
+* Redis for caching content retrieved using the Github API
+* Server-to-server GitHub API authentication
+
 h4. "SassMeister.com":http://sassmeister.com
 
 A web app for experimenting with Sass. Written in Ruby, using Sinatra. Deployed to Heroku.
