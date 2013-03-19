@@ -228,17 +228,9 @@ a#gplus:after 		{content: "\26bd";}
 						opacity: 0.85;
 }
 
-#twttr {text-align:left;}
+#twttr {text-align:left;float:left;width:100%;}
 #twttr h1 {font-size:0.75em;font-weight:bold;margin-bottom:1em;}
-#twttr .twtr-widget{clear:both;}
-#twttr .twtr-widget-profile img.twtr-profile-img,
-#twttr .twtr-widget-profile h3,
-#twttr .twtr-widget-profile h4,
-#twttr .twtr-ft a{display:none !important;}
-#twttr .twtr-hd{padding:1px 0 0 !important;}
-#twttr .twtr-widget-profile h4{margin:0 !important;}
-#twttr .twtr-ft span {float:left;text-align:left;}
-#twttr .twtr-ft span a.twtr-join-conv{display:block !important;background:url('/img/twitter-widget-logo.png') no-repeat;width:68px;height:15px;text-indent:-9999px;}
+#twttr iframe{width:100%;}
 
 header {
 	width: 100%;
@@ -302,7 +294,7 @@ article header h2 {
 
 
 footer{clear:both;width:100%;}
-nav {width:100%;float:left;margin-bottom:1.5em;}
+nav {width:100%;float:left;margin-bottom:3em;}
 nav ul {list-style:none;float:left;margin:0;padding:0;width:100%;}
 nav li {display:block;float:left;margin-right:2.5em;}
 header nav{margin-bottom:0;}
