@@ -501,7 +501,7 @@ php_value session.cookie_httponly true
 	
 	RewriteRule ^ping/close /js/ping_close.html [L]
 	
-	RewriteRule ^Readmore.js Readmore.js.html [L]
+  # RewriteRule ^Readmore.js Readmore.js.html [L]
 		
 	RewriteRule ^login										/kohana.php/users/login							[L,QSA]
 	RewriteRule ^logout										/kohana.php/users/logout							[L,QSA]
