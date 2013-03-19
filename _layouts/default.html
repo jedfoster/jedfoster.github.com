@@ -28,7 +28,7 @@
 	<script src="/js/modernizr.js"></script>
 </head>
 
-<body class="pg-{{ page.slug }}">
+<body class="pg-{{ page.slug | replace:'.','-' }}">
 	<div class="container">
 		<header>
 			<h1><a href="{{ site.url }}/">Jed Foster</a></h1>
