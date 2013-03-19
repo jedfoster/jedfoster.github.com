@@ -484,30 +484,17 @@ ul[data-clearing] {
 
 
 
-
-.pg-gistio #description.loading {
-  -webkit-animation: throb 1s infinite alternate linear;
-  -moz-animation: throb 1s infinite alternate linear;
-  -ms-animation: throb 1s infinite alternate linear;
-  -o-animation: throb 1s infinite alternate linear
+.pg-Readmore-js .slide + a {
+  display: block;
+  margin-top: -1em;
+  margin-bottom: 1.5em;
 }
 
-@-webkit-keyframes throb {
-  0%   { opacity: 0.33; }
-  100% { opacity: 1; }
+.pg-Readmore-js #demo {
+  border-top: 1px solid #8e8e8e;
+  padding-top: 3em;
 }
-@-moz-keyframes throb {
-  0%   { opacity: 0.33; }
-  100% { opacity: 1; }
-}
-@-ms-keyframes throb {
-  0%   { opacity: 0.33; }
-  100% { opacity: 1; }
-}
-@-o-keyframes throb {
-  0%   { opacity: 0.33; }
-  100% { opacity: 1; }
-}
+
 
 /**
  * Media queries for responsive design.
