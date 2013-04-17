@@ -31,7 +31,7 @@ An original design. Handcoded HTML5 and CSS3.
 
   !/img/portfolio/sites/riverside-ymca-sm.jpg!
 
-h1. "YMCA of Riverside City & County":http://riversideymca.org
+h1. YMCA of Riverside City & County
 
 An original design based on corporate style guides. Handcoded HTML5 and CSS3. Custom-built CMS. 
 
@@ -41,6 +41,7 @@ An original design based on corporate style guides. Handcoded HTML5 and CSS3. Cu
 	<li class="CSS3">CSS3</li>
 	<li class="JavaScript">JavaScript</li>
 	<li class="PHP">PHP/MySQL</li>
+	<li class="Closed">Closed</li>
 </ul>
 
 
