@@ -28,7 +28,6 @@ h3. Expert
 
 * HTML5/CSS3
 * PHP/MySQL
-* Prototype/script.aculo.us
 * Sass/Compass
 * KohanaPHP
 * OS X and Linux
@@ -132,8 +131,8 @@ _Getty Images_
 (Under contract through _Filter Digital_ from February to August)
 
 * Maintained and developed marketing web pages and microsites using HTML5, CSS3, jQuery, and XML.
-* Assumed lead role in the maintenance of a style guide framework for marketing portions of the website. The framework generates production CSS with Sass and establishes markup patterns that guide the way new pages are built. Converted from PHP to Sinatra soon after taking responsibility for the project.
-* Co-authored a next-generation style guide framework for a strategic Ruby on Rails initiative. Engineered the framework's modularized structure, dynamic routing, and the Ruby Gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
+* Assumed lead role in the maintenance of a style guide framework for marketing portions of the website. The framework generates production CSS with Sass and establishes markup patterns that guide the construction of new pages. Converted from PHP to Sinatra soon after taking responsibility for the project.
+* Co-authored a next-generation style guide framework for a strategic Ruby on Rails initiative. Engineered the framework's modular structure, dynamic routing, and the Ruby Gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
 * Coached co-workers on version control, HTML/CSS/JS best practices, troubleshooting, and other development techniques.
 * Wrote numerous automation scripts in Ruby to manipulate the hundreds--sometimes thousands--of HTML fragment files that constitute a single marketing web page, including localized versions in more than ten languages.
 * Migrated hundreds of pages of content from a legacy CMS to a new one. Wrote a Ruby script to transform the hundreds of XML documents into HTML fragments that could be consumed by the new CMS, as well as locate and move thousands of graphics from the old system to the new one.
