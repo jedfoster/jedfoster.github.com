@@ -809,38 +809,33 @@ ul[data-clearing] {
   .resume .skills {
     display: block;
     float:right;
-    width:23.404255319148936170%;
-    
-   // width:31.91489361702127659574%;
-    
+    width:23.404255319148936170%;    
     margin-left:2.12765957446808510638%;
   }
   
   .resume .skills h2 {
-/*    display: none;*/
-//    font-size:1.5em;line-height:1.1;margin-bottom:0.9em;
-
-    font-size:1.25em;line-height:1.2;margin-bottom:1.2em;
-
+    font-size:1.25em;
+    line-height:1.2;
+    margin-bottom:1.2em;
   }
   
   .resume .skills ul {
-/*    font-size:1.2em;line-height:1.3;margin-bottom:1.3em;*/
-font-size:.875em;
-line-height: 1.725;
-margin-bottom: 1.725em;
+    font-size:.875em;
+    line-height: 1.725;
+    margin-bottom: 1.725em;
   }
   
   .resume .skills h3 {
-/*    font-size:1.2em;line-height:1.3;margin-bottom:1.3em;*/
-    font-size:1em;font-weight:bold;line-height:1.5;margin-bottom:0em;
+    font-size:1em;
+    font-weight:bold;
+    line-height:1.5;
+    margin-bottom:0em;
   }
 
   .resume .experience {
     display: block;
     float: left;
     width:74.468085106382978723%;
-   // width: 65.95744680851063829787%;
   }
 }
 
@@ -861,9 +856,10 @@ margin-bottom: 1.725em;
  */
 @media print {
 	/* -- HTML5 Boilerplate's print stles -- */
-	*{background:transparent !important;color:black !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important;}
-	a,a:visited{color:#444 !important;text-decoration:underline;}
-	a[href]:after{content:" (" attr(href) ")";font-size:90%;}
+	*{background:transparent !important;color:#333 !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important;}
+	a,a:visited{color:#555 !important;text-decoration:underline;}
+	a[href]:after{content:" (" attr(href) ")";font-size:50%;}
+	header a[href]:after{content:"";display:none;}
 	abbr[title]:after{content:" (" attr(title) ")";}
 	.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:"";}
 	pre,blockquote{border:1px solid #999;page-break-inside:avoid;}
@@ -886,5 +882,7 @@ margin-bottom: 1.725em;
 	.print-hide{display:block;}
 	.hide,#sidebar,header nav{display:none;}
 	#main{width:100%;margin-right:0;}
-	header h1 {white-space: nowrap;font-size:6.5em;}
+	header h1 {white-space: nowrap;font-size: 5em;}
+	header a{text-decoration:none;}
+	header h2{font-size: 1.1em;}
 }
