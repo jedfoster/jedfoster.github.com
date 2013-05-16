@@ -141,7 +141,7 @@ _Getty Images_
 
 h3. 2005 – Present
 
-Self-employed, Website Design/Maintenance, Programming, Development
+Self-employed, Web Designer, Frontend Developer, Software Engineer
 
 * Designed, built, and maintained numerous websites for clients in fields such as health care, education, industrial manufacturing and sales, community services, motivational speaking, non-profit charities, beauty salons, and transportation safety.
 * Wrote a custom content-management system with the KohanaPHP MVC framework.
