@@ -315,7 +315,7 @@ nav li.page-.home,nav ul ul,nav li.ancestor ul ul{display:none;}
 	border-top:1px solid #b7b7b7;
 	padding-top:2.95em;
 }
-.pg-work #main section.first{border:0;padding:0;}
+.pg-work #main section:first-of-type{border:0;padding:0;}
 .pg-work #main section h1{font-size:1.2em;line-height:1.3;margin-bottom:1.3em;}
 .pg-work #main img {
 	float: left;
@@ -355,11 +355,14 @@ nav li.page-.home,nav ul ul,nav li.ancestor ul ul{display:none;}
 .pg-work #main li.CSS:before        {content: "\26d1";}
 .pg-work #main li.CSS3:before       {content: "\26e0";}
 .pg-work #main li.JavaScript:before {content: "\26d2";}
-.pg-work #main li.PHP:before        {content: "\26d3";}
+/* .pg-work #main li.PHP:before        {content: "\26d3";} */
 .pg-work #main li.PSD:before        {content: "\26dc";}
 .pg-work #main li.Refreshed:before  {content: "\26d8";}
 .pg-work #main li.Closed:before     {content: "\26d9";}
 .pg-work #main li.e-Commerce:before {content: "\26db";}
+.pg-work #main li.PHP:before        {content: "\e001";}
+.pg-work #main li.Ruby:before       {content: "\e000";}
+.pg-work #main li.GitHub:before     {content: "\26ca";}
 
 .pg-contact form{width:100%;float:left;margin-bottom:1.5em;}
 .pg-contact label{display:block;float:left;width:31.428571428571428571%;/* 220/700 */margin-right:2.857142857142857142%;/* 20/700 */text-align:right;}
