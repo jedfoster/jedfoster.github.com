@@ -8,6 +8,8 @@ config = YAML.load_file(config_file)
 
 env = ENV['env'] || 'github'
 
+
+desc "Build, then deploy the site; pass env={github|production}, default is github"
 task :deploy do
   Rake::Task["build"].invoke
   
@@ -25,11 +27,15 @@ task :deploy do
   end
 end
 
+
+desc "Build the site; pass env={github|production}, default is github"
 task :build do
   sh "bundle exec jammit --force"
   sh "jekyll --url"
 end
 
+
+desc "Open the site in your default browser; pass env={github|production}, default is github"
 task :launch do
   sh "open #{config['environments'][env]['url']}"
 end
