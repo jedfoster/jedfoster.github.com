@@ -19,11 +19,9 @@ h2. "SassMeister":http://sassmeister.com
 A playground for Sass. Type or paste some Sass into the text area and SassMeister will show you the rendered CSS. Works with both SCSS and Sass syntaxes, and includes several popular Sass libraries like Bourbon and Compass.
 
 
-
 h2. "(fork)Readmore.js":http://github.com/jedfoster/Readmore.js
 
 A smooth, lightweight jQuery plugin for collapsing and expanding long blocks of text with “Read more” and “Close” links.
-
 
 
 h2. "(fork)HTML5 WP Audio Player":https://github.com/jedfoster/html5-WP-audio-player
@@ -31,17 +29,14 @@ h2. "(fork)HTML5 WP Audio Player":https://github.com/jedfoster/html5-WP-audio-pl
 A version of the awesome WordPress Audio Player for browsers that support HTML5's @<audio>@ tag, with fallback to the original Flash player for browsers that don't.
 
 
-
 h2. "(fork)Toadstool":https://github.com/Anotheruiguy/toadstool
 
 Styleguides made awesome.
 
 
-
 h2. "(fork)Stipe":https://github.com/Anotheruiguy/stipe
 
 The core Sass Mixins that support the Toadstool Styleguide Framework
-
 
 
 h2. "(fork)AudioJS":https://github.com/jedfoster/AudioJS

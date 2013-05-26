@@ -18,7 +18,6 @@ h1. Contact
 <label>Your Email:</label>
   <input type="email" value="" name="email" id="email">
 
-
 p(message). <label>Your Message:</label>
   <textarea name="message" rows="4" cols="38" id="message"></textarea>
 
@@ -26,7 +25,6 @@ p(message). <label>Your Message:</label>
   <label>Spam Protection: Please don't fill this in:</label>
   <textarea name="comment"></textarea>
   </div>
-		
-  
+
   <button type="submit"><img src="/img/icons/mail_48.png" alt="Send Message"> Send Message</button>
   </form>

@@ -9,7 +9,6 @@ h1. Work
 
   <section id="roughdraft">
 
-
   !/img/portfolio/sites/roughdraft-2-sm.png!
 
 h1. "Roughdraft.io":http://www.roughdraft.io
@@ -24,12 +23,10 @@ A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinat
   <li class="GitHub">GitHub</li>
 </ul>
 
-
   </section>
 
 
   <section id="sassmeister">
-
 
   !/img/portfolio/sites/sassmeister-sm.png!
 
@@ -46,12 +43,10 @@ A web app for expirementing with "Sass":http://sass-lang.com. Written in Ruby, u
   <li class="GitHub">GitHub</li>
 </ul>
 
-
   </section>
 
 
   <section id="la-amistad-dental">
-
 
   !/img/portfolio/sites/la-amistad-dental-sm.jpg!
 
@@ -66,18 +61,16 @@ An original design. Handcoded HTML5 and CSS3.
 	<li class="JavaScript">JavaScript</li>
 </ul>
 
-
   </section>
 
 
   <section id="riverside-ymca">
 
-
   !/img/portfolio/sites/riverside-ymca-sm.jpg!
 
 h1. YMCA of Riverside City & County
 
-An original design based on corporate style guides. Handcoded HTML5 and CSS3. Custom-built CMS. 
+An original design based on corporate style guides. Handcoded HTML5 and CSS3. Custom-built CMS.
 
 <ul>
 	<li class="Design">Design</li>
@@ -88,12 +81,10 @@ An original design based on corporate style guides. Handcoded HTML5 and CSS3. Cu
 	<li class="Closed">Closed</li>
 </ul>
 
-
   </section>
 
 
   <section id="captive-audience-v8">
-
 
   !/img/portfolio/sites/captive-audience-v8-sm.jpg!
 
@@ -109,12 +100,10 @@ An original design. Handcoded HTML5 and CSS3. Runs on a custom CMS.
 	<li class="PHP">PHP/MySQL</li>
 </ul>
 
-
   </section>
 
 
   <section id="riverside-cardiology">
-
 
   !/img/portfolio/sites/riverside-cardiology-sm.jpg!
 
@@ -129,12 +118,10 @@ An original design. Handcoded HTML5 and CSS3.
 	<li class="JavaScript">JavaScript</li>
 </ul>
 
-
   </section>
 
 
   <section id="making-every-dollar-count">
-
 
   !/img/portfolio/sites/making-every-dollar-count-sm.jpg!
 
@@ -150,18 +137,16 @@ Rendered another designer's layout. Built a mini-CMS to manage over 250 sequenti
 	<li class="PHP">PHP & YAML</li>
 </ul>
 
-
   </section>
 
 
   <section id="scripts">
 
-
   !/img/portfolio/sites/scripts-sm.jpg!
 
 h1. Scripts
 
-A custom web app for Captive Audience, Scripts allows clients to create and edit advertising on hold scripts and place orders for new productions. 
+A custom web app for Captive Audience, Scripts allows clients to create and edit advertising on hold scripts and place orders for new productions.
 
 <ul>
 	<li class="Design">Design</li>
@@ -171,12 +156,10 @@ A custom web app for Captive Audience, Scripts allows clients to create and edit
 	<li class="PHP">PHP/MySQL</li>
 </ul>
 
-
   </section>
 
 
   <section id="sales">
-
 
   !/img/portfolio/sites/sales-sm.jpg!
 
@@ -192,12 +175,10 @@ A custom CRM web app. Captive Audience uses Sales to track new leads through the
 	<li class="PHP">PHP/MySQL</li>
 </ul>
 
-
   </section>
 
 
   <section id="buds-treewell">
-
 
   !/img/portfolio/sites/buds-treewell-sm.jpg!
 
@@ -212,16 +193,14 @@ Rendered another designer's layout.
 	<li class="Closed">Closed</li>
 </ul>
 
-
   </section>
 
 
   <section id="gcc-edirectory-front">
 
-
   !/img/portfolio/sites/gcc-edirectory-front-sm.jpg!
 
-h1. Grace Community Church e-Directory 
+h1. Grace Community Church e-Directory
 
 h5. User view
 
@@ -233,12 +212,10 @@ Integrated a custom member directory web app into the existing site.
 	<li class="PHP">PHP/MySQL</li>
 </ul>
 
-
   </section>
 
 
   <section id="gcc-edirectory-back">
-
 
   !/img/portfolio/sites/gcc-edirectory-back-sm.jpg!
 
@@ -255,12 +232,10 @@ Custom directory web app.
 	<li class="PHP">PHP/MySQL</li>
 </ul>
 
-
   </section>
 
 
   <section id="riverside-car-show">
-
 
   !/img/portfolio/sites/riverside-car-show-sm.jpg!
 
@@ -274,12 +249,10 @@ An original layout incorporating another designer's graphics. Handcoded HTML5 an
 	<li class="CSS3">CSS3</li>
 </ul>
 
-
   </section>
 
 
   <section id="east-highlands-dentistry-v2">
-
 
   !/img/portfolio/sites/east-highlands-dentistry-v2-sm.jpg!
 
@@ -294,12 +267,10 @@ Rendered another designer's layout.
 	<li class="JavaScript">JavaScript</li>
 </ul>
 
-
   </section>
 
 
   <section id="pink-ribbon">
-
 
   !/img/portfolio/sites/pink-ribbon-sm.jpg!
 
@@ -312,12 +283,10 @@ Customized CSS, based on a template design. Installed an open-source CMS.
 	<li class="HTML">HTML</li>
 </ul>
 
-
   </section>
 
 
   <section id="hssbv-v2">
-
 
   !/img/portfolio/sites/hssbv-v2-sm.jpg!
 
@@ -333,12 +302,10 @@ An original design. Handcoded HTML5 and CSS3.
 	<li class="PHP">PHP</li>
 </ul>
 
-
   </section>
 
 
   <section id="columbia-sinks">
-
 
   !/img/portfolio/sites/columbia-sinks-sm.jpg!
 
@@ -352,12 +319,10 @@ Built and integrated a custom CMS into the existing site.
 	<li class="PHP">PHP/MySQL</li>
 </ul>
 
-
   </section>
 
 
   <section id="captive-audience-v7">
-
 
   !/img/portfolio/sites/captive-audience-v7-sm.jpg!
 
@@ -373,12 +338,10 @@ Inspired by a CSS template. Custom graphics. Handcoded HTML and CSS.
 	<li class="Refreshed">Refreshed, "newer version":#captive-audience-v8 </li>
 </ul>
 
-
   </section>
 
 
   <section id="east-highlands-dentistry-v1">
-
 
   !/img/portfolio/sites/east-highlands-dentistry-v1-sm.jpg!
 
@@ -392,12 +355,10 @@ Customized CSS, based on a template design.
 	<li class="Refreshed">Refreshed, "newer version":#east-highlands-dentistry-v2 </li>
 </ul>
 
-
   </section>
 
 
   <section id="voice-over-cafe">
-
 
   !/img/portfolio/sites/voice-over-cafe-sm.jpg!
 
@@ -415,12 +376,10 @@ An original design built with Photoshop/ImageReady.
 	<li class="Closed">Closed</li>
 </ul>
 
-
   </section>
 
 
   <section id="captive-audience-v6">
-
 
   !/img/portfolio/sites/captive-audience-v6-sm.jpg!
 
@@ -437,12 +396,10 @@ An original design built with Photoshop/ImageReady.
 	<li class="Refreshed">Refreshed, "newer version":#captive-audience-v7 </li>
 </ul>
 
-
   </section>
 
 
   <section id="hssbv-v1">
-
 
   !/img/portfolio/sites/hssbv-v1-sm.jpg!
 
@@ -455,6 +412,5 @@ Customized CSS, based on a template design.
 	<li class="HTML">HTML</li>
 	<li class="Refreshed">Refreshed, "newer version":#hssbv-v2 </li>
 </ul>
-
 
   </section>
