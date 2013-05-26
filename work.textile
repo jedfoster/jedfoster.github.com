@@ -274,7 +274,7 @@ Rendered another designer's layout.
 
   !/img/portfolio/sites/pink-ribbon-sm.jpg!
 
-h1. "The Pink Ribbon Place":http://thepinkribbonplace.org/
+h1. The Pink Ribbon Place
 
 Customized CSS, based on a template design. Installed an open-source CMS.
 
