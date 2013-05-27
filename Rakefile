@@ -18,12 +18,6 @@ task :deploy do
   
   else
     sh "rsync -avz #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
-
-    # # Run this first to backup the Git repos
-    # rsync -acE --delete-after ~/git/ ~/Backups/git
-    # 
-    # # Then run this to send everything to Delta
-    # rsync -e "ssh" -acE --delete-after ~/Backups/ jed@mini.local:/Volumes/Delta/Backups
   end
 end
 
