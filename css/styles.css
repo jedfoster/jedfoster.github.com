@@ -478,11 +478,19 @@ ul[data-clearing] {
 
 
 
-
+.pg-readmore pre {
+  margin: 0;
+}
+.pg-readmore .highlight {
+  margin-bottom: 1.5em;
+}
 .pg-readmore .slide + a {
-  display: block;
   margin-top: -1em;
   margin-bottom: 1.5em;
+}
+
+.pg-readmore #info + .readmore-js-toggle {
+  padding-bottom: 4.5em; 
 }
 
 .pg-readmore #demo {
