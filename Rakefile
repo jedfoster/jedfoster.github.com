@@ -15,6 +15,9 @@ task :deploy do
   
   if env == 'github'
     sh "git push origin master"
+
+  elsif env == 's3'
+    sh 's3_website push'
   
   else
     sh "rsync -avz #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
@@ -22,7 +25,7 @@ task :deploy do
 end
 
 
-desc "Build the site; pass env={github|production}, default is github"
+desc "Build the site; pass env={github|production|s3}, default is github"
 task :build do
   sh "bundle exec jammit --force"
   sh "jekyll --url"

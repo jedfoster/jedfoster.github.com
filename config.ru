@@ -4,7 +4,7 @@ require "bundler/setup"
 require 'rack/contrib'
 require 'rack-rewrite'
  
-use Rack::StaticCache, :urls => ['/img', '/js', '/css', '/favicon.ico'], :root => "_site"
+use Rack::StaticCache, :urls => ['/img', '/js', '/css', '/favicon.ico'], :root => "_site", :duration => 0.274
 use Rack::ETag
 use Rack::Rewrite do
   rewrite '/', '/index.html'
