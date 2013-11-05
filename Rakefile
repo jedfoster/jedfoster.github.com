@@ -1,7 +1,7 @@
 require 'yaml'
 require 'rubygems'
 require 'bundler/setup'
-require 'stringex'
+require 'thor'
 
 config_file = '_config.yml'
 config = YAML.load_file(config_file)
@@ -38,6 +38,11 @@ task :launch do
 end
 
 
+desc "set asset paths"
+task :assets do
+  Utilities.new.set_asset_paths
+end
+
 
 
 
@@ -72,4 +77,24 @@ end
 def get_stdin(message)
   print message
   STDIN.gets.chomp
+end
+
+
+
+
+
+class Utilities < Thor
+  include Thor::Actions
+
+  no_tasks do
+    def set_asset_paths(host)
+      Dir.glob("_site/**/*.html", File::FNM_CASEFOLD).each do |file|
+        gsub_file("#{file}", /(src|href)=\"\/(js|css|img)/, "\\1=\"#{host}/\\2")
+      end
+      
+      Dir.glob("_site/**/*.css", File::FNM_CASEFOLD).each do |file|
+        gsub_file("#{file}", /url\(\'\//, "url('#{host}/")
+      end
+    end
+  end
 end
