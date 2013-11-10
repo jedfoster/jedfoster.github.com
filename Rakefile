@@ -1,7 +1,7 @@
 require 'yaml'
 require 'rubygems'
 require 'bundler/setup'
-require 'stringex'
+require 'thor'
 
 config_file = '_config.yml'
 config = YAML.load_file(config_file)
@@ -15,14 +15,18 @@ task :deploy do
   
   if env == 'github'
     sh "git push origin master"
+
+  elsif env == 's3'
+    sh 's3_website push'
   
   else
+    Utilities.new.set_asset_paths('http://assets.jedfoster.com')
     sh "rsync -avz #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
   end
 end
 
 
-desc "Build the site; pass env={github|production}, default is github"
+desc "Build the site; pass env={github|production|s3}, default is github"
 task :build do
   sh "bundle exec jammit --force"
   sh "jekyll --url"
@@ -34,6 +38,11 @@ task :launch do
   sh "open #{config['environments'][env]['url']}"
 end
 
+
+desc "set asset paths"
+task :assets do
+  Utilities.new.set_asset_paths
+end
 
 
 
@@ -69,4 +78,24 @@ end
 def get_stdin(message)
   print message
   STDIN.gets.chomp
+end
+
+
+
+
+
+class Utilities < Thor
+  include Thor::Actions
+
+  no_tasks do
+    def set_asset_paths(host)
+      Dir.glob("_site/**/*.html", File::FNM_CASEFOLD).each do |file|
+        gsub_file("#{file}", /(src|href)=\"\/(js|css|img)/, "\\1=\"#{host}/\\2")
+      end
+      
+      Dir.glob("_site/**/*.css", File::FNM_CASEFOLD).each do |file|
+        gsub_file("#{file}", /url\(\'\//, "url('#{host}/")
+      end
+    end
+  end
 end
