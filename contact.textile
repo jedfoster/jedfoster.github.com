@@ -8,7 +8,7 @@ h1. Contact
 
 If you have a question about, or want to report a bug in one of my open-source projects, the best thing to do is open an issue on GitHub. That allows me to track bugs and feature requests.
 
-Here are links to the issue pages of bmy most popular projects:
+Here are links to the issue pages of my most popular projects:
 
 * "SassMeister":https://github.com/jedfoster/SassMeister/issues
 * "Roughdraft":https://github.com/jedfoster/Roughdraft/issues
