@@ -20,6 +20,7 @@ task :deploy do
     sh 's3_website push'
   
   else
+    Utilities.new.set_asset_paths('http://assets.jedfoster.com')
     sh "rsync -avz #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
   end
 end
