@@ -1,6 +1,8 @@
 .DS_Store
+.sass-cache/
 Sass-Deck/
 _site/
 img/
 */_site/
 tmp/
+css/

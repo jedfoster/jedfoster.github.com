@@ -29,6 +29,7 @@ end
 
 desc "Build the site; pass env={github|production|s3}, default is github"
 task :build do
+  sh "compass compile --force -s compressed"
   sh "bundle exec jammit --force"
   sh "jekyll --url"
 end
