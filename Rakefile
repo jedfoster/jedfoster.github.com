@@ -6,7 +6,7 @@ require 'thor'
 config_file = '_config.yml'
 config = YAML.load_file(config_file)
 
-env = ENV['env'] || 'github'
+env = ENV['env'] || 'production'
 
 
 desc "Build, then deploy the site; pass env={github|production}, default is github"
@@ -21,6 +21,7 @@ task :deploy do
   
   else
     Utilities.new.set_asset_paths('http://assets.jedfoster.com')
+    sh 's3_website push'
     sh "rsync -avz #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
   end
 end
