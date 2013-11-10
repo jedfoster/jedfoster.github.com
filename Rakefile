@@ -12,13 +12,14 @@ env = ENV['env'] || 'production'
 desc "Build, then deploy the site; pass env={github|production}, default is github"
 task :deploy do
   Rake::Task["build"].invoke
-  
+
   if env == 'github'
     sh "git push origin master"
 
   elsif env == 's3'
+    Utilities.new.set_asset_paths('http://assets.jedfoster.com')
     sh 's3_website push'
-  
+
   else
     Utilities.new.set_asset_paths('http://assets.jedfoster.com')
     sh 's3_website push'
@@ -29,9 +30,16 @@ end
 
 desc "Build the site; pass env={github|production|s3}, default is github"
 task :build do
-  sh "compass compile --force -s compressed"
-  sh "bundle exec jammit --force"
-  sh "jekyll --url"
+  Rake::Task["assets:precompile"].invoke
+
+  system("jekyll --url")
+end
+
+
+desc "Compile the app's Sass"
+task "assets:precompile" do
+  system("bundle exec jammit --force")
+  system("bundle exec compass compile --force -s compressed")
 end
 
 
@@ -41,14 +49,6 @@ task :launch do
 end
 
 
-desc "set asset paths"
-task :assets do
-  Utilities.new.set_asset_paths
-end
-
-
-
-
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
 desc "Begin a new post in _posts"
 task :post, :title do |t, args|
@@ -56,7 +56,7 @@ task :post, :title do |t, args|
   description = get_stdin("Enter a description for your post: ")
   categories = get_stdin("Enter categories for your post: ")
   tags = get_stdin("Enter tags for your post: ")
-  
+
   mkdir_p "./_posts"
   permalink = "#{title.to_url}"
   filename = "./_posts/#{Time.now.strftime('%Y-%m-%d')}-#{permalink}.md"
@@ -73,17 +73,17 @@ task :post, :title do |t, args|
     post.puts "tags: \"#{tags.gsub(/&/,'&amp;')}\""
     post.puts "permalink: /blog/#{permalink}"
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-    post.puts "---"    
+    post.puts "---"
   end
 end
+
+
+
 
 def get_stdin(message)
   print message
   STDIN.gets.chomp
 end
-
-
-
 
 
 class Utilities < Thor
@@ -94,7 +94,7 @@ class Utilities < Thor
       Dir.glob("_site/**/*.html", File::FNM_CASEFOLD).each do |file|
         gsub_file("#{file}", /(src|href)=\"\/(js|css|img)/, "\\1=\"#{host}/\\2")
       end
-      
+
       Dir.glob("_site/**/*.css", File::FNM_CASEFOLD).each do |file|
         gsub_file("#{file}", /url\(\'\//, "url('#{host}/")
       end
