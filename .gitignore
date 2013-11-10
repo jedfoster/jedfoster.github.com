@@ -1,5 +1,5 @@
 Sass-Deck/
-
-/_site/
-/img/blog/
-Readmore.js/_site/
+_site/
+img/blog/
+*/_site/
+tmp/
