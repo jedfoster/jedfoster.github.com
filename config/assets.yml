@@ -11,6 +11,19 @@ javascripts:
     - _js/lang-vim.js
     - _js/lang-yaml.js
     - _js/prettify-loader.js
+  audio-wp:
+    - _js/audio-wp.js
+  audio:
+    - _js/audio.js
+  jquery-1.8.2:
+    - _js/jquery-1.8.2.js
+  jquery.foundation.clearing:
+    - _js/jquery.foundation.clearing.js
+  modernizr:
+    - _js/modernizr.js
+  readmore.min:
+    - _js/readmore.min.js
+
 
 # stylesheets:
 #   common:
