@@ -1,5 +1,6 @@
 .DS_Store
 .sass-cache/
+s3_website.yml
 Sass-Deck/
 _site/
 img/
