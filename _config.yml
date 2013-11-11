@@ -12,11 +12,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
-  - Sass-Deck/
-  - lib/
-  - tmp/
+  - lib
+  - tmp
   - "*.DS_Store"
-include: js/
+  - s3_website.yml
+  - config
 environments:
   s3:
     url: http://assets.jedfoster.com.s3.amazonaws.com  
