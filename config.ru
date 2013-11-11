@@ -4,9 +4,13 @@ require "bundler/setup"
 require 'rack/contrib'
 require 'rack-rewrite'
 require './lib/rack/static_cache'
+
+# Gzip responses
+use Rack::Deflater
  
 use Rack::StaticCache, :urls => ['/audio', '/css', '/favicon.ico', '/fonts', '/img', '/js'], :root => "_site", :duration => 7
 use Rack::ETag
+
 use Rack::Rewrite do
   rewrite '/', '/index.html'
   rewrite '/code', '/code.html'
@@ -19,4 +23,5 @@ use Rack::Rewrite do
   rewrite %r{/blog/([\w_-]+)}, '/blog/$1/index.html'
   rewrite %r{/([\w_-]+)}, '/$1/index.html'
 end
+
 run Rack::Directory.new('_site')
