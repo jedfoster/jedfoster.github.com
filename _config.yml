@@ -7,7 +7,7 @@ markdown:    rdiscount
 rdiscount:   { extensions: [smart] }
 permalink:   /:year/:month/:title/
 url: http://jedfoster.com
-exclude: config.ru, Gemfile, Gemfile.lock, Rakefile, Sass-Deck/, lib/
+exclude: config.ru, Gemfile, Gemfile.lock, Rakefile, Sass-Deck/, lib/, tmp/
 include: js/
 environments:
   s3:
