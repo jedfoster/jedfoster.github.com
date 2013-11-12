@@ -1,6 +1,3 @@
-  <section id="sw-heart">
-
-
   !/img/portfolio/sites/sw-heart-sm.jpg!
 
 h1. "Southwest Heart":http://swheart.com/
@@ -12,6 +9,3 @@ Customized CSS, based on a template design. Installed an open-source CMS.
   <li class="HTML">HTML</li>
   <li class="PHP">PHP</li>
 </ul>
-
-
-  </section>

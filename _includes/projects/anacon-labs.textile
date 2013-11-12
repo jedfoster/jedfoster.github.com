@@ -1,6 +1,3 @@
-  <section id="anacon-labs">
-
-
   !/img/portfolio/sites/anacon-labs-sm.jpg!
 
 h1. "Anacon Labs":http://anaconlabs.com/
@@ -12,6 +9,3 @@ Customized CSS, based on a template design.
   <li class="HTML">HTML</li>
   <li class="PHP">PHP</li>
 </ul>
-
-
-  </section>

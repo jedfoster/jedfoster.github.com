@@ -1,6 +1,3 @@
-  <section id="jed-michelle">
-
-
   !/img/portfolio/sites/jed-michelle-sm.jpg!
 
 h1. "Jed & Michelle":http://jedandmichelle.com
@@ -11,6 +8,3 @@ Customized CSS, based on a template design.
   <li class="CSS">CSS</li>
   <li class="HTML">HTML</li>
 </ul>
-
-
-  </section>

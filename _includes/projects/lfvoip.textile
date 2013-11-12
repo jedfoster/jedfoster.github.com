@@ -1,6 +1,3 @@
-  <section id="lookingforward-voip">
-
-
   !/img/portfolio/sites/lookingforward-voip-sm.jpg!
 
 h1. "Looking Forward VoIP":http://lfvoip.portfolio.jedfoster.com/
@@ -14,6 +11,3 @@ The business never launched and the site was never more than a mockup.
   <li class="HTML">HTML</li>
   <li class="CSS">CSS</li>
 </ul>
-
-
-  </section>

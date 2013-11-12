@@ -1,6 +1,3 @@
-  <section id="hssbv-v2">
-
-
   !/img/portfolio/sites/hssbv-v2-sm.jpg!
 
 h1. "Humane Society of San Bernardino Valley":http://hssbv.org, v.2
@@ -8,12 +5,9 @@ h1. "Humane Society of San Bernardino Valley":http://hssbv.org, v.2
 An original design. Handcoded HTML5 and CSS3.
 
 <ul>
-  <li class="Design">Design</li>
-  <li class="HTML">HTML</li>
-  <li class="CSS">CSS</li>
-  <li class="JavaScript">JavaScript</li>
-  <li class="PHP">PHP</li>
+	<li class="Design">Design</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP</li>
 </ul>
-
-
-  </section>

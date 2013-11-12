@@ -1,6 +1,3 @@
-  <section id="buds-treewell">
-
-
   !/img/portfolio/sites/buds-treewell-sm.jpg!
 
 h1. Bud's Treewell
@@ -8,11 +5,8 @@ h1. Bud's Treewell
 Rendered another designer's layout.
 
 <ul>
-  <li class="PSD">Photoshop</li>
-  <li class="HTML">HTML</li>
-  <li class="CSS">CSS</li>
-  <li class="Closed">Closed</li>
+	<li class="PSD">Photoshop</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="Closed">Closed</li>
 </ul>
-
-
-  </section>

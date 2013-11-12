@@ -1,6 +1,3 @@
-  <section id="platinum-business-strategies">
-
-
   !/img/portfolio/sites/platinum-business-strategies-sm.jpg!
 
 h1. "Platinum Business Strategies":http://platinumbusinessstrategies.com/
@@ -12,6 +9,3 @@ Customized CSS, based on a template design. Installed an open-source CMS.
   <li class="HTML">HTML</li>
   <li class="PHP">PHP</li>
 </ul>
-
-
-  </section>

@@ -1,6 +1,3 @@
-  <section id="platinum-circle-solutions">
-
-
   !/img/portfolio/sites/platinum-circle-solutions-sm.jpg!
 
 h1. Platinum Circle Solutions
@@ -13,6 +10,3 @@ Customized CSS, based on a template design. Installed an open-source CMS.
   <li class="PHP">PHP</li>
   <li class="Refreshed">Refreshed, "newer version":#platinum-business-strategies </li>
 </ul>
-
-
-  </section>

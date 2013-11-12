@@ -1,19 +1,13 @@
-  <section id="gcc-edirectory-front">
-
-
   !/img/portfolio/sites/gcc-edirectory-front-sm.jpg!
 
-h1. Grace Community Church e-Directory 
+h1. Grace Community Church e-Directory
 
 h5. User view
 
 Integrated a custom member directory web app into the existing site.
 
 <ul>
-  <li class="HTML">HTML</li>
-  <li class="CSS">CSS</li>
-  <li class="PHP">PHP/MySQL</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="PHP">PHP/MySQL</li>
 </ul>
-
-
-  </section>

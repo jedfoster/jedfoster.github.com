@@ -1,6 +1,3 @@
-  <section id="just-for-fun">
-
-
   !/img/portfolio/sites/just-for-fun-sm.jpg!
 
 h1. Just for Fun, v.1
@@ -16,6 +13,3 @@ An original design built with Photoshop/ImageReady.
   <li class="e-Commerce">e-Commerce</li>
   <li class="Refreshed">Refreshed</li>
 </ul>
-
-
-  </section>

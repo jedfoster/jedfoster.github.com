@@ -1,6 +1,3 @@
-  <section id="columbia-sinks">
-
-
   !/img/portfolio/sites/columbia-sinks-sm.jpg!
 
 h1. "Columbia Sinks":http://columbiasinks.com
@@ -8,10 +5,7 @@ h1. "Columbia Sinks":http://columbiasinks.com
 Built and integrated a custom CMS into the existing site.
 
 <ul>
-  <li class="HTML">HTML</li>
-  <li class="CSS">CSS</li>
-  <li class="PHP">PHP/MySQL</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="PHP">PHP/MySQL</li>
 </ul>
-
-
-  </section>

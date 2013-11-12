@@ -1,16 +1,10 @@
-  <section id="pink-ribbon">
-
-
   !/img/portfolio/sites/pink-ribbon-sm.jpg!
 
-h1. "The Pink Ribbon Place":http://thepinkribbonplace.org/
+h1. The Pink Ribbon Place
 
 Customized CSS, based on a template design. Installed an open-source CMS.
 
 <ul>
-  <li class="CSS">CSS</li>
-  <li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="HTML">HTML</li>
 </ul>
-
-
-  </section>

@@ -1,0 +1,15 @@
+---
+layout: home
+title: Home Page
+---
+
+h1. Hi
+
+{% for project in site.data.work %}
+  {% capture fullurl %}projects/{{ project }}.textile{% endcapture %}
+
+  <section id="{{ project }}">
+    {% include {{fullurl}} %}
+  </section>
+
+{% endfor %}

@@ -1,5 +1,3 @@
-  <section id="roughdraft">
-
   !/img/portfolio/sites/roughdraft-2-sm.png!
 
 h1. "Roughdraft.io":http://www.roughdraft.io
@@ -13,5 +11,3 @@ A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinat
   <li class="Design">Design</li>
   <li class="GitHub">GitHub</li>
 </ul>
-
-  </section>

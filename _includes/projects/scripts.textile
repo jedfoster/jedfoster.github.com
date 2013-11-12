@@ -1,19 +1,13 @@
-  <section id="scripts">
-
-
   !/img/portfolio/sites/scripts-sm.jpg!
 
 h1. Scripts
 
-A custom web app for Captive Audience, Scripts allows clients to create and edit advertising on hold scripts and place orders for new productions. 
+A custom web app for Captive Audience, Scripts allows clients to create and edit advertising on hold scripts and place orders for new productions.
 
 <ul>
-  <li class="Design">Design</li>
-  <li class="HTML">HTML</li>
-  <li class="CSS">CSS</li>
-  <li class="JavaScript">JavaScript</li>
-  <li class="PHP">PHP/MySQL</li>
+	<li class="Design">Design</li>
+	<li class="HTML">HTML</li>
+	<li class="CSS">CSS</li>
+	<li class="JavaScript">JavaScript</li>
+	<li class="PHP">PHP/MySQL</li>
 </ul>
-
-
-  </section>

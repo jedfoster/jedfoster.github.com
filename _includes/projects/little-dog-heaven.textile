@@ -1,6 +1,3 @@
-  <section id="little-dog-heaven">
-
-
   !/img/portfolio/sites/little-dog-heaven-sm.jpg!
 
 h1. "Little Dog Heaven":http://littledogheaven.com
@@ -15,6 +12,3 @@ An original design built with Photoshop/ImageReady.
   <li class="PHP">PHP/MySQL</li>
   <li class="e-Commerce">e-Commerce</li>
 </ul>
-
-
-  </section>
