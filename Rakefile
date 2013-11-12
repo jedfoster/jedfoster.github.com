@@ -33,6 +33,8 @@ task :build do
   Rake::Task["assets:precompile"].invoke
 
   system("jekyll --url")
+
+  Utilities.new.version_manifests
 end
 
 
@@ -97,6 +99,12 @@ class Utilities < Thor
 
       Dir.glob("_site/**/*.css", File::FNM_CASEFOLD).each do |file|
         gsub_file("#{file}", /url\(\'\//, "url('#{host}/")
+      end
+    end
+
+    def version_manifests
+      Dir.glob("_site/**/*.manifest", File::FNM_CASEFOLD).each do |file|
+        gsub_file("#{file}", /# rev = ([\d]+)/, "# rev = #{Time.now.getutc.to_i}")
       end
     end
   end
