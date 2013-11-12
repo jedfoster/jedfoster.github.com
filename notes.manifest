@@ -1,12 +1,12 @@
 CACHE MANIFEST
 # rev = 0000
-/css/styles.css
-/fonts/FuturaND-Bold.eot
-/fonts/FuturaND-Bold.woff
-/fonts/FuturaND-Bold.ttf
-/fonts/DejaVu-Serif.eot
-/fonts/DejaVu-Serif.woff
-/fonts/DejaVu-Serif.ttf
+http://assets.jedfoster.com/css/styles.css
+http://assets.jedfoster.com/fonts/FuturaND-Bold.eot
+http://assets.jedfoster.com/fonts/FuturaND-Bold.woff
+http://assets.jedfoster.com/fonts/FuturaND-Bold.ttf
+http://assets.jedfoster.com/fonts/DejaVu-Serif.eot
+http://assets.jedfoster.com/fonts/DejaVu-Serif.woff
+http://assets.jedfoster.com/fonts/DejaVu-Serif.ttf
 /apple-touch-icon-precomposed.png
 /apple-touch-icon-72x72-precomposed.png
 /apple-touch-icon-114x114-precomposed.png
