@@ -1,4 +1,4 @@
-safe: true
+safe: false
 # source: <your pages repo>
 destination: _site
 lsi: false
