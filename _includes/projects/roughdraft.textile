@@ -1,0 +1,17 @@
+  <section id="roughdraft">
+
+  !/img/portfolio/sites/roughdraft-2-sm.png!
+
+h1. "Roughdraft.io":http://www.roughdraft.io
+
+A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinatra. Deployed to Heroku.
+
+<ul>
+  <li class="Ruby">Ruby</li>
+  <li class="HTML5">HTML5</li>
+  <li class="CSS3">CSS3</li>
+  <li class="Design">Design</li>
+  <li class="GitHub">GitHub</li>
+</ul>
+
+  </section>

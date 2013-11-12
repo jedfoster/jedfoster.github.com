@@ -1,0 +1,20 @@
+  <section id="acms-signup">
+
+
+  !/img/portfolio/sites/acms-signup-sm.jpg!
+
+h1. "ACMS ATM Location Scouts":http://acms.portfolio.jedfoster.com/scouts/signup
+
+A custom web app. Worked with another designer\'s PSD mockups.
+
+The app is 90% complete, but the clients decided to shelve the whole project.
+
+<ul>
+  <li class="PSD">Photoshop</li>
+  <li class="HTML">HTML</li>
+  <li class="CSS">CSS</li>
+  <li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>

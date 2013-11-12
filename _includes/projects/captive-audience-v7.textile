@@ -1,0 +1,19 @@
+  <section id="captive-audience-v7">
+
+
+  !/img/portfolio/sites/captive-audience-v7-sm.jpg!
+
+h1. Captive Audience, v.7
+
+Inspired by a CSS template. Custom graphics. Handcoded HTML and CSS.
+
+<ul>
+  <li class="Design">Design</li>
+  <li class="HTML">HTML</li>
+  <li class="CSS">CSS</li>
+  <li class="JavaScript">JavaScript</li>
+  <li class="Refreshed">Refreshed, "newer version":#captive-audience-v8 </li>
+</ul>
+
+
+  </section>

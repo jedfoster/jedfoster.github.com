@@ -1,0 +1,23 @@
+  <section id="voice-over-cafe">
+
+
+  !/img/portfolio/sites/voice-over-cafe-sm.jpg!
+
+h1. Voice Over Cafe
+
+An original design built with Photoshop/ImageReady.
+
+Even though it was built with evil, evil tables this is one of my favorite designs.
+
+<ul>
+  <li class="Design">Design</li>
+  <li class="PSD">Photoshop</li>
+  <li class="HTML">HTML</li>
+  <li class="CSS">CSS</li>
+  <li class="PHP">PHP/MySQL</li>
+  <li class="e-Commerce">e-Commerce</li>
+  <li class="Closed">Closed</li>
+</ul>
+
+
+  </section>

@@ -1,0 +1,20 @@
+  <section id="captive-audience-v6">
+
+
+  !/img/portfolio/sites/captive-audience-v6-sm.jpg!
+
+h1. Captive Audience, v.6
+
+An original design built with Photoshop/ImageReady.
+
+<ul>
+  <li class="Design">Design</li>
+  <li class="PSD">Photoshop</li>
+  <li class="HTML">HTML</li>
+  <li class="CSS">CSS</li>
+  <li class="JavaScript">JavaScript</li>
+  <li class="Refreshed">Refreshed, "newer version":#captive-audience-v7 </li>
+</ul>
+
+
+  </section>

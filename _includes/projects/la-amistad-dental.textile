@@ -1,0 +1,18 @@
+  <section id="la-amistad-dental">
+
+
+  !/img/portfolio/sites/la-amistad-dental-sm.jpg!
+
+h1. La Amistad Dental Office
+
+An original design. Handcoded HTML5 and CSS3.
+
+<ul>
+  <li class="Design">Design</li>
+  <li class="HTML">HTML5</li>
+  <li class="CSS">CSS3</li>
+  <li class="JavaScript">JavaScript</li>
+</ul>
+
+
+  </section>

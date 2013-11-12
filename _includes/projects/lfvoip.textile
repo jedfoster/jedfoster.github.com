@@ -1,0 +1,19 @@
+  <section id="lookingforward-voip">
+
+
+  !/img/portfolio/sites/lookingforward-voip-sm.jpg!
+
+h1. "Looking Forward VoIP":http://lfvoip.portfolio.jedfoster.com/
+
+An original design. Handcoded HTML and CSS. 
+
+The business never launched and the site was never more than a mockup.
+
+<ul>
+  <li class="Design">Design</li>
+  <li class="HTML">HTML</li>
+  <li class="CSS">CSS</li>
+</ul>
+
+
+  </section>

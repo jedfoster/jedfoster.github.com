@@ -1,0 +1,17 @@
+  <section id="east-highlands-dentistry-v1">
+
+
+  !/img/portfolio/sites/east-highlands-dentistry-v1-sm.jpg!
+
+h1. East Highlands Dentistry, v.1
+
+Customized CSS, based on a template design.
+
+<ul>
+  <li class="CSS">CSS</li>
+  <li class="HTML">HTML</li>
+  <li class="Refreshed">Refreshed, "newer version":#east-highlands-dentistry-v2 </li>
+</ul>
+
+
+  </section>

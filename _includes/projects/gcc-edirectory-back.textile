@@ -1,0 +1,20 @@
+  <section id="gcc-edirectory-back">
+
+
+  !/img/portfolio/sites/gcc-edirectory-back-sm.jpg!
+
+h1. Grace Community Church e-Directory
+
+h5. Administrative view
+
+Custom directory web app.
+
+<ul>
+  <li class="HTML">HTML</li>
+  <li class="CSS">CSS</li>
+  <li class="JavaScript">JavaScript</li>
+  <li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>

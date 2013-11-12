@@ -1,0 +1,19 @@
+  <section id="riverside-ymca">
+
+
+  !/img/portfolio/sites/riverside-ymca-sm.jpg!
+
+h1. "YMCA of Riverside City & County":http://riversideymca.org
+
+An original design based on corporate style guides. Handcoded HTML5 and CSS3. Custom-built CMS. 
+
+<ul>
+  <li class="Design">Design</li>
+  <li class="HTML">HTML5</li>
+  <li class="CSS">CSS3</li>
+  <li class="JavaScript">JavaScript</li>
+  <li class="PHP">PHP/MySQL</li>
+</ul>
+
+
+  </section>
