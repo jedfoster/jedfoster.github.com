@@ -32,7 +32,7 @@ desc "Build the site; pass env={github|production|s3}, default is github"
 task :build do
   Rake::Task["assets:precompile"].invoke
 
-  system("jekyll --url")
+  system("jekyll build")
 
   Utilities.new.version_manifests
 end
