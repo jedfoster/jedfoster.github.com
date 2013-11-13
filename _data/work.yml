@@ -1,32 +1,95 @@
-- roughdraft
-- sassmeister
-- la-amistad-dental
-- riverside-ymca
-# - sw-heart
-- captive-audience-v8
-- riverside-cardiology
-# - acms
-# - platinum-business-strategies
-# - platinum-circle-solutions
-# - anacon-labs
-# - lfvoip
-- making-every-dollar-count
-- scripts
-- sales
-- buds-treewell
-- gcc-edirectory-front
-- gcc-edirectory-back
-- riverside-car-show
-# - perfect-form
-- east-highlands-dentistry-v2
-# - jed-and-michelle
-- pink-ribbon
-- hssbv-v2
-- columbia-sinks
-- captive-audience-v7
-- east-highlands-dentistry-v1
-- voice-over-cafe
-- captive-audience-v6
-- hssbv-v1
-# - just-for-fun
-# - little-dog-heaven
+- id: roughdraft
+  file: projects/roughdraft.textile
+
+- id: sassmeister
+  file: projects/sassmeister.textile
+
+- id: la-amistad-dental
+  file: projects/la-amistad-dental.textile
+
+- id: riverside-ymca
+  file: projects/riverside-ymca.textile
+
+# - id: sw-heart
+#   file: projects/sw-heart.textile
+
+- id: captive-audience-v8
+  file: projects/captive-audience-v8.textile
+
+- id: riverside-cardiology
+  file: projects/riverside-cardiology.textile
+
+# - id: acms
+#   file: projects/acms.textile
+
+# - id: platinum-business-strategies
+#   file: projects/platinum-business-strategies.textile
+
+# - id: platinum-circle-solutions
+#   file: projects/platinum-circle-solutions.textile
+
+# - id: anacon-labs
+#   file: projects/anacon-labs.textile
+
+# - id: lfvoip
+#   file: projects/lfvoip.textile
+
+- id: making-every-dollar-count
+  file: projects/making-every-dollar-count.textile
+
+- id: scripts
+  file: projects/scripts.textile
+
+- id: sales
+  file: projects/sales.textile
+
+- id: buds-treewell
+  file: projects/buds-treewell.textile
+
+- id: gcc-edirectory-front
+  file: projects/gcc-edirectory-front.textile
+
+- id: gcc-edirectory-back
+  file: projects/gcc-edirectory-back.textile
+
+- id: riverside-car-show
+  file: projects/riverside-car-show.textile
+
+# - id: perfect-form
+#   file: projects/perfect-form.textile
+
+- id: east-highlands-dentistry-v2
+  file: projects/east-highlands-dentistry-v2.textile
+
+# - id: jed-and-michelle
+#   file: projects/jed-and-michelle.textile
+
+- id: pink-ribbon
+  file: projects/pink-ribbon.textile
+
+- id: hssbv-v2
+  file: projects/hssbv-v2.textile
+
+- id: columbia-sinks
+  file: projects/columbia-sinks.textile
+
+- id: captive-audience-v7
+  file: projects/captive-audience-v7.textile
+
+- id: east-highlands-dentistry-v1
+  file: projects/east-highlands-dentistry-v1.textile
+
+- id: voice-over-cafe
+  file: projects/voice-over-cafe.textile
+
+- id: captive-audience-v6
+  file: projects/captive-audience-v6.textile
+
+- id: hssbv-v1
+  file: projects/hssbv-v1.textile
+
+# - id: just-for-fun
+#   file: projects/just-for-fun.textile
+
+# - id: little-dog-heaven
+#   file: projects/little-dog-heaven.textile
