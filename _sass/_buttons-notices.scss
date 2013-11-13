@@ -1,0 +1,98 @@
+/* buttons & notices */
+a.button, button {
+  display: block;
+  float: left;
+  margin: 0.6em 1em 0.6em 0;
+  padding: 0.55em 0.5em 0.25em;
+  border: 1px solid #afafaf;
+  border-top-color: #d1d1d1;
+  border-left-color: #d1d1d1;
+  background-color: #f5f5f5;
+  font-size: 100%;
+  line-height: 1;
+  text-decoration: none;
+  color: #565656;
+  cursor: pointer;
+  -webkit-box-sizing: content-box;
+  text-shadow: 1px 1px 0 #EEE;
+  text-shadow: 1px 1px 0 rgba(250, 250, 250, 0.7);
+}
+a.button.inline, button.inline {
+  display: inline-block;
+  float: none;
+}
+button img, a.button img {
+  display: inline;
+  margin: -2px 0.25em -2px 0 !important;
+  padding: 0;
+  border: none;
+  width: 16px;
+  height: 16px;
+  float: none;
+}
+button:hover, a.button:hover {
+  background-color: #dff4ff;
+  border: 1px solid #c2e1ef;
+  color: #336699;
+}
+.error,.notice,.success,.info {
+  padding: 0.7em 0.75em;
+  margin-bottom: 1.5em;
+  border: 1px solid;
+  font-weight: bold;
+}
+.error, body .negative, a.negative:hover {
+  color: #8a1f11;
+}
+.error, a.negative:hover, button.negative:hover {
+  background-color: #fbe3e4;
+  border-color: #fbc2c4;
+}
+.notice {
+  background: #fff6bf;
+  color: #7D6122;
+  border-color: #ffd324;
+}
+.success, body .positive, a.positive:hover {
+  color: #529214;
+}
+.success, a.positive:hover, button.positive:hover {
+  background: #e6efc2;
+  border-color: #c6d880;
+}
+.info {
+  background: #d5edf8;
+  color: #205791;
+  border-color: #92cae4;
+}
+.error a,.notice a,.success a,.info a {
+  color: #8a1f11;
+  text-decoration: underline;
+}
+.notice a {
+  color: #7D6122;
+}
+.success a {
+  color: #264409;
+}
+.info a {
+  color: #205791;
+}
+a.button:active, button:active {
+  background-color: #6299c5;
+  border-color: #6299c5;
+  color: #fff;
+  text-shadow: 1px 1px 0 #444;
+  text-shadow: 1px 1px 0 rgba(68, 68, 68, 0.7);
+}
+a.positive:active, button.positive:active {
+  background-color: #529214;
+  border-color: #529214;
+}
+a.negative:active, button.negative:active {
+  background-color: #d12f19;
+  border-color: #d12f19;
+}
+h2 a {
+  display: inline-block;
+}
