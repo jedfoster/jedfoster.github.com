@@ -37,6 +37,8 @@ GEM
     fssm (0.2.10)
     haml (4.0.4)
       tilt
+    haml-contrib (1.0.0.1)
+      haml (>= 3.2.0.alpha.13)
     highline (1.6.20)
     jammit (0.6.6)
       cssmin (>= 1.0.3)
@@ -106,6 +108,7 @@ DEPENDENCIES
   RedCloth
   compass
   haml
+  haml-contrib
   jammit
   jekyll
   rack-contrib!

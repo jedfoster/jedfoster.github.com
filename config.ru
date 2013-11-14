@@ -31,6 +31,8 @@ use Rack::Rewrite do
   rewrite '/notes', '/notes.html'
   rewrite '/contact', '/contact.html'
   rewrite '/portfolio2', '/portfolio2.html'
+  
+  rewrite '/style-guide', '/style-guide.html'
 
   rewrite %r{/([\w_-]+).manifest}, '/$1.manifest'
   rewrite %r{/(\d{4}/\d{2})/([\w_-]+)}, '/$1/$2/index.html'
