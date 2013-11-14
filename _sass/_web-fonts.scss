@@ -30,3 +30,58 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+
+%icon-font {
+  font-family: 'Icons';
+  speak: none;
+  padding-right:0.4em;
+}
+
+/* content: '\26e2'; /* rocket */
+/* content: '\52';   /* heart */
+/* content: '\4e';   /* star */
+/* content: '\4b';   /* link */
+/* content: '\67';   /* heart 2 */
+/* content: '\68';   /* star 2 */
+
+
+.Design:before {
+  content: "\26cf";
+}
+.HTML:before {
+  content: "\26d0";
+}
+.HTML5:before {
+  content: "\26de";
+}
+.CSS:before {
+  content: "\26d1";
+}
+.CSS3:before {
+  content: "\26e0";
+}
+.JavaScript:before {
+  content: "\26d2";
+}
+.PSD:before {
+  content: "\26dc";
+}
+.Refreshed:before {
+  content: "\26d8";
+}
+.Closed:before {
+  content: "\26d9";
+}
+.e-Commerce:before {
+  content: "\26db";
+}
+.PHP:before {
+  content: "\e001";
+}
+.Ruby:before {
+  content: "\e000";
+}
+.GitHub:before {
+  content: "\26ca";
+}
