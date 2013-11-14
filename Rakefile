@@ -45,6 +45,12 @@ task "assets:precompile" do
 end
 
 
+desc "Watch the app's Sass directory"
+task "sass:watch" do
+  system("bundle exec compass watch --css-dir ./_site/css")
+end
+
+
 desc "Open the site in your default browser; pass env={github|production}, default is github"
 task :launch do
   sh "open #{config['environments'][env]['url']}"
