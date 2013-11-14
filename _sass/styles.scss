@@ -151,44 +151,7 @@ a#gplus:after {
 }
 
 
-
-#campfire {
-  background: url('/img/campfire-desaturated.png') no-repeat scroll top left;
-  width: 58px;
-  height: 48px;
-  display: block;
-  float: left;
-  margin: 0 1.5em 1.5em 0;
-}
-#campfire img{
-	filter:alpha(opacity=15);
-			 -moz-opacity: 0.15;
-						opacity: 0.15;
-	-webkit-transition: opacity 0.3s ease;
-	   -moz-transition: opacity 0.3s ease;
-	     -o-transition: opacity 0.3s ease;
-	        transition: opacity 0.3s ease;
-}
-#campfire:hover img, #campfire:active img{
-	filter:alpha(opacity=85);
-			 -moz-opacity: 0.85;
-						opacity: 0.85;
-}
-
-#twttr {
-  text-align: left;
-  float: left;
-  width: 100%;
-}
-#twttr h1 {
-  font-size: 0.75em;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-#twttr iframe {
-  width: 100%;
-}
-
+@import "twitter-feed";
 
 header {
 	width: 100%;
