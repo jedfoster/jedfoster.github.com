@@ -5,21 +5,21 @@ slug: style-guide
 ---
 
 :css
-  section {
-    float: left;
-    width: 100%;
-    clear: both;
-    margin-bottom: 1.5em;
-    padding-bottom: 1.5em;
-    border-bottom: 1px solid #666;
-  }
-  section:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
+  / article {
+  /   float: left;
+  /   width: 100%;
+  /   clear: both;
+  /   margin-bottom: 1.5em;
+  /   padding-bottom: 1.5em;
+  /   border-bottom: 1px solid #666;
+  / }
+  article:first-of-type {
+    padding-top: 0;
+    border-top: 0;
   }
 
 
-%section#text
+%article#text
   :textile
     h1. H1 Futura ND Bold
 
@@ -49,7 +49,7 @@ slug: style-guide
     |A3          |B3          |
 
 
-%section#buttons
+%article#buttons
   %button
     Button
 
@@ -71,7 +71,7 @@ slug: style-guide
     A.button.negative
 
 
-%section#alerts
+%article#alerts
   .notice
     Notice
     %a Link
@@ -89,7 +89,32 @@ slug: style-guide
     %a Link
 
 
-%section#colors
+%article#widgets.pg-work
+  %section
+    :textile
+        !http://assets.jedfoster.com/img/portfolio/sites/roughdraft-2-sm.png!
+
+      h1. "Kitchen Sink":/
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit magna aliqua.
+
+      <ul>
+        <li class="Ruby">Ruby</li>
+        <li class="HTML5">HTML5</li>
+        <li class="CSS3">CSS3</li>
+        <li class="Design">Design</li>
+        <li class="GitHub">GitHub</li>
+        <li class="HTML">HTML</li>
+        <li class="CSS">CSS</li>
+        <li class="JavaScript">JavaScript</li>
+        <li class="PSD">PSD</li>
+        <li class="Refreshed">Refreshed</li>
+        <li class="Closed">Closed</li>
+        <li class="e-Commerce">e-Commerce</li>
+        <li class="PHP">PHP</li>
+      </ul>
+
+%article#colors
 
   .alpha-gray
     alpha-gray
