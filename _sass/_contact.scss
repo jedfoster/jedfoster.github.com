@@ -1,0 +1,48 @@
+.pg-contact form {
+  @extend %span-12;
+  
+  margin-bottom: 1.5em;
+}
+.pg-contact label {
+  @extend %span-3;
+
+  display: block;
+  text-align:right;
+}
+.pg-contact input {
+  @extend %span-3;
+
+  font-size:0.95em;
+}
+.pg-contact textarea {
+  @extend %span-6;
+
+  //  width: 64.285714285714285714%;/* 450/700 */
+}
+.pg-contact button[type="submit"] {
+  margin-left: 34.285714285714285714%;/* 240/700 */
+}
+.pg-contact button[type="submit"] img {
+  width: 1em;
+  max-width: 48px;
+}
+.pg-contact .error {
+  float: left;
+  font-size: 0.75em;
+  margin-left: 1em;
+  position: absolute;
+  z-index: 1000;
+}
+.pg-contact .message label {
+  height: 100px;
+}
+.pg-contact .message .error {
+  position: relative;
+  margin-left: 0;
+}
+.pg-contact p.success {
+  width: 96.3%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
