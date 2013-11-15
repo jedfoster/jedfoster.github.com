@@ -5,21 +5,19 @@ slug: style-guide
 ---
 
 :css
-  / article {
-  /   float: left;
-  /   width: 100%;
-  /   clear: both;
-  /   margin-bottom: 1.5em;
-  /   padding-bottom: 1.5em;
-  /   border-bottom: 1px solid #666;
-  / }
   article:first-of-type {
     padding-top: 0;
     border-top: 0;
   }
+  .showgrid {
+    background: url('/img/grid_16px.png') repeat;
+    float: left;
+    width: 100%;
+    clear: both;
+  }
 
 
-%article#text
+%article#text.showgrid
   :textile
     h1. H1 Futura ND Bold
 
@@ -91,7 +89,36 @@ slug: style-guide
     %a Link
 
 
-%article#portfolio-piece.pg-work
+%article#notes-tables.showgrid
+  :textile
+      <div class="span-half">
+
+    h3. Morning
+
+    |_. #497 |_. Sumner |_. Auburn |_. Seattle |_. Train |
+    |4:51    |5:12      |5:20      |5:54       |1500     |
+    |5:27    |5:47      |5:56      |6:29       |1502     |
+    |5:57    |6:17      |6:26      |6:59       |1504     |
+    |6:17    |6:37      |6:46      |7:19       |1506     |
+
+      </div>
+
+      <div class="span-half">
+
+    h3. Evening
+
+    |_. Seattle |_. Tukwila |_. Kent  |_. Auburn |_. #497* |_. Sumner |_. Train |
+    |3:12       |3:24       |3:31     |3:38      |4:03     |3:47      |1505     |
+    |3:42       |3:54       |4:01     |4:08      |--       |4:17      |1507     |
+    |4:12       |4:24       |4:31     |4:38      |5:03     |4:48      |1509     |
+    |4:32       |4:44       |4:51     |4:58      |5:22     |5:08      |1511     |
+
+
+    p. *These trips will wait for Sounder connections before departing
+
+      </div>
+
+%article#portfolio-piece.pg-work.showgrid
   %section
     :textile
         !http://assets.jedfoster.com/img/portfolio/sites/roughdraft-2-sm.png!
@@ -117,7 +144,7 @@ slug: style-guide
       </ul>
 
 
-%article#blog-post-lists
+%article#blog-post-lists.showgrid
   %section.posts
     %article
       %header
