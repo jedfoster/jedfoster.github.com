@@ -31,6 +31,7 @@ use Rack::Rewrite do
   rewrite '/notes', '/notes.html'
   rewrite '/contact', '/contact.html'
   rewrite '/portfolio2', '/portfolio2.html'
+  rewrite '/about/resume', '/about/resume.html'
   
   rewrite '/style-guide', '/style-guide.html'
 
