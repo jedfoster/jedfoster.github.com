@@ -85,7 +85,7 @@ A web app for experimenting with Sass. Written in Ruby, using Sinatra. Deployed 
 * Icon fonts
 * GitHub OAuth
 * HTML5 localStorage
-* Packaged two Sass libraries as Compass extensions and published them as RubyGems
+* Packaged two Sass libraries as Compass extensions and published them as Ruby gems
 
 h4. "Readmore.js":https://github.com/jedfoster/Readmore.js
 
@@ -114,7 +114,7 @@ Sass library that forms the core of Toadstool.
 * Co-developer
 * Engineered a modular file structure
 * Extracted core Sass into a Compass extension
-* Created RubyGem
+* Created Ruby gem
 
 
 
@@ -133,7 +133,7 @@ _Getty Images_
 
 * Maintained and developed marketing web pages and microsites using HTML5, CSS3, jQuery, and XML.
 * Assumed lead role in the maintenance of a legacy style guide framework for marketing portions of the website. The framework generates production CSS with Sass and establishes markup patterns that guide the construction of new pages. 
-* Co-authored a next-generation style guide framework for a strategic Ruby on Rails initiative. Engineered the framework's modular structure, dynamic routing, and the Ruby Gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
+* Co-authored a next-generation style guide framework for a strategic Ruby on Rails initiative. Engineered the framework's modular structure, dynamic routing, and the Ruby gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
 * Coached co-workers on version control, HTML/CSS/JS best practices, troubleshooting, and other development techniques.
 * Wrote numerous automation scripts in Ruby to manipulate the hundreds--sometimes thousands--of HTML fragment files that constitute a single marketing web page, including localized versions in more than ten languages.
 * Migrated hundreds of pages of content from a legacy CMS to a new one. Wrote a Ruby script to transform XML documents into HTML fragments that could be consumed by the new CMS, as well as locate and move thousands of graphics from the old system to the new one.
