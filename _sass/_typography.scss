@@ -44,28 +44,28 @@ h6 {
   font-size: 1em;
   font-weight: bold;
 }
-h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
-  margin: 0;
-}
+// h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
+//   margin: 0;
+// }
 p {
   margin: 0 0 1.5em;
 }
-.left {
-  float: left !important;
-}
-.right {
-  float: right !important;
-}
-.left,.right {
-  margin-bottom: 1.5em;
-}
-p .left, p .right {
-  margin: 0 1.5em 1.5em 0;
-  padding: 0;
-}
-p .right {
-  margin: 0 0 1.5em 1.5em;
-}
+// .left {
+//   float: left !important;
+// }
+// .right {
+//   float: right !important;
+// }
+// .left,.right {
+//   margin-bottom: 1.5em;
+// }
+// p .left, p .right {
+//   margin: 0 1.5em 1.5em 0;
+//   padding: 0;
+// }
+// p .right {
+//   margin: 0 0 1.5em 1.5em;
+// }
 a, button {
   color: #006EB2;
   text-decoration: none;
@@ -81,30 +81,23 @@ blockquote {
   margin: 1.5em;
   font-style: italic;
 }
-strong, dfn {
+b, strong {
   font-weight: bold;
 }
-em, dfn {
+i, em {
   font-style: italic;
 }
-sup, sub {
-  line-height: 0;
-}
-abbr, acronym {
-  border-bottom: 1px dotted #666;
-}
-address {
-  margin: 0 0 1.5em;
-  font-style: italic;
-}
-del {
-  color: #666;
-}
+
+// address {
+//   margin: 0 0 1.5em;
+//   font-style: italic;
+// }
+
 pre {
   margin: 1.5em 0;
   white-space: pre-wrap;
 }
-pre, code, tt {
+pre, code {
   font: 1em "Menlo", Monaco,"Courier New", Courier, monospace;
   line-height: 1.5;
 }
@@ -118,21 +111,18 @@ ul, ol {
 ul {
   list-style-type: disc;
 }
-ul.sans-bullet {
-  list-style: none;
-}
 ol {
   list-style-type: decimal;
 }
-dl {
-  margin: 0 0 1.5em 0;
-}
-dl dt {
-  font-weight: bold;
-}
-dd {
-  margin-left: 1.5em;
-}
+// dl {
+//   margin: 0 0 1.5em 0;
+// }
+// dl dt {
+//   font-weight: bold;
+// }
+// dd {
+//   margin-left: 1.5em;
+// }
 table {
   margin-bottom: 1.5em;
   width: 100%;
@@ -146,10 +136,14 @@ thead th {
 th, td, caption {
   padding: .375em .75em;
 }
-.zebra, tbody tr:nth-child(even), tbody tr.even {
+%zebra {
   background: #E9E9E9;
   background: transparentize(#333, 0.9);
 }
+tr:nth-child(even) {
+  @extend %zebra;
+}
+
 tfoot {
   font-style: italic;
 }
@@ -161,20 +155,6 @@ caption {
   margin-bottom: 1.875em;
   line-height: 1.875em;
 }
-.large {
-  font-size: 1.2em;
-  line-height: 2.5em;
-  margin-bottom: 1.25em;
-}
 .hide,.print-hide {
   display: none;
-}
-.quiet {
-  color: #666;
-}
-.loud {
-  color: #000;
-}
-.strong {
-  font-weight: bold;
 }
