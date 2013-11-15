@@ -5,7 +5,7 @@ slug: notes
 ---
 
 
-  <article class="first">
+  <article>
 
 h1. Transit Schedules
 
@@ -14,7 +14,7 @@ h1. Transit Schedules
   </article>
 
 
-  <article class="">
+  <article>
 
 h1. Sumner Library Hours
 
@@ -23,7 +23,7 @@ h1. Sumner Library Hours
   </article>
 
 
-  <article class="last">
+  <article>
 
 h1. Al-Pac Library Hours
 

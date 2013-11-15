@@ -65,39 +65,39 @@
 @import "web-fonts";
 @import "typography";
 
-.added {
-  background: #060;
-  color: #fff;
-}
-.removed {
-  background: #900;
-  color: #fff;
-}
-.first {
-  margin-left: 0;
-  padding-left: 0;
-}
-.last {
-  margin-right: 0;
-  padding-right: 0;
-}
-.top {
-  margin-top: 0;
-  padding-top: 0;
-}
-.bottom {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.text-right {
-  text-align: right;
-}
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
-}
+// .added {
+//   background: #060;
+//   color: #fff;
+// }
+// .removed {
+//   background: #900;
+//   color: #fff;
+// }
+// .first {
+//   margin-left: 0;
+//   padding-left: 0;
+// }
+// .last {
+//   margin-right: 0;
+//   padding-right: 0;
+// }
+// .top {
+//   margin-top: 0;
+//   padding-top: 0;
+// }
+// .bottom {
+//   margin-bottom: 0;
+//   padding-bottom: 0;
+// }
+// .text-right {
+//   text-align: right;
+// }
+// .text-left {
+//   text-align: left;
+// }
+// .text-center {
+//   text-align: center;
+// }
 
 
 @import "forms";
@@ -123,6 +123,10 @@
   font-family: 'Icons';
   font-style: normal;
   speak: none;
+  
+  &:last-child {
+    margin-right: 0;
+  }
 }
 #socialLinks a span {
   display: none;
@@ -233,6 +237,10 @@ nav li {
   display: block;
   float: left;
   margin-right: 2.5em;
+  
+  &:last-child {
+    margin-right: 0;
+  }
 }
 header nav {
   margin-bottom: 0;
