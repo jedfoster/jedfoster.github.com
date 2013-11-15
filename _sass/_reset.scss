@@ -1,4 +1,13 @@
 /* reset */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
 html {
   margin: 0;
   padding: 0;
