@@ -1,6 +1,7 @@
 /* forms */
 label {
-  font-weight: bold;
+  @extend %secondary-font-family;
+
   vertical-align: top;
 }
 fieldset {

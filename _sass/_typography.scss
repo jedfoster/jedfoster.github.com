@@ -9,40 +9,68 @@ body {
   text-shadow: 1px 1px 0 #EEE;
   text-shadow: 1px 1px 0 rgba(250, 250, 250, 0.7);
 }
-h1, h2, h3, h4, h5, header nav, label, a.button, button {
-  font-family: "FuturaND-Bold", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: normal;
-}
-h1 {
+
+
+%heading-1 {
+  @extend %secondary-font-family;
+
   font-size: 3em;
   line-height: 1.25;
   margin-bottom: 0.25em;
 }
-h2 {
-  font-size: 2em;  
-  line-height: 1.25;
-  margin-bottom: 0.25em;
+
+%heading-2 {
+  @extend %heading-1;
+
+  font-size: 2em;
 }
-h3 {
+
+%heading-3 {
+  @extend %secondary-font-family;
+
   font-size: 1.5em;
   line-height: 1.5;
   margin-bottom: 0.5em;
 }
-h4 {
+
+%heading-4 {
+  @extend %secondary-font-family;
+
   font-size: 1.2em;
   line-height: 1.5;
   margin-bottom: 0.99em;
 }
-h5 {
+
+%heading-5 {
+  @extend %secondary-font-family;
+  
   font-size: 1em;
-  font-weight: bold;
   margin-bottom: 1.5em;
 }
-h6 {
+
+%heading-6 {
   font-size: 1em;
   font-weight: bold;
+}
+
+
+h1 {
+  @extend %heading-1;
+}
+h2 {
+  @extend %heading-2;
+}
+h3 {
+  @extend %heading-3;
+}
+h4 {
+  @extend %heading-4;
+}
+h5 {
+  @extend %heading-5;
+}
+h6 {
+  @extend %heading-6;
 }
 // h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
 //   margin: 0;

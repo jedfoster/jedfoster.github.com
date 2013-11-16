@@ -1,5 +1,7 @@
 /* buttons & notices */
 a.button, button {
+  @extend %secondary-font-family;
+
   display: block;
   float: left;
   margin: 0.6em 1em 0.6em 0;
