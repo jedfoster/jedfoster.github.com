@@ -12,7 +12,6 @@ a.button, button {
   text-decoration: none;
   color: $alpha-gray;
   cursor: pointer;
-  -webkit-box-sizing: content-box;
   text-shadow: 1px 1px 0 $charlie-gray;
   text-shadow: 1px 1px 0 transparentize($white, 0.2);
 }
