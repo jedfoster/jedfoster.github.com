@@ -158,7 +158,7 @@ table {
 th {
   font-weight: normal;
 }
-th, td, caption {
+th, td {
   padding: .375em .75em;
 }
 %zebra {
@@ -167,10 +167,6 @@ th, td, caption {
 }
 tr:nth-child(even) {
   @extend %zebra;
-}
-
-tfoot {
-  font-style: italic;
 }
 .small {
   font-size: .8em;
