@@ -33,8 +33,35 @@
 
 
 %icon-font {
+  display: inline-block;
+  min-width: 1em;
+
+  &:before {
+    @extend %icon-pseudo-content;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  .alt {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 1px;
+    height: 1px;
+  }
+}
+
+
+%icon-pseudo-content {
+  font-size: 1em;
   font-family: 'Icons';
-  speak: none;
+	font-style: normal;
+	line-height: 1;
+	vertical-align: middle;
+	speak: none;
+  -webkit-font-smoothing: antialiased;
+  
   padding-right:0.4em;
 }
 
@@ -46,42 +73,94 @@
 /* content: '\68';   /* star 2 */
 
 
-.Design:before {
-  content: "\26cf";
+.Design {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\26cf";
+  }
 }
-.HTML:before {
-  content: "\26d0";
+.HTML {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\26d0";
+  }
 }
-.HTML5:before {
-  content: "\26de";
+.HTML5 {
+  @extend %icon-font;
+
+  &:before {
+    content: "\26de";
+  }
 }
-.CSS:before {
-  content: "\26d1";
+.CSS {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\26d1";
+  }
 }
-.CSS3:before {
-  content: "\26e0";
+.CSS3 {
+  @extend %icon-font;
+
+  &:before {
+    content: "\26e0";
+  }
 }
-.JavaScript:before {
-  content: "\26d2";
+.JavaScript {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\26d2";
+  }
 }
-.PSD:before {
-  content: "\26dc";
+.PSD {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\26dc";
+  }
 }
-.Refreshed:before {
-  content: "\26d8";
+.Refreshed {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\26d8";
+  }
 }
-.Closed:before {
-  content: "\26d9";
+.Closed {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\26d9";
+  }
 }
-.e-Commerce:before {
-  content: "\26db";
+.e-Commerce {
+  @extend %icon-font;
+
+  &:before {
+    content: "\26db";
+  }
 }
-.PHP:before {
-  content: "\e001";
+.PHP {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\e001";
+  }
 }
-.Ruby:before {
-  content: "\e000";
+.Ruby {
+  @extend %icon-font;
+
+  &:before {
+  	content: "\e000";
+  }
 }
-.GitHub:before {
-  content: "\26ca";
+.GitHub {
+  @extend %icon-font;
+
+  &:before {
+    content: "\26ca";
+  }
 }
