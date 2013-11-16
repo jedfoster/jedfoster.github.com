@@ -9,10 +9,6 @@ body {
   max-width: 940px;
 }
 
-.showgrid {
-  background: url('/img/grid_16px.png') repeat;
-}
-
 %column {
   float: left;
   margin-right: 2.12765957446808510638%; /* 20/940 */
@@ -98,15 +94,7 @@ body {
 }
 
 
-hr {
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 1.5em;
-  margin: 0;
-  border: 0;
-  border-top: 1px solid #8e8e8e;
-}
+
 
 .clear {
   clear: both;

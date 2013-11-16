@@ -2,19 +2,9 @@
 layout: default
 title: Style Guide
 slug: style-guide
+css: |
+  <link rel="stylesheet" href="/css/style-guide.css">
 ---
-
-:css
-  #main > article {
-    padding-top: 0;
-    border-top: 0;
-  }
-  .showgrid {
-    background: url('/img/grid_16px.png') repeat;
-    float: left;
-    width: 100%;
-    clear: both;
-  }
 
 
 %article#text.showgrid
@@ -74,19 +64,19 @@ slug: style-guide
 %article#alerts
   .notice
     Notice
-    %a Link
+    %a{:href => '#'} Link
 
   .success
     Success
-    %a Link
+    %a{:href => '#'} Link
 
   .error
     Error
-    %a Link
+    %a{:href => '#'} Link
 
   .info
     Info
-    %a Link
+    %a{:href => '#'} Link
 
 
 %article#notes-tables.showgrid
@@ -173,43 +163,71 @@ slug: style-guide
       %p Commenty comment
 
 
+%article#forms.showgrid
+  :textile
+      <form>
+
+    <label>Your Email:</label>
+      <input type="email" value="Mr. Lorem Ipsum">
+
+    <label>Select:</label>
+      <select>
+        <option>Option #1</option>
+        <option>Option #2</option>
+        <option>Option #3</option>
+      </select>
+
+    <label>Your Message:</label>
+      <textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+
+    <button type="submit"><img src="/img/icons/mail_48.png" alt="Send Message"> Send Message</button>
+      </form>
+
+
+
 %article#colors
+  %h1.clear Gray
 
-  .alpha-gray
-    alpha-gray
-
-  .bravo-gray
-    bravo-gray
-
-  .charlie-gray
-    charlie-gray
-
-  .delta-gray
-    delta-gray
-
-  .echo-gray
-    echo-gray
+  .foo
+    .alpha-gray
+    .bravo-gray
+    .charlie-gray
 
 
-  .alpha-color
-    alpha-color
+  %h1.clear Blue
 
-  .bravo-color
-    bravo-color
-
-  .charlie-color
-    charlie-color
-
-  .delta-color
-    delta-color
-
-  .echo-color
+  .foo
+    .alpha-color
+    .alpha-color-bravo
+    .alpha-color-charlie
 
 
+  %h1.clear Green
+
+  .foo
+    .bravo-color
+    .bravo-color-bravo
+    .bravo-color-charlie
+
+  %h1.clear Yellow
+
+  .foo
+    .charlie-color
+    .charlie-color-bravo
+    .charlie-color-charlie
 
 
-/ Body text: 696969
-/ Anchor: 006EB2
-/ Anchor:hover: E7BD36
-/ Table heading: c3d9ff
-/ zebra: E9E9E9
+  %h1.clear Red
+
+  .foo
+    .delta-color
+    .delta-color-bravo
+    .delta-color-charlie
+
+
+  %h1.clear Purple
+
+  .foo
+    .echo-color
+    .echo-color-bravo
+    .echo-color-charlie

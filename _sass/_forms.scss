@@ -1,13 +1,14 @@
 /* forms */
 label {
-  @extend %secondary-font-family;
-
-  vertical-align: top;
+  @extend %heading-5;
+  
+  display: block;
+  margin-bottom: 0;
 }
 fieldset {
   padding: 1.5em 1em;
   margin: 0 0 1.5em 0;
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
 }
 legend {
   font-weight: bold;
@@ -15,53 +16,46 @@ legend {
   margin-top: -0.2em;
   margin-bottom: 1em;
 }
-fieldset,#IE8#HACK {
+fieldset {
   padding-top: 1.4em;
 }
-legend,#IE8#HACK {
+legend {
   margin-top: 0;
   margin-bottom: 0;
 }
-input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="url"], input.text, input.title, textarea {
-  background-color: #fff;
-  border: 1px solid #bbb;
-  font-size: 1em;
-}
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input.text:focus, input.title:focus, textarea:focus {
-  border-color: #666;
+input, textarea, select {
+  background: transparentize($white, 0.3);
+  font-size: 0.85em;
+  border: 1px solid $border-color;
+  width: 100%;
+  margin: 0 0 1.7em;
+  padding: 0.25em;
+  
+  &:focus {
+    border-color: transparentize($alpha-color, 0.1);
+    -webkit-box-shadow: 0 0 0.5em transparentize($alpha-color, 0.5);
+    box-shadow: 0 0 0.5em transparentize($alpha-color, 0.5);
+  }
 }
 select {
-  background-color: #fff;
-  border-width: 1px;
-  border-style: solid;
+  height: 1.85em;
+  vertical-align: top;
 }
-input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="url"], input.text, input.title, textarea, select {
-  margin: 0 0 1.6em;
-  padding: 0.25em;
-}
-p input[type="text"], p input[type="password"], p input[type="email"], p input[type="tel"], p input[type="url"], p input.text, p textarea {
-  margin-bottom: 0;
-}
-input.text, input.title {
-  width: 300px;
-}
-input.title {
-  font-size: 1.5em;
-}
+
 textarea {
-  width: 390px;
-  height: 6.7em;
+  display: block;
+  height: 7em;
 }
 form p {
   margin-bottom: 1.42em;
 }
-form.inline {
-  line-height: 3;
-}
-form.inline p {
-  margin-bottom: 0;
-}
-form.inline button {
-  float: none;
-  display: inline;
-}
+// form.inline {
+//   line-height: 3;
+// }
+// form.inline p {
+//   margin-bottom: 0;
+// }
+// form.inline button {
+//   float: none;
+//   display: inline;
+// }

@@ -1,13 +1,14 @@
 .pg-contact form {
-  @extend %span-12;
+  // @extend %span-12;
   
   margin-bottom: 1.5em;
 }
 .pg-contact label {
-  @extend %span-3;
+  // @extend %span-3;
 
   display: block;
-  text-align:right;
+  // text-align:right;
+  // clear: both;
 }
 .pg-contact input {
   @extend %span-3;

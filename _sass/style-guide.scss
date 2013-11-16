@@ -1,0 +1,37 @@
+@import "compass/utilities/color/contrast";
+
+$contrasted-lightness-threshold: 50%;
+
+@import "colors";
+
+
+@each $color-name, $color-var in $color-map {
+  .#{$color-name} {
+    @extend %#{$color-name};
+    @include contrasted($color-var);
+    
+    color: contrast-color($color-var, #222, #fff);    
+    text-shadow: 1px 1px 0 contrast-color(contrast-color($color-var, #222, #fff), #fff, #222);
+    text-align: center;
+    padding: 0.75em;
+    width: 31.333333333%;
+    margin: 0 3% 1.5em 0;
+    float: left;
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+}
+
+
+#main > article {
+  padding-top: 0;
+  border-top: 0;
+}
+.showgrid {
+  //background: url('/img/grid_16px.png') repeat;
+  float: left;
+  width: 100%;
+  clear: both;
+}
