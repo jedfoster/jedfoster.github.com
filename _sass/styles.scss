@@ -444,40 +444,48 @@ article.post {
  * These follow after primary styles so they will successfully override.
  */
 
-@media all and (orientation:portrait) {
+@media all and (orientation: portrait) {
   /* Style adjustments for portrait mode goes here */
 }
 
-@media all and (orientation:landscape) {
+@media all and (orientation: landscape) {
   /* Style adjustments for landscape mode goes here */
 }
 
 
 @media screen and (max-width: 768px) {
-	body{padding:0.75em;}
-	header h1 {
-		width:100%;
-		float:none;
+	body{
+	  padding: 0.75em;
 	}
-	header h1 a {display:inline;}
+	header h1 {
+		width: 100%;
+		float: none;
+	}
+	header h1 a {
+	  display: inline;
+	}
 	header h2 {
 		width: 100%;
-		float:none;
-		clear:both;
+		float: none;
+		clear: both;
 	}
 	header nav{
-		float:none;
-		clear:both;
+		float: none;
+		clear: both;
 	}
-	nav ul, nav li {float:none;}
-	nav li {line-height:1.5;}
+	nav ul, nav li {
+	  float: none;
+	}
+	nav li {
+	  line-height: 1.5;
+	}
 	#main, #sidebar  {
-		width:100%;
-		float:none;
-		clear:both;
+		width: 100%;
+		float: none;
+		clear: both;
 	}
 	#sidebar {
-		padding-top:1.5em;
+		padding-top: 1.5em;
 		border-top: 1px solid #b7b7b7;
 	}
 }
@@ -571,13 +579,13 @@ article.post {
 
 }
 
-@media screen and (min-width:360px) and (max-width: 480px) {
+@media screen and (min-width: 360px) and (max-width: 480px) {
 	header h1 {
-		font-size:4.25em;
+		font-size: 4.25em;
 	}
 	header h2 {
-		font-size:1.5em;
-		line-height:1.5;
+		font-size: 1.5em;
+		line-height: 1.5;
 	}
   header h2 span:last-child {
     display: inline;
@@ -585,14 +593,14 @@ article.post {
   .pg-work section img {
     margin-bottom: 1.5em;
   }
-  .pg-work section ul,.pg-work section li {
+  .pg-work section ul, .pg-work section li {
     float: left;
     clear: none;
   }
 
 }
 
-@media screen and (min-width:480px) and (max-width: 560px) {
+@media screen and (min-width: 480px) and (max-width: 560px) {
   header h1 {
     font-size: 4.5em;
   }
@@ -644,26 +652,26 @@ article.post {
     float: left; /* same as default */
     clear:none;
     width: 31.428571428571428571%; /* same as default */
-    margin-right:2.857142857142857142%; /* same as default */
-    text-align:right; /* same as default */
+    margin-right: 2.857142857142857142%; /* same as default */
+    text-align: right; /* same as default */
   }
   .pg-contact input, .pg-contact textarea {
     width: 64.285714285714285714%; /* same as default */
   }
   .pg-contact button[type="submit"] {
     float: left; /* same as default */
-    margin-left:34.285714285714285714%; /* same as default */
+    margin-left: 34.285714285714285714%; /* same as default */
   }
 
   .pg-work section {
     margin-bottom: 1.5em; /* same as default */
-    padding-top:2.95em; /* same as default */
+    padding-top: 2.95em; /* same as default */
 
     img {
       float: left; /* same as default */
-      margin-right:2.857142857142857142%; /* same as default */
-      margin-bottom:1.5em; /* same as default */
-      width:54.29%; /* same as default */
+      margin-right: 2.857142857142857142%; /* same as default */
+      margin-bottom: 1.5em; /* same as default */
+      width: 54.29%; /* same as default */
     }
   }
 }
@@ -678,7 +686,7 @@ article.post {
   }
   header h1 {
     width: 74.468085106382978723%;/* 700/940 */
-    float:left;
+    float: left;
     font-size: 5.25em;
     margin-bottom: -1.5em;
   }
@@ -688,7 +696,7 @@ article.post {
   }
   header h2 {
     width: 23.4104255319148936170%;/* 220/940 */
-    float:right;
+    float: right;
     text-align: right;
     line-height: 1.33;
     margin: 0 0 0.625em;
@@ -801,7 +809,7 @@ article.post {
 @media screen and (min-width: 768px) and (max-width: 970px) {
   header h1 {
     width: 74.468085106382978723%;/* 700/940 */
-    float:left;
+    float: left;
     font-size: 5.5em;
     margin-bottom: -1.5em;
   }
@@ -901,10 +909,8 @@ article.post {
     content: "";
     display: none;
   }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+
+  a[href^="#"]:after {
     content: "";
   }
   pre, blockquote {
@@ -924,7 +930,7 @@ article.post {
     orphans: 3;
     widows: 3;
   }
-  h2, h3 {
+  h1, h2, h3 {
     page-break-after: avoid;
   }
 
@@ -938,19 +944,12 @@ article.post {
     padding: 0;
     border: none;
   }
-  hr.space {
-    background: #fff;
-    color: #fff;
-    visibility: hidden;
-  }
+
   code {
     font: .9em "Menlo", Monaco, "Courier New", Courier, monospace;
   }
   header, a img {
     border: none;
-  }
-  p img.top {
-    margin-top: 0;
   }
   blockquote {
     margin: 1.5em;
@@ -958,19 +957,10 @@ article.post {
     font-style: italic;
     font-size: .9em;
   }
-  .small {
-    font-size: .9em;
-  }
-  .large {
-    font-size: 1.1em;
-  }
-  .quiet {
-    color: #999;
-  }
   .print-hide {
     display: block;
   }
-  .hide,#sidebar, header nav {
+  .hide, #sidebar, header nav {
     display: none;
   }
   #main {
