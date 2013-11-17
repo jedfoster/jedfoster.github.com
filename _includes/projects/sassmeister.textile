@@ -1,4 +1,4 @@
-  !/img/portfolio/sites/sassmeister-sm.png!
+  !/img/portfolio/sites/sassmeister-2.0-sm.png!
 
 h1. "SassMeister":http://sassmeister.com
 
