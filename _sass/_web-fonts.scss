@@ -9,6 +9,7 @@
 	font-style: normal;
   font-variant: normal;
 }
+
 @font-face {
 	font-family: 'DejaVuSerifBook';
 	src: url('/fonts/DejaVu-Serif.eot');
@@ -20,6 +21,7 @@
 	font-style: normal;
 	font-variant: normal;
 }
+
 @font-face {
 	font-family: 'Icons';
 	src: url('/fonts/Icons.eot');
@@ -46,6 +48,13 @@
 
   &:before {
     @extend %icon-pseudo-content;
+
+    padding-right: 0.5em;
+  }
+  &:after {
+    @extend %icon-pseudo-content;
+
+    padding-left: 0.5em;
   }
   &:hover {
     text-decoration: none;
@@ -62,15 +71,13 @@
 
 
 %icon-pseudo-content {
-  font-size: 1em;
+  font-size: 0.8125em;
   font-family: 'Icons';
 	font-style: normal;
 	line-height: 1;
-	vertical-align: middle;
+	vertical-align: baseline;
 	speak: none;
   -webkit-font-smoothing: antialiased;
-  
-  padding-right:0.4em;
 }
 
 /* content: '\26e2'; /* rocket */
@@ -171,4 +178,12 @@
   &:before {
     content: "\26ca";
   }
+}
+
+.fork {
+  @extend %icon-font;
+
+  &:after {
+	  content: "\26cc";
+	}
 }

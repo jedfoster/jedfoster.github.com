@@ -232,21 +232,7 @@ nav li.page-.home, nav ul ul, nav li.ancestor ul ul {
     float: left;
     display: block;
     margin-right: 1.25em;
-
-    &:before {
-      @extend %icon-font;
-    }
   }
-}
-
-
-
-
-.fork:after {
-  @extend %icon-font;
-
-	content: "\26cc";
-	padding-left:0.4em;
 }
 
 
