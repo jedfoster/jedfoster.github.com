@@ -16,7 +16,7 @@ A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinat
 
 h2. "SassMeister":http://sassmeister.com
 
-A playground for Sass. Type or paste some Sass into the text area and SassMeister will show you the rendered CSS. Works with both SCSS and Sass syntaxes, and includes several popular Sass libraries like Bourbon and Compass.
+A playground for Sass. Type or paste some Sass into the text area and SassMeister will show you the rendered CSS. Works with both SCSS and Sass syntaxes, and includes more than 30 popular Sass libraries like Bourbon and Compass.
 
 
 h2. "(fork)Readmore.js":http://github.com/jedfoster/Readmore.js
@@ -36,7 +36,7 @@ Styleguides made awesome.
 
 h2. "(fork)Stipe":https://github.com/Anotheruiguy/stipe
 
-The core Sass Mixins that support the Toadstool Styleguide Framework
+The core Sass Mixins that support the Toadstool style guide framework
 
 
 h2. "(fork)AudioJS":https://github.com/jedfoster/AudioJS

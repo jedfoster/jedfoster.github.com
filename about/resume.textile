@@ -75,17 +75,16 @@ h4. "Roughdraft.io":http://www.roughdraft.io
 A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinatra. Deployed to Heroku.
 
 * Redis for caching content retrieved using the Github API
-* Server-to-server GitHub API authentication
+* Server-to-server GitHub OAuth API
 
 h4. "SassMeister.com":http://sassmeister.com
 
 A web app for experimenting with Sass. Written in Ruby, using Sinatra. Deployed to Heroku.
 
-* Lead developer
 * Icon fonts
-* GitHub OAuth
+* GitHub OAuth API
 * HTML5 localStorage
-* Packaged two Sass libraries as Compass extensions and published them as Ruby gems
+* Packaged several Sass libraries as Compass extensions and published them as Ruby gems
 
 h4. "Readmore.js":https://github.com/jedfoster/Readmore.js
 
@@ -105,7 +104,6 @@ Sinatra-based style guide app.
 
 * Co-developer
 * Implemented dynamic routing in Sinatra
-* Created various Ruby methods
 
 h4. "Stipe":https://github.com/Anotheruiguy/stipe
 
@@ -114,9 +112,7 @@ Sass library that forms the core of Toadstool.
 * Co-developer
 * Engineered a modular file structure
 * Extracted core Sass into a Compass extension
-* Created Ruby gem
-
-
+* Created a Ruby gem
 
 
 
@@ -141,7 +137,7 @@ _Getty Images_
 
 h3. 2005 – Present
 
-Self-employed, Web Designer, Frontend Developer, Software Engineer
+Self-employed, Web Designer, Front end Developer, Software Engineer
 
 * Designed, built, and maintained numerous websites for clients in fields such as health care, education, industrial manufacturing and sales, community services, motivational speaking, non-profit charities, beauty salons, and transportation safety.
 * Wrote a custom content-management system with the KohanaPHP MVC framework.
