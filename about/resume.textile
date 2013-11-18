@@ -28,29 +28,36 @@ h3. Expert
 
 * HTML5
 * CSS3
-* PHP/MySQL
+* Responsive Web Design
 * Sass
+* Ruby
+* Sinatra
+* Ruby on Rails
+* JavaScript, including jQuery and Prototype &amp; script.aculo.us
+* Git
+* PHP
+* MySQL
 * KohanaPHP
-* OS X and Linux
-* Git and SVN
 * Apache
+
 
 h3. Competent &amp; Improving
 
-* Responsive Web Design
-* Ruby
-* JavaScript, including jQuery and Prototype/script.aculo.us
-* Sinatra
-* Ruby on Rails
 * Vim
+* Redis
+* OAuth
+* Jekyll
+* Amazon S3
+* Amazon Route 53
 * Heroku cloud platform
+* Agile &amp; Lean development practices
 
 
 h3. Perpetual Interests
 
-* Usability/accessibility best practices
+* Usability &amp; accessibility best practices
 * Semantic markup
-* Next-generation technologies and techniques
+* Next-generation web technologies and techniques
 * Typography, grid design, and color theory
 * Industrial design and the history of common objects
 
@@ -128,7 +135,7 @@ _Getty Images_
 (Under contract through _Filter Digital_ from February, 2012 to August, 2012)
 
 * Maintained and developed marketing web pages and microsites using HTML5, CSS3, jQuery, and XML.
-* Assumed lead role in the maintenance of a legacy style guide framework for marketing portions of the website. The framework generates production CSS with Sass and establishes markup patterns that guide the construction of new pages. 
+* Assumed lead role in the maintenance of a legacy style guide framework for marketing portions of the website. The framework generates production CSS with Sass and establishes markup patterns that guide the construction of new pages.
 * Co-authored a next-generation style guide framework for a strategic Ruby on Rails initiative. Engineered the framework's modular structure, dynamic routing, and the Ruby gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
 * Coached co-workers on version control, HTML/CSS/JS best practices, troubleshooting, and other development techniques.
 * Wrote numerous automation scripts in Ruby to manipulate the hundreds--sometimes thousands--of HTML fragment files that constitute a single marketing web page, including localized versions in more than ten languages.
