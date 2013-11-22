@@ -94,13 +94,20 @@ p {
 // p .right {
 //   margin: 0 0 1.5em 1.5em;
 // }
+
+%background-transition {
+  -webkit-transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
+     -moz-transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
+       -o-transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
+          transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
+}
+
+
 a, button {
+  @extend %background-transition;
+
   color: $href-color;
   text-decoration: none;
-  -webkit-transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
-  -moz-transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
-  -o-transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
-  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
 }
 a:focus, a:hover, a:active {
   color: $href-hover-color;

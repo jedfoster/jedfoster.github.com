@@ -29,11 +29,11 @@
   font-family: 'Icons';
   font-style: normal;
   speak: none;
-  
+
   &:last-child {
     margin-right: 0;
   }
-  
+
   &:hover, &:active {
     color: $href-hover-color;
   }
@@ -156,7 +156,7 @@ nav li {
   display: block;
   float: left;
   margin-right: 2.5em;
-  
+
   &:last-child {
     margin-right: 0;
   }
@@ -222,7 +222,7 @@ nav li.page-.home, nav ul ul, nav li.ancestor ul ul {
 
   ul {
     @extend %span-4;
-    
+
     list-style: none;
     padding-left: 0;
     margin-right:0;
@@ -270,7 +270,7 @@ article h1 .date {
 }
 article .mod_date {
   @extend %secondary-font-family;
-  
+
   color: $bravo-gray;
   font-size: 0.875em;
   display: block;
@@ -287,6 +287,44 @@ article .mod_date {
 }
 .notes header, .notes #main, .resume #main {
   width: 100%;
+}
+
+.notes {
+  colgroup, tr {
+    @extend %background-transition;
+  }
+
+  .hover {
+    @extend %background-transition;
+
+    background: transparentize($alpha-color-charlie, 0.5);
+  }
+
+  th {
+    @extend %background-transition;
+    cursor: pointer;
+
+    &:active {
+      @extend %background-transition;
+      background: $bravo-color-bravo;
+    }
+    &.selected {
+      @extend %background-transition;
+
+      background: $bravo-color-charlie;
+    }
+  }
+
+  tr td:first-child {
+    @extend %background-transition;
+
+    cursor: pointer;
+
+    &:active {
+      @extend %background-transition;
+      background: $charlie-color-bravo;
+    }
+  }
 }
 
 
