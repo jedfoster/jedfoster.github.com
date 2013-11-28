@@ -21,7 +21,7 @@ use Rack::StaticCache, :urls => [
     '/apple-touch-icon-114x114-precomposed.png',
     '/apple-touch-icon-precomposed.png',
     '/apple-touch-icon.png'
-  ], :root => "_site", :duration => 7
+  ], :root => "_site", :duration => 7, :versioning => false
 use Rack::ETag
 
 use Rack::Rewrite do
