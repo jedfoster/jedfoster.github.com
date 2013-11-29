@@ -1,4 +1,4 @@
-  <div class="span-half">
+  <div id="morning" class="span-half">
 
 h3. Morning
 
@@ -14,7 +14,7 @@ h3. Morning
 
   </div>
 
-  <div class="span-half">
+  <div id="evening" class="span-half">
 
 h3. Evening
 
