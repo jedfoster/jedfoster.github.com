@@ -1,20 +1,94 @@
-var row = false,
-    bodytxt = '';
-
 $('table').each(function() {
-  n = 0;
+  i = 0;
   l = $('th', this).length;
-  x = '';
+  colgroups = '';
 
-  while (n < l) {
-    x += '<colgroup/>';
-    n++;
+  while (i < l) {
+    colgroups += '<colgroup/>';
+    i++;
   }
 
-  $(this).prepend(x);
+  $(this).prepend(colgroups);
 });
 
 
+var now = new Date();
+var date = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
+
+
+var momnt = moment();
+
+
+var getThreshold = function(time, warn, miss, min, max) {
+  var minThreshold =  moment().clone().subtract(min, 'minutes'), // before
+      maxThreshold =  moment().clone().add(max, 'minutes'); // after
+
+  var klass = '';
+
+  if(time.isAfter(minThreshold) && time.isBefore(maxThreshold)) {
+    if(moment().isBefore(time.clone().subtract(warn, 'minutes'))) {
+      klass = 'good';
+    }
+  
+    else if(moment().isBefore(time.clone().subtract(miss, 'minutes'))) {
+      klass = 'warning';
+    }
+
+    else {
+      klass = 'missed';
+    } 
+  }
+
+  return klass;
+};  
+
+
+var updateThresholds = function() {
+  console.log('called');
+  $('time').each(function() {
+    var $this = $(this);
+
+    var klass = getThreshold( moment($this.attr('datetime')), $this.data('warn'), $this.data('miss'), $this.data('min'), $this.data('max')  );
+    $(this).parent()[0].className = klass;
+  });
+
+  window.setTimeout(updateThresholds, 4000);
+};
+
+
+$('#morning td:nth-child(2)').each(function() {
+  var time = moment(date + ' ' + $(this).text().trim() + ' AM'),
+      warn = 25,
+      miss = 17;
+ 
+  var timeHTML = $('<time />')
+                    .attr('datetime', time.format())
+                    .data('warn', warn)
+                    .data('miss', miss)
+                    .data('min', 26)
+                    .data('max', 45)
+                    .html($(this).text().trim());
+  $(this).html(timeHTML);
+});
+
+
+$('#evening td:first-child').each(function() {
+  var time = moment(date + ' ' + $(this).text().trim() + ' PM'),
+      warn = 10,
+      miss = 4;
+
+  var timeHTML = $('<time />')
+                    .attr('datetime', time.format())
+                    .data('warn', warn)
+                    .data('miss', miss)
+                    .data('min', 20)
+                    .data('max', 25)
+                    .html($(this).text().trim());
+  $(this).html(timeHTML);
+});
+
+
+updateThresholds();
 
 
 $('th').on('click', function(event) {
@@ -54,11 +128,10 @@ $('td').on('click', function(event) {
 
   var location = 'sms://253.218.8202;body=' + (bodytxt); //.replace(/ /, '%20').replace(/:/, '%3A'));
 
-  console.log(location);
+  // console.log(location);
 
   window.location = location;
 });
-
 
 
 $("table").delegate('td', 'mouseover mouseleave touchenter touchleave', function(e) {
@@ -77,6 +150,7 @@ $("table").delegate('td', 'mouseover mouseleave touchenter touchleave', function
     }
   }
 });
+
 
 $("table").delegate('th', 'mouseover mouseleave touchenter touchleave', function(e) {
   if (e.type == 'mouseover' || e.type == 'touchenter') {

@@ -31,6 +31,12 @@ $echo-color-bravo:      #bfb6db;
 $echo-color-charlie:    #ece4fb;
 
 
+$fox-color:          mix($charlie-color-bravo, $delta-color-charlie); //#f7760c;
+$fox-color-bravo:    mix($charlie-color-charlie, $delta-color-charlie); //#ffb885;
+$fox-color-charlie:  lighten(mix($charlie-color-charlie, $delta-color-charlie, 70%), 5%); //#ffdcbd;
+
+
+
 $href-color:            $alpha-color;
 $href-hover-color:      $charlie-color-bravo;
 

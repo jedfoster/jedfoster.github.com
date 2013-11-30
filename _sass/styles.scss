@@ -41,10 +41,6 @@
 #socialLinks a span {
   display: none;
 }
-
-#socialLinks a.last {
-  margin-right: 0;
-}
 #email:after {
   content: "\26cd";
 }
@@ -325,6 +321,18 @@ article .mod_date {
       background: $charlie-color-bravo;
     }
   }
+
+  .missed {
+    background: $delta-color-charlie;
+  }
+
+  .warning {
+    background: $fox-color-bravo;
+  }
+
+  .good {
+    background: $bravo-color-charlie;
+  }
 }
 
 
@@ -332,8 +340,6 @@ article .mod_date {
   font-family: 'Icons';
   speak: none;
   padding-left:0.4em;
-
-
   content: '\26e2';
 }
 
