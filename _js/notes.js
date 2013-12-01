@@ -62,7 +62,7 @@ $('#morning td:nth-child(2)').each(function() {
       miss = 17;
  
   var timeHTML = $('<time />')
-                    .attr('datetime', time.format())
+                    .attr('datetime', time.format("YYYY-MM-DDTHH:mm", "YYYY-MM-DD HH:mm A"))
                     .data('warn', warn)
                     .data('miss', miss)
                     .data('min', 26)
@@ -73,18 +73,23 @@ $('#morning td:nth-child(2)').each(function() {
 
 
 $('#evening td:first-child').each(function() {
-  var time = moment(date + ' ' + $(this).text().trim() + ' PM'),
+  var time = moment(date + ' ' + $(this).text().trim() + ' PM', "YYYY-MM-DD HH:mm A"),
       warn = 10,
       miss = 4;
 
+  console.log('"' + time.format() + '"');
+
   var timeHTML = $('<time />')
-                    .attr('datetime', time.format())
+                    .attr('datetime', time.format("YYYY-MM-DDTHH:mm"))
                     .data('warn', warn)
                     .data('miss', miss)
                     .data('min', 20)
                     .data('max', 25)
                     .html($(this).text().trim());
   $(this).html(timeHTML);
+
+   console.log(timeHTML);
+
 });
 
 
