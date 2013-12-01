@@ -57,12 +57,12 @@ var updateThresholds = function() {
 
 
 $('#morning td:nth-child(2)').each(function() {
-  var time = moment(date + ' ' + $(this).text().trim() + ' AM'),
+  var time = moment(date + ' ' + $(this).text().trim() + ' AM', "YYYY-MM-DD HH:mm A"),
       warn = 25,
       miss = 17;
  
   var timeHTML = $('<time />')
-                    .attr('datetime', time.format("YYYY-MM-DDTHH:mm", "YYYY-MM-DD HH:mm A"))
+                    .attr('datetime', time.format("YYYY-MM-DDTHH:mm"))
                     .data('warn', warn)
                     .data('miss', miss)
                     .data('min', 26)
