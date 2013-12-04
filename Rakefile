@@ -17,13 +17,13 @@ task :deploy do
     sh "git push origin master"
 
   elsif env == 's3'
-    Utilities.new.set_asset_paths('http://assets.jedfoster.com')
+    # Utilities.new.set_asset_paths('http://assets.jedfoster.com')
     sh 's3_website push'
 
   else
-    Utilities.new.set_asset_paths('http://assets.jedfoster.com')
+    # Utilities.new.set_asset_paths('http://assets.jedfoster.com')
     sh 's3_website push'
-    sh "rsync -avz #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
+    # sh "rsync -avz #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
   end
 end
 
