@@ -185,7 +185,7 @@ nav li.page-.home, nav ul ul, nav li.ancestor ul ul {
 .span-half {
   @extend %span-6;
 
-  overflow-y: scroll
+  overflow: auto; 
 }
 .span-half + .span-half {
   margin-right: 0;
