@@ -11,48 +11,109 @@ $('table').each(function() {
   $(this).prepend(colgroups);
 });
 
+var colors = {
+  missed: '',
+  warning: '',
+  good: ''
+};
+
+$(['missed', 'warning', 'good']).each(function(k, value) {
+  var div = document.createElement('div');
+
+  div.className = value;
+  document.getElementsByTagName("body")[0].appendChild(div);
+
+  colors[value] = window.getComputedStyle(div).backgroundColor; 
+
+  document.getElementsByTagName("body")[0].removeChild(div);
+});
+
+var rgb2hex = function(rgb) {
+  rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d\.]+))?\)$/);
+  function hex(x) {
+    return ("0" + parseInt(x).toString(16)).slice(-2);
+  }
+  return (hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3])).toUpperCase();
+};
+
+var mix = function(color_1, color_2, weight) {
+  function d2h(d) { return d.toString(16); }
+  function h2d(h) { return parseInt(h, 16); }
+
+  weight = (typeof(weight) !== 'undefined') ? weight : 50;
+
+  var color = "#";
+
+  for(var i=0; i <= 5; i+=2) {
+    var v1 = h2d(color_1.substr(i, 2)),
+        v2 = h2d(color_2.substr(i, 2)),
+        val = d2h(Math.floor(v2 + (v1 - v2) * (weight/100.0) ));
+
+    while(val.length < 2){
+      val = '0' + val;
+    }
+    color += val;
+  }
+    
+  return color;
+};
 
 var now = new Date();
 var date = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
 
-
-var momnt = moment();
+//var momnt = moment(date + ' 3:47 PM', "YYYY-MM-DD HH:mm A");
 
 
 var getThreshold = function(time, warn, miss, min, max) {
   var minThreshold =  moment().clone().subtract(min, 'minutes'), // before
       maxThreshold =  moment().clone().add(max, 'minutes'); // after
 
-  var klass = '';
-
   if(time.isAfter(minThreshold) && time.isBefore(maxThreshold)) {
-    if(moment().isBefore(time.clone().subtract(warn, 'minutes'))) {
-      klass = 'good';
+    var scale_point = 100,
+        diff = 0;
+    
+    var warnThreshold = time.clone().subtract(warn, 'minutes'),
+        missThreshold = time.clone().subtract(miss, 'minutes');
+
+    if(moment().isBefore(warnThreshold)) {
+      diff = moment().diff(warnThreshold, 'minutes') * -1;
+
+      if (diff < warn) {
+        scale_point = (diff / warn) * 100;
+      }
+
+      return mix(rgb2hex(colors['good']), rgb2hex(colors['warning']), scale_point);
     }
   
-    else if(moment().isBefore(time.clone().subtract(miss, 'minutes'))) {
-      klass = 'warning';
+    else if(moment().isBefore(missThreshold)) {
+      diff = moment().diff(missThreshold, 'minutes') * -1;
+
+      if (diff < warn) {
+        scale_point = (diff / miss) * 100;
+      }
+
+      return mix(rgb2hex(colors['warning']), rgb2hex(colors['missed']), scale_point);
     }
 
     else {
-      klass = 'missed';
-    } 
+      return colors['missed']      
+    }
   }
-
-  return klass;
+  
+  return '';
 };  
 
-
 var updateThresholds = function() {
-  console.log('called');
+  //console.log('called');
+
   $('time').each(function() {
     var $this = $(this);
 
-    var klass = getThreshold( moment($this.attr('datetime')), $this.data('warn'), $this.data('miss'), $this.data('min'), $this.data('max')  );
-    $(this).parent()[0].className = klass;
+    var color = getThreshold( moment($this.attr('datetime')), $this.data('warn'), $this.data('miss'), $this.data('min'), $this.data('max')  );
+    $($(this).parent()[0]).css('backgroundColor', color);
   });
 
-  window.setTimeout(updateThresholds, 4000);
+  window.setTimeout(updateThresholds, 6000);
 };
 
 
@@ -65,7 +126,7 @@ $('#morning td:nth-child(2)').each(function() {
                     .attr('datetime', time.format("YYYY-MM-DDTHH:mm"))
                     .data('warn', warn)
                     .data('miss', miss)
-                    .data('min', 26)
+                    .data('min', 35)
                     .data('max', 45)
                     .html($(this).text().trim());
   $(this).html(timeHTML);
@@ -77,8 +138,6 @@ $('#evening td:first-child').each(function() {
       warn = 10,
       miss = 4;
 
-  console.log('"' + time.format() + '"');
-
   var timeHTML = $('<time />')
                     .attr('datetime', time.format("YYYY-MM-DDTHH:mm"))
                     .data('warn', warn)
@@ -87,9 +146,6 @@ $('#evening td:first-child').each(function() {
                     .data('max', 25)
                     .html($(this).text().trim());
   $(this).html(timeHTML);
-
-   console.log(timeHTML);
-
 });
 
 
