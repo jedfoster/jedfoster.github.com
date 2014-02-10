@@ -38,7 +38,7 @@ use Rack::Rewrite do
   rewrite %r{/([\w_-]+).manifest}, '/$1.manifest'
   rewrite %r{/(\d{4}/\d{2})/([\w_-]+)}, '/$1/$2/index.html'
   rewrite %r{/blog/([\w_-]+)}, '/blog/$1/index.html'
-  rewrite %r{/([\w_-]+)}, '/$1/index.html'
+  rewrite %r{/([\w_\.-]+)}, '/$1/index.html'
 end
 
 run Rack::Directory.new('_site')
