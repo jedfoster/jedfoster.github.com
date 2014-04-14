@@ -12,7 +12,7 @@ h1. Resume
 
 h2. Experience
 
-* 13 years of practical experience hand coding HTML, CSS, JavaScript, Ruby, PHP, and MySQL
+* 15 years of practical experience hand coding HTML, CSS, JavaScript, Ruby, PHP, and MySQL
 * Built numerous websites using responsive design, icon fonts to support HiDPI displays, HTML5 JavaScript APIs, CSS3 transforms, and other techniques
 * Developed numerous e-commerce/content management systems and custom web apps using PHP/MySQL and Ruby/RoR
 * Core contributor to several open-source projects
@@ -43,10 +43,14 @@ h3. Expert
 
 h3. Competent &amp; Improving
 
+* Node.js
+* CoffeeScript
+* TDD
 * Vim
 * Redis
 * OAuth
 * Jekyll
+* Cucumber/RSpec
 * Amazon S3
 * Amazon Route 53
 * Heroku cloud platform
@@ -77,13 +81,6 @@ h3. Intangibles
 
 h2. Open-source Projects
 
-h4. "Roughdraft.io":http://www.roughdraft.io
-
-A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinatra. Deployed to Heroku.
-
-* Redis for caching content retrieved using the Github API
-* Server-to-server GitHub OAuth API
-
 h4. "SassMeister.com":http://sassmeister.com
 
 A web app for experimenting with Sass. Written in Ruby, using Sinatra. Deployed to Heroku.
@@ -91,7 +88,17 @@ A web app for experimenting with Sass. Written in Ruby, using Sinatra. Deployed 
 * Icon fonts
 * GitHub OAuth API
 * HTML5 localStorage
+* Service Oriented Architecture
+* Memcache
+* Node.js
 * Packaged several Sass libraries as Compass extensions and published them as Ruby gems
+
+h4. "Roughdraft.io":http://www.roughdraft.io
+
+A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinatra. Deployed to Heroku.
+
+* Redis for caching content retrieved using the Github API
+* Server-to-server GitHub OAuth API
 
 h4. "Readmore.js":https://github.com/jedfoster/Readmore.js
 
@@ -130,21 +137,29 @@ h2. Employment History
 
 h3. February 2012 - present
 
-Software Engineer
+Software Engineer, Front End Developer, Ruby on Rails
 _Getty Images_
 (Under contract through _Filter Digital_ from February, 2012 to August, 2012)
 
+* Worked on a team building a unified, Ruby on Rails-based platform for several Getty Images websites.
+* Established code organization best practices for a large multi-app, multi-site Sass library.
+* Improved existing Sass code and sought to improve team compentency in CSS and Sass best practices.
+* Implemented responsive designs.
+* Built and maintained an icon webfont and associated Sass code, solving issues such as cross-browser support and sub-pixel antialiasing along the way.
+* Collaborated closely with UX designers on UI concepts and prototypes for an upcoming redesign of gettyimages.com.
+* Gained experience in test-driven design with Cucumber and Jasmine.
+* Co-authored and maintained a Rails-based style guide. Engineered the framework's modular structure, dynamic routing, and the Ruby gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
 * Maintained and developed marketing web pages and microsites using HTML5, CSS3, jQuery, and XML.
-* Assumed lead role in the maintenance of a legacy style guide framework for marketing portions of the website. The framework generates production CSS with Sass and establishes markup patterns that guide the construction of new pages.
-* Co-authored a next-generation style guide framework for a strategic Ruby on Rails initiative. Engineered the framework's modular structure, dynamic routing, and the Ruby gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
-* Coached co-workers on version control, HTML/CSS/JS best practices, troubleshooting, and other development techniques.
+* Assumed lead role in the maintenance of a legacy style guide framework for marketing portions of the website.
+* Coached co-workers on HTML/CSS/JS best practices, version control, troubleshooting, and other development techniques.
 * Wrote numerous automation scripts in Ruby to manipulate the hundreds--sometimes thousands--of HTML fragment files that constitute a single marketing web page, including localized versions in more than ten languages.
 * Migrated hundreds of pages of content from a legacy CMS to a new one. Wrote a Ruby script to transform XML documents into HTML fragments that could be consumed by the new CMS, as well as locate and move thousands of graphics from the old system to the new one.
 
 
-h3. 2005 – Present
 
-Self-employed, Web Designer, Front end Developer, Software Engineer
+h3. 2005 – 2013
+
+Self-employed, Web Designer, Front End Developer, Software Engineer
 
 * Designed, built, and maintained numerous websites for clients in fields such as health care, education, industrial manufacturing and sales, community services, motivational speaking, non-profit charities, beauty salons, and transportation safety.
 * Wrote a custom content-management system with the KohanaPHP MVC framework.
@@ -173,13 +188,11 @@ _Captive Audience Marketing Inc._
 
 
 
-
-notextile. <div class="print-hide">
-
+  <div class="print-hide">
 
 h2. Contact Info
 
 Email: "jed@jedfoster.com":mailto:jed@jedfoster.com
 Mobile: 253.298.2868
 
-notextile. </div>
+  </div>
