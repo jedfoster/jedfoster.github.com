@@ -384,6 +384,34 @@ article.post {
   padding-top: 3em;
 }
 
+.resume {
+  header h3 {
+    display: none;
+
+    @media print {
+      display: block;
+      float: left;
+      clear: both;
+      font-size: 1.75em;
+    }
+  }
+
+  h3 {
+    page-break-after: avoid;
+    page-break-before: always;
+  }
+
+  .employment {
+    page-break-inside: avoid;
+  }
+
+  @media print {
+    #main h1 {
+      display: none;
+    }
+  }
+
+}
 
 /**
  * Media queries for responsive design.
@@ -774,10 +802,11 @@ article.post {
   a[href]:after {
     content: " (" attr(href) ")";
     font-size: 50%;
-  }
-  header a[href]:after {
-    content: "";
-    display: none;
+
+    .print-hide &, header & {
+      content: "";
+      display: none;
+    }
   }
 
   a[href^="#"]:after {
