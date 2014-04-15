@@ -26,14 +26,14 @@ h2. Qualifications
 
 h3. Expert
 
-* HTML5
+(columns)* HTML5
 * CSS3
 * Responsive Web Design
 * Sass
 * Ruby
 * Sinatra
 * Ruby on Rails
-* JavaScript, including jQuery and Prototype &amp; script.aculo.us
+* JavaScript
 * Git
 * PHP
 * MySQL
@@ -41,36 +41,41 @@ h3. Expert
 * Apache
 
 
-h3. Competent &amp; Improving
+h3. Proficient
 
-* Node.js
+(columns)* Node.js
 * CoffeeScript
 * TDD
 * Vim
 * Redis
 * OAuth
 * Jekyll
+* Bower
 * Cucumber/RSpec
-* Amazon S3
+* Rack::Test
+* Jasmine
+* Heroku
+* PostgreSQL
+* Amazon S3 
 * Amazon Route 53
-* Heroku cloud platform
 * Agile &amp; Lean development practices
 
 
 h3. Perpetual Interests
 
 * Usability &amp; accessibility best practices
-* Semantic markup
 * Next-generation web technologies and techniques
 * Typography, grid design, and color theory
+* Semantic markup and the open web
 * Industrial design and the history of common objects
 
 
 h3. Intangibles
 
+* Passionate about the intersection of design and code
+* Dedicated to continued learning in a wide range of disciplines
 * Able to plainly communicate technical concepts
 * Learn new concepts and technologies quickly
-* Dedicated to continued learning in a wide range of disciplines
 
   </div>
 
@@ -85,7 +90,7 @@ h4. "SassMeister.com":http://sassmeister.com
 
 A web app for experimenting with Sass. Written in Ruby, using Sinatra. Deployed to Heroku.
 
-* Icon fonts
+* Icon font
 * GitHub OAuth API
 * HTML5 localStorage
 * Service Oriented Architecture
@@ -112,14 +117,15 @@ An implementation of a popular WordPress audio player for browsers that support 
 * Icon font
 * Forked and improved an existing JavaScript library
 
-h4. "Toadstool":https://github.com/Anotheruiguy/toadstool
+h4. "Toadstool":https://github.com/Toadstool-Stipe/toadstool
 
 Sinatra-based style guide app.
 
 * Co-developer
 * Implemented dynamic routing in Sinatra
+* Created a suite of automation tools for developing with the app
 
-h4. "Stipe":https://github.com/Anotheruiguy/stipe
+h4. "Stipe":https://github.com/Toadstool-Stipe/stipe
 
 Sass library that forms the core of Toadstool.
 
@@ -139,7 +145,6 @@ h3. February 2012 - present
 
 Software Engineer, Front End Developer, Ruby on Rails
 _Getty Images_
-(Under contract through _Filter Digital_ from February, 2012 to August, 2012)
 
 * Worked on a team building a unified, Ruby on Rails-based platform for several Getty Images websites.
 * Established code organization best practices for a large multi-app, multi-site Sass library.
@@ -148,7 +153,7 @@ _Getty Images_
 * Built and maintained an icon webfont and associated Sass code, solving issues such as cross-browser support and sub-pixel antialiasing along the way.
 * Collaborated closely with UX designers on UI concepts and prototypes for an upcoming redesign of gettyimages.com.
 * Gained experience in test-driven design with Cucumber and Jasmine.
-* Co-authored and maintained a Rails-based style guide. Engineered the framework's modular structure, dynamic routing, and the Ruby gem that forms the core Sass library. This framework was open-sourced and became Toadstool.
+* Co-authored and maintained a Rails-based style guide. Engineered the framework's modular structure, dynamic routing, and the Ruby gem that forms the core Sass library.
 * Maintained and developed marketing web pages and microsites using HTML5, CSS3, jQuery, and XML.
 * Assumed lead role in the maintenance of a legacy style guide framework for marketing portions of the website.
 * Coached co-workers on HTML/CSS/JS best practices, version control, troubleshooting, and other development techniques.
@@ -161,11 +166,11 @@ h3. 2005 – 2013
 
 Self-employed, Web Designer, Front End Developer, Software Engineer
 
-* Designed, built, and maintained numerous websites for clients in fields such as health care, education, industrial manufacturing and sales, community services, motivational speaking, non-profit charities, beauty salons, and transportation safety.
+* Designed, built, and maintained numerous websites for clients in fields such as health care, education, industrial manufacturing and sales, community services, motivational speaking, non-profit charities, and transportation safety.
 * Wrote a custom content-management system with the KohanaPHP MVC framework.
 * Developed several iterations of a custom content-management system, most of which are still in use.
-* Built an e-commerce solution that has processed about $250,000 in revenue for clients.
-* From 2007 through 2011 I continued working with Captive Audience as my largest client. Designed and implemented business-critical database and infrastructure solutions using FileMaker Pro Server and PHP/MySQL web applications, such as integrating an offline FileMaker database with an online ordering system using PHP/MySQL and XML, and developing a custom CRM web app that tied in with their larger FileMaker system.
+* Built an e-commerce solution that has processed about $350,000 in revenue for clients.
+* From 2007 through 2011 I continued working with Captive Audience as my largest client. I designed and implemented business-critical database and infrastructure solutions using FileMaker Pro Server and PHP/MySQL web applications, such as integrating an offline FileMaker database with an online ordering system using PHP/MySQL and XML, and developing a custom CRM web app that tied in with their larger FileMaker system.
 
 
 

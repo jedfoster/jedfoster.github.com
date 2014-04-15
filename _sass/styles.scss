@@ -392,7 +392,7 @@ article.post {
       display: block;
       float: left;
       clear: both;
-      font-size: 1.75em;
+      font-size: 1.45em;
     }
   }
 
@@ -408,6 +408,26 @@ article.post {
   @media print {
     #main h1 {
       display: none;
+    }
+
+    .skills ul {
+      float: left;
+      width: 100%;
+
+      li {
+        width: 50%;
+        padding-right: 2em;
+        float: left;
+      }
+      
+      & + * {
+        float: left;
+        width: 100%;
+        clear: both;
+      }
+    }
+    .employment {
+      clear: both;
     }
   }
 
@@ -764,6 +784,19 @@ article.post {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .resume .skills ul.columns {
+    padding-left: 0.5em;
+    list-style-position: inside;
+    -moz-column-count: 3;
+    -moz-column-gap: 1.5em; 
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1.5em; 
+    column-count: 3;
+    column-gap: 1.5em; 
+  }
+}
+
 @media screen and (max-width: 640px) {
   .span-half {
     float: none;
@@ -790,13 +823,13 @@ article.post {
 	/* -- HTML5 Boilerplate's print stles -- */
   * {
     background: transparent !important;
-    color: #333 !important;
+    color: #444 !important;
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important;
   }
   a, a:visited {
-    color: #555 !important;
+    color: #666 !important;
     text-decoration: underline;
   }
   a[href]:after {
