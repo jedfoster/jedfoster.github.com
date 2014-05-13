@@ -75,7 +75,7 @@ Now I _really_ need to get back to Project A.
 
 [1]: http://www.sinatrarb.com/
 [2]: http://sass-lang.com/
-[3]: https://github.com/anotheruiguy/toadstool
+[3]: https://github.com/Toadstool-Stipe/toadstool
 [4]: https://github.com/jaketrent/jquery-readmore
 [5]: http://plugins.learningjquery.com/expander/
 [6]: http://sim.plified.com/2008/09/15/sliding-content-from-a-partial-height-with-jquery/

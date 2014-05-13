@@ -29,12 +29,12 @@ h2. "(fork)HTML5 WP Audio Player":https://github.com/jedfoster/html5-WP-audio-pl
 A version of the awesome WordPress Audio Player for browsers that support HTML5's @<audio>@ tag, with fallback to the original Flash player for browsers that don't.
 
 
-h2. "(fork)Toadstool":https://github.com/Anotheruiguy/toadstool
+h2. "(fork)Toadstool":https://github.com/Toadstool-Stipe/toadstool
 
 Styleguides made awesome.
 
 
-h2. "(fork)Stipe":https://github.com/Anotheruiguy/stipe
+h2. "(fork)Stipe":https://github.com/Toadstool-Stipe/stipe
 
 The core Sass Mixins that support the Toadstool style guide framework
 
