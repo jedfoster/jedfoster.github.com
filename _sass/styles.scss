@@ -67,38 +67,41 @@ svg {
 @import "twitter-feed";
 
 header {
-	width: 100%;
-	float: left;
-	padding: 1.5em 0 0.6em;
-	margin-bottom: 1.45em;
-	border-bottom: 1px solid $border-color;
-}
-header h1 {
-	width: 74.468085106382978723%;/* 700/940 */
-	float:left;
-	font-size: 6.75em;
-	margin-bottom: -1.5em;
-	line-height: 1;
-}
-header a {
-	color: lighten($alpha-gray, 14);
-	display: inline-block;
-	padding-top: 2px;
-}
-header h2 {
-	width: 23.4104255319148936170%;/* 220/940 */
-	float:right;
-	text-align: right;
-	line-height: 1.33;
-	margin: 0 0 0.625em;
-	font-size: 1.5em;
-}
-header h2 span {
-	display: inline-block;
-	width: 100%;
-}
-header h2 span:last-child {
-  display: block;
+  width: 100%;
+  float: left;
+  padding: 1.5em 0 0.6em;
+  margin-bottom: 1.45em;
+  border-bottom: 1px solid $border-color;
+
+  h1 {
+    width: 74.468085106382978723%;/* 700/940 */
+    float:left;
+    font-size: 6.75em;
+    margin-bottom: -1.5em;
+    line-height: 1;
+  }
+  a {
+    color: lighten($alpha-gray, 14);
+    display: inline-block;
+    padding-top: 2px;
+  }
+  h2 {
+    width: 23.4104255319148936170%;/* 220/940 */
+    float:right;
+    text-align: right;
+    line-height: 1.33;
+    margin: 0 0 0.625em;
+    font-size: 1.5em;
+
+    span {
+      display: inline-block;
+      width: 100%;
+      
+      &:last-child {
+        display: block;
+      }
+    }
+  }
 }
 
 
