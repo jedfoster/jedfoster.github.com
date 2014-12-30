@@ -6,16 +6,11 @@ svg {
 }
 
 @import "web-fonts";
-
 @import "colors";
-
 @import "typography";
-
-
 @import "forms";
 @import "buttons-notices";
 @import "grid";
-
 
 #socialLinks {
   margin-bottom: 1.5em;
@@ -96,7 +91,7 @@ header {
     span {
       display: inline-block;
       width: 100%;
-      
+
       &:last-child {
         display: block;
       }
@@ -108,10 +103,6 @@ header {
 h2 a {
   display: inline-block;
 }
-
-
-
-
 
 article header {
 	width: 100%;
@@ -194,7 +185,7 @@ nav li.page-.home, nav ul ul, nav li.ancestor ul ul {
 .span-half {
   @extend %span-6;
 
-  overflow: auto; 
+  overflow: auto;
 }
 .span-half + .span-half {
   margin-right: 0;
@@ -239,14 +230,6 @@ nav li.page-.home, nav ul ul, nav li.ancestor ul ul {
     margin-right: 1.25em;
   }
 }
-
-
-
-
-
-
-// @import "contact";
-
 
 article {
   border-top: 1px solid $border-color;
@@ -369,7 +352,6 @@ article.post {
 }
 
 
-
 @import "clearing";
 
 
@@ -387,7 +369,6 @@ article.post {
 .pg-readmore #info + .readmore-js-toggle {
   padding-bottom: 4.5em;
 }
-
 .pg-readmore #demo {
   border-top: 1px solid $border-color;
   padding-top: 3em;
@@ -428,7 +409,7 @@ article.post {
         padding-right: 2em;
         float: left;
       }
-      
+
       & + * {
         float: left;
         width: 100%;
@@ -445,28 +426,19 @@ article.post {
 /**
  * Media queries for responsive design.
  *
- * These follow after primary styles so they will successfully override.
+ * These follow after primary styles so they will override.
  */
-
-@media all and (orientation: portrait) {
-  /* Style adjustments for portrait mode goes here */
-}
-
-@media all and (orientation: landscape) {
-  /* Style adjustments for landscape mode goes here */
-}
-
 
 @media screen and (max-width: 768px) {
 	body{
-	  padding: 0.75em;
+    padding: 0.75em;
 	}
 	header h1 {
 		width: 100%;
 		float: none;
 	}
 	header h1 a {
-	  display: inline;
+    display: inline;
 	}
 	header h2 {
 		width: 100%;
@@ -478,10 +450,10 @@ article.post {
 		clear: both;
 	}
 	nav ul, nav li {
-	  float: none;
+    float: none;
 	}
 	nav li {
-	  line-height: 1.5;
+    line-height: 1.5;
 	}
 	#main, #sidebar  {
 		width: 100%;
@@ -751,15 +723,6 @@ article.post {
 }
 
 @media screen and (min-width: 768px) {
-  /*
-    h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
-    h2 {font-size:2em;margin-bottom:0.75em;}
-    h3 {font-size:1.5em;line-height:1.1;margin-bottom:0.9em;}
-    h4 {font-size:1.25em;line-height:1.2;margin-bottom:1.2em;}
-    h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
-    h6 {font-size:1em;font-weight:bold;}
-  */
-
   .resume .skills {
     display: block;
     float: right;
@@ -798,11 +761,11 @@ article.post {
     padding-left: 0.5em;
     list-style-position: inside;
     -moz-column-count: 3;
-    -moz-column-gap: 1.5em; 
+    -moz-column-gap: 1.5em;
     -webkit-column-count: 3;
-    -webkit-column-gap: 1.5em; 
+    -webkit-column-gap: 1.5em;
     column-count: 3;
-    column-gap: 1.5em; 
+    column-gap: 1.5em;
   }
 }
 
