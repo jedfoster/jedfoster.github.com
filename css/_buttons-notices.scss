@@ -3,7 +3,7 @@ a.button, button {
   @extend %secondary-font-family;
 
   display: inline-block;
-  margin: 0 0 1.2em;
+  margin: 0 0.5em 1.2em 0;
   padding: 0.55em 0.5em 0.25em;
   border: 1px solid $border-color;
   background-color: $charlie-gray;

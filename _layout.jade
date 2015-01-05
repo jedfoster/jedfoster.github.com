@@ -23,10 +23,10 @@ html
 
     link(rel='stylesheet' href='/css/styles.css')
     - if(css)
-      = css
+      != css
     script(src='/js/modernizr.js')
 
-  body(class=('pg-' + title.toLowerCase()))
+  body(class=('pg-' + title.toLowerCase().replace(/\s/g, '-') ))
     div.container
       header
         h1
@@ -47,7 +47,7 @@ html
         != partial('_sidebar')
 
     - if(javascript)
-      = javascript
+      != javascript
 
     script
       var _gaq=[['_setAccount','UA-24822554-1'],['_trackPageview'],['_setDomainName', '.jedfoster.com']];

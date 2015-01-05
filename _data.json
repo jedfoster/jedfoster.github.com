@@ -4,5 +4,9 @@
   },
   "contact": {
     "title": "Contact"
+  },
+  "style-guide": {
+    "title": "Style Guide",
+    "css": "<link rel='stylesheet' href='/css/style-guide.css'>"
   }
 }
