@@ -8,5 +8,10 @@
   "style-guide": {
     "title": "Style Guide",
     "css": "<link rel='stylesheet' href='/css/style-guide.css'>"
+  },
+  "notes": {
+    "title": "Notes",
+    "js": "<script src='/js/notes.js'></script>",
+    "layout": "_notes"
   }
 }

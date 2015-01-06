@@ -213,13 +213,7 @@ article {
   margin-bottom: 1.5em;
   clear: both;
 }
-article.first {
-  border-top: 0;
-  padding-top: 0;
-}
-article.last {
-  margin-bottom: 0;
-}
+
 article:only-child, article:first-child {
   border-top: 0;
   padding-top: 0;
@@ -242,14 +236,14 @@ article .mod_date {
   line-height: 1.71428571428571428571em;
 }
 
-.pg-notes header, .pg-notes header h1, .pg-notes #main {
+.pg-notes header, .pg-notes header h1, .pg-notes main {
   float: none;
 }
 .pg-notes header h1 {
   display: block;
   margin-bottom: 0;
 }
-.pg-notes header, .pg-notes #main, .resume #main {
+.pg-notes header, .pg-notes main, .resume main {
   width: 100%;
 }
 
@@ -300,6 +294,11 @@ article .mod_date {
 
   .good {
     background: $bravo-color-charlie;
+  }
+
+  p:last-child {
+    @extend .clear;
+    @extend .small;
   }
 }
 
@@ -372,7 +371,7 @@ article.post {
   }
 
   @media print {
-    #main h1 {
+    main h1 {
       display: none;
     }
 
@@ -431,7 +430,7 @@ article.post {
 	nav li {
     line-height: 1.5;
 	}
-	#main, #sidebar  {
+	main, #sidebar  {
 		width: 100%;
 		float: none;
 		clear: both;
@@ -843,7 +842,7 @@ article.post {
   .hide, #sidebar, header nav {
     display: none;
   }
-  #main {
+  main {
     width: 100%;
     margin-right: 0;
   }
