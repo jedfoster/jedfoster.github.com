@@ -16,5 +16,32 @@
   },
   "code": {
     "title": "Code"
+  },
+  "work": {
+    "title": "Work",
+    "content": [
+      "roughdraft",
+      "sassmeister",
+      "la-amistad-dental",
+      "riverside-ymca",
+      "captive-audience-v8",
+      "riverside-cardiology",
+      "making-every-dollar-count",
+      "scripts",
+      "sales",
+      "buds-treewell",
+      "gcc-edirectory-front",
+      "gcc-edirectory-back",
+      "riverside-car-show",
+      "east-highlands-dentistry-v2",
+      "pink-ribbon",
+      "hssbv-v2",
+      "columbia-sinks",
+      "captive-audience-v7",
+      "east-highlands-dentistry-v1",
+      "voice-over-cafe",
+      "captive-audience-v6",
+      "hssbv-v1"
+    ]
   }
 }
