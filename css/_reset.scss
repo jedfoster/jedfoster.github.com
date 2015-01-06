@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 html {
   margin: 0;
   padding: 0;
@@ -44,16 +43,10 @@ table, th, td {
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
 }
-blockquote, q {
-  quotes: "" "";
-}
 a img {
   border: none;
 }
-:focus {
+*:focus {
   outline: 0;
 }
-/* Bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-.ie7 img {
-  -ms-interpolation-mode: bicubic;
-}
+

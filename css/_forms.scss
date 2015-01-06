@@ -32,7 +32,7 @@ input, textarea, select {
   padding: 0.25em;
   
   &:focus {
-    border-color: transparentize($alpha-color, 0.1);
+    border-color: transparentize($alpha-color, 0.6);
     -webkit-box-shadow: 0 0 0.5em transparentize($alpha-color, 0.5);
     box-shadow: 0 0 0.5em transparentize($alpha-color, 0.5);
   }
