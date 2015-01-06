@@ -172,7 +172,7 @@ th, td {
   background: $charlie-gray;
   background: transparentize($bravo-gray, 0.7);
 }
-tr:nth-child(even) {
+thead + tbody tr:nth-child(odd) {
   @extend %zebra;
 }
 .small {
@@ -193,3 +193,4 @@ hr {
   border: 0;
   border-top: 1px solid $border-color;
 }
+
