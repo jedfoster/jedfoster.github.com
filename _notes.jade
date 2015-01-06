@@ -23,13 +23,12 @@ html(manifest='/notes.manifest')
     link(rel='stylesheet' href='/css/styles.css')
 
   body(class=('pg-' + title.toLowerCase().replace(/\s/g, '-') ))
-    div.container
-      header
-        h1
-          a(href='/') Notes
+    header
+      h1
+        a(href='/') Notes
 
-      div#main(role='main')
-        != yield
+    main(role='main')
+      != yield
 
     - if(javascript)
       != javascript

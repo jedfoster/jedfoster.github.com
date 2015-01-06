@@ -27,24 +27,23 @@ html
     script(src='/js/modernizr.js')
 
   body(class=('pg-' + title.toLowerCase().replace(/\s/g, '-') ))
-    div.container
-      header
-        h1
-          a(href='/') Jed Foster
+    header
+      h1
+        a(href='/') Jed Foster
 
-        h2
-          span Code. 
-          span Design. 
-          span For the web.
+      h2
+        span Code. 
+        span Design. 
+        span For the web.
 
-        nav
-          != partial('_navigation')
+      nav
+        != partial('_navigation')
 
-      div#main(role='main')
-        != yield
+    main(role='main')
+      != yield
 
-      div#sidebar
-        != partial('_sidebar')
+    div#sidebar
+      != partial('_sidebar')
 
     - if(javascript)
       != javascript
