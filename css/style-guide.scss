@@ -4,7 +4,6 @@ $contrasted-lightness-threshold: 50%;
 
 @import "colors";
 
-
 $color-map: (
   alpha-gray:             $alpha-gray           ,
   bravo-gray:             $bravo-gray           ,
@@ -26,7 +25,6 @@ $color-map: (
   echo-color-charlie:     $echo-color-charlie
 );
 
-
 @each $color-name, $color-var in $color-map {
   .#{$color-name} {
     background: $color-var;    
@@ -38,7 +36,6 @@ $color-map: (
     height: 6em;
     margin: 0 3% 1.5em 0;
     float: left;
-
 
     &:nth-child(3n+3) {
       margin-right: 0;
@@ -60,14 +57,15 @@ $color-map: (
   }
 }
 
-
 #main > article {
   padding-top: 0;
   border-top: 0;
 }
+
 .showgrid {
   //background: url('/img/grid_16px.png') repeat;
   float: left;
   width: 100%;
   clear: both;
 }
+

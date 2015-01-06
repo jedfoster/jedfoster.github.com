@@ -266,18 +266,18 @@ article .mod_date {
   line-height: 1.71428571428571428571em;
 }
 
-.notes header, .notes header h1, .notes #main {
+.pg-notes header, .pg-notes header h1, .pg-notes #main {
   float: none;
 }
-.notes header h1 {
+.pg-notes header h1 {
   display: block;
   margin-bottom: 0;
 }
-.notes header, .notes #main, .resume #main {
+.pg-notes header, .pg-notes #main, .resume #main {
   width: 100%;
 }
 
-.notes {
+.pg-notes {
   colgroup, tr {
     @extend %background-transition;
   }
@@ -483,7 +483,7 @@ article.post {
   header h2 span {
     display: inline;
   }
-  .notes header h1 {
+  .pg-notes header h1 {
     margin-bottom: 0.1em;
     font-size: 4.5em;
   }
@@ -546,7 +546,7 @@ article.post {
     padding-top: .375em;
     padding-bottom: .375em;
   }
-  .notes th {
+  .pg-notes th {
     font-size: 0.8em;
     line-height: 1.625;
   }

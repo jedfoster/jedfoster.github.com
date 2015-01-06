@@ -1,5 +1,5 @@
 doctype html
-html
+html(manifest='/notes.manifest')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
@@ -21,37 +21,16 @@ html
     link(rel='apple-touch-icon-precomposed' sizes='114x114' href='/apple-touch-icon-114x114-precomposed.png')
 
     link(rel='stylesheet' href='/css/styles.css')
-    - if(css)
-      != css
-
-    script(src='/js/modernizr.js')
 
   body(class=('pg-' + title.toLowerCase().replace(/\s/g, '-') ))
     div.container
       header
         h1
-          a(href='/') Jed Foster
-
-        h2
-          span Code. 
-          span Design. 
-          span For the web.
-
-        nav
-          != partial('_navigation')
+          a(href='/') Notes
 
       div#main(role='main')
         != yield
 
-      div#sidebar
-        != partial('_sidebar')
-
     - if(javascript)
       != javascript
-
-    script.
-      var _gaq=[['_setAccount','UA-24822554-1'],['_trackPageview'],['_setDomainName', '.jedfoster.com']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
 
