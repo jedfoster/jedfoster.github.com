@@ -1,5 +1,0 @@
-<section id="twttr">
-	<h1>Recently on Twitter...</h1>
-  <a class="twitter-timeline" href="https://twitter.com/jed_foster" data-widget-id="314049955574718464">Tweets by @jed_foster</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
-</section>
