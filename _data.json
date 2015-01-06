@@ -13,5 +13,8 @@
     "title": "Notes",
     "js": "<script src='/js/notes.js'></script>",
     "layout": "_notes"
+  },
+  "code": {
+    "title": "Code"
   }
 }
