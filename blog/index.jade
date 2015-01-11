@@ -1,0 +1,59 @@
+
+- function xmlSchemaDate(date) {
+-   return moment(date).format('YYYY-MM-DDTHH:mm:ssZ')
+- }
+
+- function shortDate(date) {
+-   return moment(date).format('MMM D, YYYY')
+- }
+
+- function dateSort(a, b) {
+-   a = new Date(a.date); 
+-   b = new Date(b.date); 
+
+-   return b < a ? -1 : b > a ? 1 : 0;
+- }
+
+- var posts = []
+- each post, slug in public.blog._data
+  - post.date = post.date || slug.substring(0, 10)
+  - post.slug = slug
+  - posts.push(public.blog._data[slug])
+
+
+
+
+h1 Blog
+
+section.posts.hfeed
+  - for post in posts.sort(dateSort)
+    - var className
+
+    - if (post.link)
+      - className = 'link'
+    - else if(post.tags && post.tags.match(/featured/))
+      - className = 'featured'
+
+    - // post.url = post.permalink || 
+
+    article(class=className)
+      header
+        time.published.mod_date(datetime=xmlSchemaDate(post.date) pubdate)
+          = shortDate(post.date)
+
+        - if(post.link)
+          h2 
+            a(rel="bookmark" href="{{ post.link | escape }}")
+              = post.title
+        - else
+          h2 
+            a(rel="bookmark" href="{{ post.url }}")
+              = post.title
+
+      - if(post.link)
+        = post.content
+      - else
+        - if(post.description)
+          p.entry-summary
+            = post.description
+
