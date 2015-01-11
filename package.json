@@ -1,0 +1,26 @@
+{
+  "name": "jedfoster.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "harp": "https://github.com/jedfoster/harp/tarball/5e6825c6fa0da8a53459ba7d5cfb1930c409d45b",
+    "moment": "^2.9.0",
+    "router-stupid": "~0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jedfoster/jedfoster.github.com"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jedfoster/jedfoster.github.com/issues"
+  },
+  "homepage": "https://github.com/jedfoster/jedfoster.github.com"
+}
