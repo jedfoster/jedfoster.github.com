@@ -36,26 +36,28 @@ h3. Expert
 * JavaScript
 * Git
 * PHP
-* MySQL
-* KohanaPHP
 * Apache
 
 
 h3. Proficient
 
 (columns)* Node.js
+* Express
+* Mocha
 * CoffeeScript
 * TDD
 * Vim
 * Redis
 * OAuth
 * Jekyll
+* Harp
 * Bower
 * Cucumber/RSpec
 * Rack::Test
 * Jasmine
 * Heroku
 * PostgreSQL
+* MySQL
 * Amazon S3 
 * Amazon Route 53
 * Agile &amp; Lean development practices
@@ -96,6 +98,10 @@ A web app for experimenting with Sass. Written in Ruby, using Sinatra. Deployed 
 * Service Oriented Architecture
 * Memcache
 * Node.js
+* Bower
+* Gulp
+* Mocha
+* MiniTest
 * Packaged several Sass libraries as Compass extensions and published them as Ruby gems
 
 h4. "Roughdraft.io":http://www.roughdraft.io
@@ -116,6 +122,10 @@ An implementation of a popular WordPress audio player for browsers that support 
 * CSS3 transitions
 * Icon font
 * Forked and improved an existing JavaScript library
+
+h4. "icomoon2sass":https://github.com/jedfoster/icomoon2sass
+
+A Ruby gem that makes importing icon fonts from icomoon.io easier and less error-prone
 
 h4. "Toadstool":https://github.com/Toadstool-Stipe/toadstool
 
@@ -141,7 +151,25 @@ Sass library that forms the core of Toadstool.
 
 h2. Employment History
 
-h3. February 2012 - present
+h3. June 2014 - present
+
+Software Engineer, Ruby on Rails
+_Urbanspoon_
+
+* Implemented the web aspect of a major rebranding initiative.
+* Guided a modular front-end archtecture, updating large sections of legacy markup and styles.
+* Replaced Bootstrap Sass gem with a custom Sass framework, eliminating thousands of lines of unnecessary code.
+* Created a front-end pattern library, outlining markup and style contracts.
+* Improved Sass compile time by almost 50%.
+* Worked on a major localization project. Architected a model for the translation tables, based on principles of modular design.
+* Wrote a Rake task to integrate with a localization vendor's API, automating the management of translation strings.
+* Converted a large number of non-responsive pages of the site to be responsive, or at least fluid.
+* Rewrote a custom Javascript library for interacting with Filepicker.io. Also rewrote large portions of Ruby code around interacting with Amazon S3.
+* Wrote a Ruby gem, icomoon2sass, to make importing icon fonts from icomoon.io easier and less error-prone. Integrated as a Rake task.
+* Implemented microdata and Google Tag Manager for analytics.
+
+
+h3. February 2012 - May 2014
 
 Software Engineer, Front End Developer, Ruby on Rails
 _Getty Images_
