@@ -15,6 +15,29 @@ var moment = require('moment');
 // compiled, this is the cleanest solution.
 global.moment = moment;
 
+global.helpers = {
+  xmlSchemaDate: function(date) {
+    return moment(date).format('YYYY-MM-DDTHH:mm:ssZ')
+  },
+  shortDate: function(date) {
+    return moment(date).format('MMM D, YYYY')
+  },
+  relatedPosts: function(posts, current, limit) {
+    var sortedPosts = [];
+
+    limit = limit || 3;
+    current = JSON.stringify(current);
+
+    posts.forEach(function(item, i, a) {
+      if(JSON.stringify(item) !== current) {
+        sortedPosts.push(item);
+      }
+    });
+
+    return sortedPosts.slice(0, limit);
+  }
+};
+
 function run() {
   route.all('*', harp.mount(__dirname + '/public'));
 

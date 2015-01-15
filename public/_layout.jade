@@ -4,8 +4,10 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
 
-    - title = title || ''
-    title= title
+    
+    title
+      block title
+        = title || ''
 
     - if(description)
       - var attributes = {content: description};
@@ -22,12 +24,14 @@ html
     link(rel='apple-touch-icon-precomposed' sizes='114x114' href='/apple-touch-icon-114x114-precomposed.png')
 
     link(rel='stylesheet' href='/css/styles.css')
-    - if(css)
-      != css
+    block css
+      - if(css)
+        != css
 
     script(src='/js/modernizr.js')
 
-  body(class=('pg-' + title.toLowerCase().replace(/\s/g, '-') ))
+  - bodyClass = title ? 'pg-' + title.toLowerCase().replace(/\s/g, '-') : ''
+  body(class=bodyClass)
     header
       h1
         a(href='/') Jed Foster
@@ -38,16 +42,20 @@ html
         span For the web.
 
       nav
-        != partial('_navigation')
+        block navigation
+          != partial('/_navigation')
 
     main(role='main')
-      != yield
+      block content
+        != yield
 
     div#sidebar
-      != partial('_sidebar')
+      block sidebar
+        != partial('/_sidebar')
 
-    - if(javascript)
-      != javascript
+    block javascript
+      - if(javascript)
+        != javascript
 
     script.
       var _gaq=[['_setAccount','UA-24822554-1'],['_trackPageview'],['_setDomainName', '.jedfoster.com']];

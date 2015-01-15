@@ -1,0 +1,73 @@
+extends ../_layout.jade
+
+block css
+  link(rel='stylesheet' href='/css/prettify.tomorrow.css')
+
+block javascript
+  script(src='/js/jquery-1.8.2.js')
+  script(src='/js/prettify.min.js')
+  script(src='/js/jquery.foundation.clearing.js')
+  script.
+    $.fn.foundationClearing ? $(document).foundationClearing() : null;
+
+!= partial('../_post_helpers')
+- var posts = global.posts
+- var helpers = global.helpers
+
+
+block content
+  - if (current.path[3])
+    - date = date || public.blog._data[current.path[3]].date
+    - title = title || public.blog._data[current.path[3]].title
+    - link = link || public.blog._data[current.path[3]].link
+
+  article.post
+    header
+      time.published.mod_date(datetime=helpers.xmlSchemaDate(date) pubdate)
+        = helpers.shortDate(date) 
+
+      - if(link)
+        h1
+          a.entry-title(href=link)
+            = title
+          | &nbsp;→
+      - else
+        h1.entry-title
+          = title
+
+    - className = 'entry-content' + (link ? ' link' : '')
+    div#post(class=className)
+      != yield
+
+  aside#related
+    - if(!link)
+      h2 Also on this site
+
+      ol.posts
+        - for post in helpers.relatedPosts(posts, public.blog._data[current.source])
+          li
+            span.date
+              = helpers.shortDate(post.date)
+              | 
+            a(href=post.url)
+              = post.title
+
+    p You should 
+      a(href='http://twitter.com/jed_foster' rel='me') follow me on Twitter: @jed_foster
+      | .
+
+    nav
+      a.home(href='/blog/') ← all posts
+
+
+block navigation
+  != partial('../_navigation')
+  
+block sidebar
+  != partial('../_sidebar')
+
+block title
+  - if (current.path[3])
+    - title = title || public.blog._data[current.path[3]].title
+
+  = title
