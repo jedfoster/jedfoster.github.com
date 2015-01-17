@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.8.10",
-    "harp": "https://github.com/jedfoster/harp/tarball/4499b416191c948f844e88d2791d5274780a1504",
+    "harp": "https://github.com/jedfoster/harp/tarball/ea71b535febb2d81ab5c9a027ae41fe65db3dcd5",
     "moment": "^2.9.0",
     "router-stupid": "~0.7.0"
   },
