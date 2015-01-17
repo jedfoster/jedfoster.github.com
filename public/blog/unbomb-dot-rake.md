@@ -1,7 +1,6 @@
 A quick and dirty Rake task to strip a BOM from a file.
 
-{% highlight ruby %}
-
+```ruby
 task :unbomb do
   file = ARGV.last
   
@@ -9,9 +8,7 @@ task :unbomb do
   
   File.open(file, 'w:utf-8') { |f| f.write string.sub!(/\uFEFF/, '') }
 end
-
-{% endhighlight %}
-
+```
 
 Invoke with `→ rake unbomb PATH/TO/FILE`
 
