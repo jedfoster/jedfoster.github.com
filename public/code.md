@@ -13,12 +13,12 @@ A micro-publishing platform backed by GitHub Gists. Written in Ruby, using Sinat
 A playground for Sass. Type or paste some Sass into the text area and SassMeister will show you the rendered CSS. Works with both SCSS and Sass syntaxes, and includes more than 30 popular Sass libraries like Bourbon and Compass.
 
 
-## [ Readmore.js ]( http://github.com/jedfoster/Readmore.js )
+## [ Readmore.js ]( /Readmore.js/ )
 
 A smooth, lightweight jQuery plugin for collapsing and expanding long blocks of text with “Read more” and “Close” links.
 
 
-## [ HTML5 WP Audio Player ]( https://github.com/jedfoster/html5-WP-audio-player )
+## [ HTML5 WP Audio Player ]( /html5-WP-audio-player/ )
 
 A version of the awesome WordPress Audio Player for browsers that support HTML5's `<audio>` tag, with fallback to the original Flash player for browsers that don't.
 
@@ -33,6 +33,6 @@ Styleguides made awesome.
 The core Sass Mixins that support the Toadstool style guide framework
 
 
-## [ AudioJS ](https://github.com/jedfoster/AudioJS)
+## [ AudioJS ]( /AudioJS/ )
 
 Fork of [ VideoJS ]( http://videojs.com/ ) for audio, with support for themes.

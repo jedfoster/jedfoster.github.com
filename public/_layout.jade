@@ -30,7 +30,7 @@ html
 
     script(src='/js/modernizr.js')
 
-  - bodyClass = title ? 'pg-' + title.toLowerCase().replace(/\s/g, '-') : ''
+  - bodyClass = bodyClass ||  title ? 'pg-' + title.toLowerCase().replace(/\s/g, '-') : ''
   body(class=bodyClass)
     header
       h1
