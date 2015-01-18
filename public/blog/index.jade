@@ -1,0 +1,36 @@
+!= partial('../_post_helpers')
+- var posts = global.posts
+- var helpers = global.helpers
+
+h1 Blog
+
+section.posts.hfeed
+  - for post in posts
+    - var className
+
+    - if (post.link)
+      - className = 'link'
+    - else if(post.tags && post.tags.match(/featured/))
+      - className = 'featured'
+
+    article(class=className)
+      header
+        time.published.mod_date(datetime=helpers.xmlSchemaDate(post.date) pubdate)
+          = helpers.shortDate(post.date)
+
+        - if(post.link)
+          h2 
+            a(rel="bookmark" href=post.link)
+              = post.title
+        - else
+          h2 
+            a(rel="bookmark" href=post.url)
+              = post.title
+
+      - if(post.link)
+        = post.content
+      - else
+        - if(post.description)
+          p.entry-summary
+            = post.description
+

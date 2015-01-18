@@ -1,0 +1,109 @@
+:markdown
+  # HTML5 Audio Player
+
+  [This project](https://github.com/jedfoster/html5-WP-audio-player) is a version of the awesome [WordPress Audio Player](http://wpaudioplayer.com/standalone/) by [Martin Laine](http://www.1pixelout.net/) for browsers that support HTML5's `<audio>` tag, with fallback to the original WP Audio Player for browsers that don't.
+
+  Audio sample is [Crookshanks by Palace Cat](http://palacecat.bandcamp.com/track/crookshanks), via [duplokat](http://duplokat.tumblr.com/post/12695092003/geek-friday-ringtone)
+
+  _See the standalone [WordPress Audio Player](http://wpaudioplayer.com/standalone/) page for information on using and configuring the Flash player._
+
+  [Fork me on GitHub!](https://github.com/jedfoster/html5-WP-audio-player)
+
+hr
+
+h3 Standard
+
+.audio-js-box.wp-css
+  audio.audio-js(controls preload data-description='Palace Cat - Crookshanks')
+    source(src='/audio/Palace Cat - Crookshanks.mp3' type='audio/mpeg')
+    source(src='/audio/Palace Cat - Crookshanks.ogg' type='audio/ogg')
+    source(src='/audio/Palace Cat - Crookshanks.wav' type='audio/wav')
+
+    // Minimum width of player is 81px
+    object#audioplayer1(type='application/x-shockwave-flash' data='/WP-audio-player/player.swf' height='24' width='81')
+      param(name="movie" value='/WP-audio-player/player.swf')
+      param(name='FlashVars' value='playerID=audioplayer1&soundFile=/audio/Palace%20Cat%20-%20Crookshanks.mp3&noinfo=no&titles=Crookshanks&artists=Palace%20Cat')
+      param(name='quality' value='high')
+      param(name='menu' value='false')
+      param(name='wmode' value='transparent')
+
+      p
+        a(href='/audio/Palace Cat - Crookshanks.mp3') Download this audio file.
+
+hr
+
+h3 Standard (open at start)
+
+.audio-js-box.wp-css.open-at-start
+  audio.audio-js(controls preload data-description='Palace Cat - Crookshanks')
+    source(src='/audio/Palace Cat - Crookshanks.mp3' type='audio/mpeg')
+    source(src='/audio/Palace Cat - Crookshanks.ogg' type='audio/ogg')
+    source(src='/audio/Palace Cat - Crookshanks.wav' type='audio/wav')
+
+    // Minimum width of player is 81px
+    object#audioplayer2(type='application/x-shockwave-flash' data='/WP-audio-player/player.swf' height='24' width='81')
+      param(name="movie" value='/WP-audio-player/player.swf')
+      param(name='FlashVars' value='playerID=audioplayer2&soundFile=/audio/Palace%20Cat%20-%20Crookshanks.mp3&noinfo=no&titles=Crookshanks&artists=Palace%20Cat')
+      param(name='quality' value='high')
+      param(name='menu' value='false')
+      param(name='wmode' value='transparent')
+
+      p
+        a(href='/audio/Palace Cat - Crookshanks.mp3') Download this audio file.
+
+hr
+
+h3 Right-to-Left (play button on left)
+
+.audio-js-box.wp-css.wp-rtl
+  audio.audio-js(controls preload data-description='Palace Cat - Crookshanks')
+    source(src='/audio/Palace Cat - Crookshanks.mp3' type='audio/mpeg')
+    source(src='/audio/Palace Cat - Crookshanks.ogg' type='audio/ogg')
+    source(src='/audio/Palace Cat - Crookshanks.wav' type='audio/wav')
+
+    // Minimum width of player is 81px
+    object#audioplayer3(type='application/x-shockwave-flash' data='/WP-audio-player/player.swf' height='24' width='81')
+      param(name="movie" value='/WP-audio-player/player.swf')
+      param(name='FlashVars' value='playerID=audioplayer3&soundFile=/audio/Palace%20Cat%20-%20Crookshanks.mp3&noinfo=no&titles=Crookshanks&artists=Palace%20Cat')
+      param(name='quality' value='high')
+      param(name='menu' value='false')
+      param(name='wmode' value='transparent')
+
+      p
+        a(href='/audio/Palace Cat - Crookshanks.mp3') Download this audio file.
+
+hr
+
+h3 Right-to-Left (play button on left, open at start)
+
+.audio-js-box.wp-css.wp-rtl.open-at-start
+  audio.audio-js(controls preload data-description='Palace Cat - Crookshanks')
+    source(src='/audio/Palace Cat - Crookshanks.mp3' type='audio/mpeg')
+    source(src='/audio/Palace Cat - Crookshanks.ogg' type='audio/ogg')
+    source(src='/audio/Palace Cat - Crookshanks.wav' type='audio/wav')
+
+    // Minimum width of player is 81px
+    object#audioplayer4(type='application/x-shockwave-flash' data='/WP-audio-player/player.swf' height='24' width='81')
+      param(name="movie" value='/WP-audio-player/player.swf')
+      param(name='FlashVars' value='playerID=audioplayer4&soundFile=/audio/Palace%20Cat%20-%20Crookshanks.mp3&noinfo=no&titles=Crookshanks&artists=Palace%20Cat')
+      param(name='quality' value='high')
+      param(name='menu' value='false')
+      param(name='wmode' value='transparent')
+
+      p
+        a(href='/audio/Palace Cat - Crookshanks.mp3') Download this audio file.
+
+hr
+
+h3 The original, Flash version
+
+object#audioplayer5(type='application/x-shockwave-flash' data='/WP-audio-player/player.swf' height='48' width='360')
+  param(name="movie" value='/WP-audio-player/player.swf')
+  param(name='FlashVars' value='playerID=audioplayer5&soundFile=/audio/Palace%20Cat%20-%20Crookshanks.mp3&noinfo=no&titles=Crookshanks&artists=Palace%20Cat')
+  param(name='quality' value='high')
+  param(name='menu' value='false')
+  param(name='wmode' value='transparent')
+
+  p
+    a(href='/audio/Palace Cat - Crookshanks.mp3') Download this audio file.
+

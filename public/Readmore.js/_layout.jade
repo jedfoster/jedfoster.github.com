@@ -1,0 +1,36 @@
+extends ../_layout.jade
+
+block css
+  link(rel='stylesheet' href='/css/prettify.tomorrow.css')
+
+block javascript
+  script(src='/js/jquery-1.8.2.js')
+  script(src='/js/prettify.min.js')
+  script(src='/js/readmore.min.js')
+
+  script.
+    $('article').readmore({
+      collapsedHeight: 216,
+      speed: 200
+    });
+    
+    // Wait a tick before firing Readmore on the #info block to give Prettify time to finish painting.
+    setTimeout(function() {
+      $('#info').readmore({
+        moreLink: '<a href="#">Usage, examples, and options</a>',
+        collapsedHeight: 432,
+        speed: 200,
+        afterToggle: function(trigger, element, expanded) {
+          if(! expanded) { // The "Close" link was clicked
+            $('html, body').animate({scrollTop: $(element).offset().top}, {duration: 100});
+          }
+        }
+      });
+    }, 100);
+
+block navigation
+  != partial('../_navigation')
+  
+block sidebar
+  != partial('../_sidebar')
+

@@ -6,5 +6,7 @@ _site/
 img/
 */_site/
 tmp/
-css/
-js/
+www
+bower_components
+node_modules
+npm-debug.log

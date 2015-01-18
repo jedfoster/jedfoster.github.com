@@ -1,0 +1,208 @@
+article#text.showgrid
+  :markdown
+    # H1 Futura ND Bold
+
+    ## H2 Futura ND Bold
+
+    ### H3 Futura ND Bold
+
+    #### H4 Futura ND Bold
+
+    ##### H5 Futura ND Bold
+
+    ###### H6 (Undefined)
+
+    ---
+
+    Paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id [est laborum](/).
+
+    * Item
+    * Item
+    * Item
+
+
+    1. Item
+    2. Item
+    3. Item
+
+    | Column A | Column B |
+    | -------- | -------- |
+    | A1       | B1       |
+    | A2       | B2       |
+    | A3       | B3       |
+
+
+article#buttons
+  button Button
+
+  button.positive Button.positive
+
+  button.negative Button.negative
+
+  br
+
+  a.button A.button
+
+  a.button.positive A.button.positive
+
+  a.button.negative A.button.negative
+
+
+article#alerts
+  .notice
+    | Notice <a>Link</a>
+
+  .success
+    | Success <a>Link</a>
+
+  .error
+    | Error <a>Link</a>
+
+  .info
+    | Info <a>Link</a>
+
+
+article#notes-tables.showgrid
+  div.span-half
+    :markdown
+      ### Morning
+
+      | #497 | Sumner | Auburn | Seattle | Train |
+      | ---- | ------ | ------ | ------- | ----- |
+      | 4:51 | 5:12   | 5:20   | 5:54    | 1500  |
+      | 5:27 | 5:47   | 5:56   | 6:29    | 1502  |
+      | 5:57 | 6:17   | 6:26   | 6:59    | 1504  |
+      | 6:17 | 6:37   | 6:46   | 7:19    | 1506  |
+
+  div.span-half
+    :markdown
+      ### Evening
+
+      | Seattle | Tukwila | Kent | Auburn | #497* | Sumner | Train |
+      | ------- | ------- | ---- | ------ | ----- | ------ | ----- |
+      | 3:12    | 3:24    | 3:31 | 3:38   | 4:03  | 3:47   | 1505  |
+      | 3:42    | 3:54    | 4:01 | 4:08   | ----  | 4:17   | 1507  |
+      | 4:12    | 4:24    | 4:31 | 4:38   | 5:03  | 4:48   | 1509  |
+      | 4:32    | 4:44    | 4:51 | 4:58   | 5:22  | 5:08   | 1511  |
+
+      *These trips will wait for Sounder connections before departing
+
+
+article#portfolio-piece.pg-work.showgrid
+  section
+    img(src='http://jedfoster.com/img/portfolio/sites/roughdraft-2-sm.png')
+
+    h1
+      a Kitchen Sink
+
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit magna aliqua.
+
+    ul
+      li.Ruby Ruby
+      li.HTML5 HTML5
+      li.CSS3 CSS3
+      li.Design Design
+      li.GitHub GitHub
+      li.HTML HTML
+      li.CSS CSS
+      li.JavaScript JavaScript
+      li.PSD PSD
+      li.Refreshed Refreshed
+      li.Closed Closed
+      li.e-Commerce e-Commerce
+      li.PHP PHP
+
+
+article#blog-post-lists.showgrid
+  section.posts
+    article
+      header
+        time.published.mod_date(datetime="2013-02-22T16:01:00-08:00" pubdate="")
+          | Feb 22, 2013
+
+        h2
+          a(rel="bookmark" href="/blog/unbomb-dot-rake")
+            | Standard Blog Post
+
+      p.entry-summary Flowery summary ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    article.link
+      header
+        time.published.mod_date(datetime="2013-11-13T00:00:00-08:00" pubdate="")
+          | Nov 13, 2013
+
+        h2
+          a(rel="bookmark" href="http://mattgemmell.com/2012/08/05/managing-email-realistically/")
+            | Link Post
+      p Quotable Person:
+
+      blockquote
+        p Quotey quote ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat.
+
+      p Commenty comment
+
+
+article#forms.showgrid
+  form
+    label Your Email:
+    input(type="email" value="Mr. Lorem Ipsum")
+
+    label Select:
+    select
+      option Option #1
+      option Option #2
+      option Option #3
+
+    label Your Message:
+    textarea Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    button(type="submit" img src="/img/icons/mail_48.png" alt="Send Message") Send Message
+
+
+article#colors
+  h1.clear Gray
+
+  .foo
+    .alpha-gray
+    .bravo-gray
+    .charlie-gray
+
+
+  h1.clear Blue
+
+  .foo
+    .alpha-color
+    .alpha-color-bravo
+    .alpha-color-charlie
+
+
+  h1.clear Green
+
+  .foo
+    .bravo-color
+    .bravo-color-bravo
+    .bravo-color-charlie
+
+
+  h1.clear Yellow
+
+  .foo
+    .charlie-color
+    .charlie-color-bravo
+    .charlie-color-charlie
+
+
+  h1.clear Red
+
+  .foo
+    .delta-color
+    .delta-color-bravo
+    .delta-color-charlie
+
+
+  h1.clear Purple
+
+  .foo
+    .echo-color
+    .echo-color-bravo
+    .echo-color-charlie

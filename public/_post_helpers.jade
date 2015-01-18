@@ -1,0 +1,16 @@
+- var posts = []
+
+- function dateSort(a, b) {
+-   a = new Date(a.date); 
+-   b = new Date(b.date); 
+
+-   return b < a ? -1 : b > a ? 1 : 0;
+- }
+
+- each post, slug in public.blog._data
+  - if (slug != 'index')
+    - post.url = post.permalink  || '/blog/' + moment(post.date).format('YYYY/MM') + '/' + slug + '/'
+    - posts.push(public.blog._data[slug])
+
+- global.posts = posts.sort(dateSort)
+
