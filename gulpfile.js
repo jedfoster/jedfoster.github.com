@@ -1,7 +1,8 @@
 var gulp   = require('gulp'),
     harp   = require('harp'),
-    cp     = require('child_process'),
-    moment = require('moment');
+    moment = require('moment'),
+    uglify = require('gulp-uglify');
+
 
 // this line, although dirty, ensures that Harp templates
 // have access to moment - which given the whole partial
@@ -41,13 +42,19 @@ gulp.task('serve', function() {
 gulp.task('build', function(done) {
   process.env.NODE_ENV = 'production';
 
-  harp.compile(__dirname + '/public', __dirname + '/www', function(errors){
+  harp.compile(__dirname + '/public', __dirname + '/www', function(errors) {
     if(errors) {
       console.log(JSON.stringify(errors, null, 2));
       process.exit(1);
     }
-
-    process.exit(0);
+    
+    return gulp.src(__dirname + '/www/js/*.js')
+      .pipe(uglify({
+        mangle: true,
+        compress: true,
+        preserveComments: 'some'
+      }))
+      .pipe(gulp.dest(__dirname + '/www/js'));
   });
 });
 
