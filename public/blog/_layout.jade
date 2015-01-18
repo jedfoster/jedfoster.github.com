@@ -69,5 +69,7 @@ block sidebar
 block title
   - if (current.path[3])
     - title = title || public.blog._data[current.path[3]].title
+  - else if (current.path[1])
+    - title = title || public.blog._data[current.path[1]].title
 
   = title
