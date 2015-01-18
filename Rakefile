@@ -1,60 +1,14 @@
-require 'yaml'
 require 'rubygems'
 require 'bundler/setup'
 require 'thor'
 
-config_file = '_config.yml'
-config = YAML.load_file(config_file)
-
-env = ENV['env'] || 'production'
-
-
-desc "Build, then deploy the site; pass env={github|production}, default is github"
+desc "Deploy the site"
 task :deploy do
-  # Rake::Task["build"].invoke
-
-  if env == 'github'
-    sh "git push origin master"
-
-  elsif env == 's3'
-    # Utilities.new.set_asset_paths('http://assets.jedfoster.com')
-    sh 's3_website push'
-
-  else
-    # Utilities.new.set_asset_paths('http://assets.jedfoster.com')
-    sh 's3_website push'
-    # sh "rsync -avz #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
-  end
-end
-
-
-desc "Build the site; pass env={github|production|s3}, default is github"
-task :build do
-  Rake::Task["assets:precompile"].invoke
-
-  system("jekyll build")
-
   Utilities.new.version_manifests
+
+  sh 's3_website push'
 end
 
-
-desc "Compile the app's Sass"
-task "assets:precompile" do
-  system("bundle exec jammit --force")
-  system("bundle exec compass compile --force -s compressed")
-end
-
-
-desc "Watch the app's Sass directory"
-task "sass:watch" do
-  system("bundle exec compass watch --css-dir ./_site/css")
-end
-
-
-desc "Open the site in your default browser; pass env={github|production}, default is github"
-task :launch do
-  sh "open #{config['environments'][env]['url']}"
-end
 
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
@@ -98,18 +52,8 @@ class Utilities < Thor
   include Thor::Actions
 
   no_tasks do
-    def set_asset_paths(host)
-      Dir.glob("_site/**/*.html", File::FNM_CASEFOLD).each do |file|
-        gsub_file("#{file}", /(src|href)=\"\/(js|css|img)/, "\\1=\"#{host}/\\2")
-      end
-
-      Dir.glob("_site/**/*.css", File::FNM_CASEFOLD).each do |file|
-        gsub_file("#{file}", /url\(\'\//, "url('#{host}/")
-      end
-    end
-
     def version_manifests
-      Dir.glob("_site/**/*.manifest", File::FNM_CASEFOLD).each do |file|
+      Dir.glob("www/**/*.manifest", File::FNM_CASEFOLD).each do |file|
         gsub_file("#{file}", /# rev = ([\d]+)/, "# rev = #{Time.now.getutc.to_i}")
       end
     end
