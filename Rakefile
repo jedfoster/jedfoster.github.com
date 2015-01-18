@@ -11,7 +11,7 @@ env = ENV['env'] || 'production'
 
 desc "Build, then deploy the site; pass env={github|production}, default is github"
 task :deploy do
-  Rake::Task["build"].invoke
+  # Rake::Task["build"].invoke
 
   if env == 'github'
     sh "git push origin master"
