@@ -309,5 +309,13 @@
     "date": "2013-02-22 16:01",
     "title": "unbomb.rake",
     "categories": ""
+  },
+  "bad-grizzly": {
+    "permalink": "/blog/bad-grizzly",
+    "description": "A simple, full-stack JavaScript clone of SassMeister.com, built for a guest lecture at Code Fellows.",
+    "tags": "",
+    "date": "2014-01-21 13:39",
+    "title": "Bad Grizzly",
+    "categories": ""
   }
 }
