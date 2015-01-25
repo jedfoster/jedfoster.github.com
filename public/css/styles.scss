@@ -731,7 +731,6 @@ article.post {
 @media screen and (max-width: 767px) {
   // Column-ify only the first 2 lists.
   .resume .skills ul:nth-of-type(-n+2) {
-    background: #f0f;
     padding-left: 0.5em;
     list-style-position: inside;
     -moz-column-count: 3;
