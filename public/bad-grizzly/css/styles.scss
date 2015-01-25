@@ -1,0 +1,59 @@
+$primary-gray: #444;
+$secondary-gray: #6e6e6e;
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@mixin side-by-side {
+  display: block;
+  float: left;
+  width: 49%;
+  margin-bottom: 1em;
+  &:only-of-type {
+    width: 100%;
+  }
+  &:nth-of-type(even), &:only-of-type {
+    margin-left: 2%;
+  }
+} 
+
+@import '../vendor/deck.js/core/deck.core.scss';
+@import '../vendor/deck.js/extensions/goto/deck.goto.scss';
+@import '../vendor/deck.js/extensions/menu/deck.menu.scss';
+@import '../vendor/deck.js/extensions/navigation/deck.navigation.scss';
+@import '../vendor/deck.js/extensions/status/deck.status.scss';
+@import '../vendor/deck.js/extensions/scale/deck.scale.scss';
+@import '../vendor/deck.js/themes/style/swiss.scss';
+@import '../vendor/deck.js/themes/transition/horizontal-slide.scss';
+
+@import 'prettify';
+@import 'tomorrow';
+
+.slide {
+  background: #fff;
+}
+
+.deck-child-current {
+  background: #fff;
+}
+
+.side-by-side {
+  width: 100%;
+  clear: both;
+  zoom: 1;
+  overflow: hidden;
+}
+
+.half {
+  @include side-by-side;
+}
+
+.notes{
+  display: none !important;
+}
+

@@ -1,0 +1,2684 @@
+.slide
+  .notes 
+    | - about me
+    | - been building things for the web for 15 years
+    | - worked in PHP, Rails, .Net (a little)
+    | - now I'm excited about Node
+  h1 Ember in the front, Node in the back
+
+
+
+// .slide
+//   .vcenter
+//     h3 <pre class="no-prettify"><code class="no-prettify">http://jedfoster.com/bad-grizzly/</code></pre>
+  
+
+  
+.slide
+  .notes
+    |   - what are we going to build
+    |   - a simple clone of Sassmeister.com
+    |     - ember in the front
+    |     - node in the back
+  img(src='http://s3.drft.io/Screen Shot 2014-09-28 at 9.18.44 PM.png')
+
+
+
+
+
+.slide
+  .notes
+    |   - the flow of our app:
+    |     1. A user enters Sass code into a text area
+    |     2. The client-side Ember app will post the input to server via AJAX
+    |     3. The server will process the input and respond with a JSON object containing the rendered CSS output
+    |     4. Ember will render the returned JSON in a template on our page
+    |     5. Profit
+  h2 Flow of the app
+
+  :markdown
+    1. A user enters Sass code into a text area
+    2. The client-side Ember app will post the input to the server via AJAX
+    3. The server will process the input and respond with a JSON object containing the rendered CSS output
+    4. Ember will render the returned JSON in a template on our page
+    5. __Profit__
+
+
+
+
+  .slide
+    img(src='http://s3.drft.io/tumblr_n4g0lxryv51qgn992o1_500.gif')
+
+
+
+.slide
+  .notes
+    | - file structure
+    |   - keeping code organized makes life easy
+    |     - easier to maintain a mental model
+    |     - easier to debug
+    |   - node doesn't have a canonical file structure
+    |   - this is what I'm using currently
+  h2 File Structure
+
+  :markdown
+    ```
+    app/
+      controllers/
+      index.js
+      views/
+    config/
+    node_modules/
+    package.json
+    public/
+      css/
+      js/
+    test/
+    ```
+  
+
+
+.slide
+  .notes 
+    | - `npm init`
+    |   - it's a wizard
+  h1
+    code npm init
+
+
+  .slide
+    h2
+      code npm init
+
+    :markdown
+      ```
+      $ npm init
+      This utility will walk you through creating a package.json file.
+      It only covers the most common items, and tries to guess sane defaults.
+
+      See `npm help json` for definitive documentation on these fields
+      and exactly what they do.
+
+      Use `npm install <pkg> --save` afterwards to install a package and
+      save it as a dependency in the package.json file.
+
+      Press ^C at any time to quit.
+      name: (bad-grizzly)
+      ```
+
+
+
+.slide
+  h2
+    code npm init
+
+
+  .slide
+    :markdown
+      ```
+      name: (bad-grizzly)
+      ```
+
+
+  .slide
+    :markdown
+      ```
+      version: (0.0.0)
+      ```
+
+
+  .slide
+    :markdown
+      ```
+      description:
+      ```
+
+  .slide
+    :markdown
+      ```
+      entry point: (index.js)
+      ```
+
+  .slide
+    .notes
+      |     - entry point
+      |       - file structure
+      |       - app/index.js
+
+    :markdown
+      ```
+      entry point: (index.js) app/index.js
+      ```
+
+  .slide
+    .notes
+      | - For the rest, just keep hitting enter
+      | - defaults are fine
+    p (Just keep hitting `Enter`. :-)
+
+
+
+.slide
+  .notes
+    | - npm init generates a package.json file that contains info on everything needed to build and run your app
+
+  :markdown
+    ## `package.json`
+
+    ```
+    $ cat package.json
+    {
+      "name": "bad-grizzly",
+      "version": "0.0.0",
+      "description": "bad-grizzly ===========",
+      "main": "app/index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/jedfoster/bad-grizzly.git"
+      },
+      "author": "",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/jedfoster/bad-grizzly/issues"
+      },
+      "homepage": "https://github.com/jedfoster/bad-grizzly"
+    }
+    ```
+
+
+
+.slide
+  h1 Stupid npm tricks
+
+
+
+.slide
+  .notes
+    | - npm tricks
+    |   - scripts are additional npm commands
+    |   - the key is a command, and the value is either a shell command or the path to a script.
+    |   - There are a number of valid commands
+    |     - we're interested in `npm start`
+    |       - `node app/index.js`
+    |       - doesn't run because `app/index.js` doesn't exist
+    |   - we'll revisit scripts again when we write tests
+  h2 Stupid npm tricks
+
+  :markdown
+    ```json
+    "scripts": {
+      "start": "node app/index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    ```
+
+
+
+.slide
+  h1
+    code app/
+
+
+
+.slide
+  .notes
+    | - create /app
+    |   - create directory and `index.js`
+  h2
+    code app/
+
+  :markdown
+    ```
+    $ mkdir app
+    $ touch app/index.js
+    ```
+
+
+
+.slide
+  .notes
+    |   - show node example
+    | - but there's an easier way
+  h2
+    code app/
+
+  :markdown
+    Hello World example from [nodejs.org](http://nodejs.org):
+
+    ```javascript
+    var http = require('http');
+
+    http.createServer(function (req, res) {
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      res.end('Hello World\n');
+    }).listen(1337, '127.0.0.1');
+
+    console.log('Server running at http://127.0.0.1:1337/');
+    ```
+
+
+
+.slide
+  .notes
+    |   - install Express
+    |     - `--save` option
+    |       - updates package.json
+  h2 Express
+
+  :markdown
+    ```
+    $ npm install --save express
+    ```
+
+
+  .slide
+    p Updates our <code>package.json</code>
+
+    :markdown
+      ```
+      $ cat package.json
+      {
+        "name": "bad-grizzly",
+        "version": "0.0.0",
+        ...,
+        "dependencies": {
+          "express": "^4.8.7"
+        }
+      }
+      ```
+
+
+
+.slide
+  .notes
+    |   - describe Express
+    |       - “a minimal and flexible node.js web application framework [for building] web applications.”
+    |       - handles low-level stuff like `createServer` boilerplate
+    |   - run npm start
+    |   - open http://localhost:3000
+  h2 Express
+
+  :markdown
+    A simple Express app
+
+    ```javascript
+    var express = require('express');
+    var app = express();
+
+    app.get('/', function(req, res) {
+      res.send('Greetings, earthlings!');
+    });
+
+    app.listen('3000');
+    console.log("The server is now listening on port 3000");
+    ```
+
+
+  .slide
+    :markdown
+      `$ npm start`
+
+
+  .slide
+    h3 PROFIT!
+
+
+
+.slide
+  img.vcenter(src='http://s3.drft.io/tumblr_lp0ydoztYN1qgn992o1_1280.jpg')
+
+
+
+.slide
+  h2 Stopping the server
+
+  :markdown
+    `<control>-C` in your terminal.
+
+
+
+.slide
+  .notes
+    | - examine index.js
+    |   - require express
+    |   - initialize app with express()
+    |   - route
+    |   - listen on port
+  h2
+    code app/
+
+  :markdown
+    ```javascript
+    var express = require('express');
+    var app = express();
+
+    app.get('/', function(req, res) {
+      res.send('Greetings, earthlings!');
+    });
+
+    app.listen('3000');
+    console.log("The server is now listening on port 3000");
+    ```
+
+
+
+.slide
+  .notes
+    | - HTTP verbs
+    |   - Express routing methods mirror HTTP verbs
+  h2 Verbs
+
+  p Express provides routing methods that mirror HTTP verbs, here we used the <code>GET</code> verb.
+
+  :markdown
+    ```javascript
+    app.get('/', function(req, res) {
+      res.send('Greetings, earthlings!');
+    });
+    ```
+
+
+  .slide
+    .notes
+      | - arguments
+      |   - path
+      |   - callback
+      |     - request object
+      |       - contains query params
+      |     - response object
+      |       - methods for manipulating the response
+      |       - status
+      |       - send() to send a simple string
+    p Other verbs, like <code>POST</code>, map to similar methods:
+
+    :markdown
+      ```javascript
+      app.post('/form', function(req, res) { ... });
+      ```
+
+
+
+.slide
+  .notes
+    | - port refactor
+    |   - node global `process` variable
+  h2 A minor refactor
+
+  p We've hardcoded the port number in two places:
+
+  :markdown
+    ```javascript
+    app.listen('3000');
+    console.log("The server is now listening on port 3000");
+    ```
+
+
+  .slide
+    p Use Node's global <code>process</code> object to access the environment
+
+    :markdown
+      ```javascript
+      app.port = process.env.PORT || 3000;
+
+      app.listen(app.port);
+      console.log("The server is now listening on port %s", app.port);
+      ```
+
+
+
+.slide
+  h1 The View
+
+
+
+.slide
+  h2 Views
+
+  p This won't get us very far.
+
+  :markdown
+    ```javascript
+    app.get('/', function(req, res) {
+        res.send('Greetings, earthlings!');
+    });
+    ```
+
+
+
+.slide
+  h2 Enter Jade
+
+  :markdown
+    We want to write HTML, we just don't want to _write_ HTML
+
+
+  .slide
+    :markdown
+      ```
+      $ npm install --save jade
+      ```
+
+  .slide
+    :markdown
+      Jade is a "terse and simple templating language" for Node.
+
+
+
+.slide
+  .notes
+    | - explain a little about Jade syntax
+    | - no closing tags
+    | - no angle brackets
+    |   - `=` to output JavaScript variables
+
+  h2 Jade
+
+  .side-by-side
+    .half
+      :markdown
+        We can write this:
+
+        ```jade
+        doctype html
+        html(lang="en")
+          head
+            title= pageTitle
+          body
+            h1 Jade template engine
+            #container.col
+              if youAreUsingJade
+                p You are amazing
+              else
+                p Get on it!
+              p.
+                Jade is a terse and simple templating language... 
+        ```
+
+    .half.slide
+      :markdown
+        And it will become:
+
+        ```html
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <title>Jade</title>
+          </head>
+          <body>
+            <h1>Jade template engine</h1>
+            <div id="container" class="col">
+              <p>You are amazing</p>
+              <p>
+                Jade is a terse and simple templating language...
+         ```
+
+
+
+.slide
+  .notes
+    | - set Jade as the `view engine` and set the `views` directory
+    |   - explain set() and config options
+    |   - `__dirname`
+  h2 Using Jade
+
+  :markdown
+    ```javascript
+    var express = require('express');
+    var app = express();
+
+    app.set('view engine', 'jade');
+    app.set('views', __dirname + '/views');
+    ```
+
+
+.slide
+  h2 Our first view
+
+  :markdown
+    ```javascript
+    $ mkdir app/views
+    $ touch app/views/index.jade
+    ```
+
+
+  .slide
+    :markdown
+      Open `index.jade` and add this code:
+
+      ```jade
+      doctype html
+      html
+        head
+          meta(charset='utf-8')
+          meta(http-equiv='X-UA-Compatible' content='IE=edge')
+          title= pageTitle
+          meta(name='viewport' content='width=device-width, initial-scale=1')
+          link(rel='stylesheet' href='/css/app.css')
+        body
+          h1= 'Greetings, ' + user
+      ```
+
+
+
+.slide
+  .notes
+    | - update app/index.js to render
+    |   - explain render()
+    |     - arguments
+    |       - view
+    |       - hash of local vars
+    |     - looks in the configured `views` directory for file named `view`
+    |     - local vars available in the template
+  h2 Rendering Jade
+
+  :markdown
+    ```javascript
+    app.get('/', function(req, res) {
+      res.render('index', {
+        pageTitle: 'Hello, ' + process.env.USER,
+        user: process.env.USER
+      });
+    });
+    ```
+
+
+
+.slide
+  .notes
+    | - living in the future
+    |   - 15 years ago, you'd have to walk uphill, both ways, to find code
+    |   - modern package managers enable you to release a project in an afternoon that consist of 90% or more third-party code.
+  h1 Bower
+
+
+
+.slide
+  .notes
+    | - npm for server-side
+    | - bower for client-side
+    | - install bower packages from just about anywhere
+    |   - bower registry
+    |   - GitHub
+    |   - private git server
+    |   - a URL
+    | - front-end assets
+    |   - CSS
+    |   - JS
+    |   - images
+    |   - Sass
+    |   - if it goes on the front end, you can install it with bower
+
+  h2 Intro to Bower
+
+  :markdown
+    Install packages from:
+
+    - Bower registry
+    - GitHub
+    - private Git server
+    - even just a URL
+
+    Install CSS, JavaScript, Sass, images, you name it. If it goes on the front-end you can install it with Bower.
+
+
+
+.slide
+  h2 Install
+
+  .slide
+    .notes
+      | - install with npm
+      |   - `-g` flag tells bower to install globally
+      |     - not installed in app's node_modules
+      |     - available from anywhere
+    :markdown
+      Install Bower:
+
+      ```
+      $ npm install -g bower
+      ```
+
+
+  .slide
+    :markdown
+      Install a Bower package from the registry...
+
+      ```
+      $ bower install <package>
+      ```
+
+
+    .slide
+      :markdown
+        ...From a GitHub repo
+
+        ```
+        $ bower install <github-user-name>/<repo-name>
+        ```
+
+
+    .slide
+      :markdown
+        ...From a private git server
+
+        ```
+        $ bower install https://git.drft.io/jedfoster/shoestring.git
+        ```
+
+
+
+.slide
+  .notes
+    | - by default, bower installs packages to `bower_components` directory
+    | - I prefer /public/vendor
+    | - create .bowerrc
+    |   - it's just JSON
+  h2 Configuring Bower
+
+  :markdown
+    Customize the install location with a <code>.bowerrc</code> file.
+
+    ```
+    $ touch .bowerrc
+    ```
+
+
+  .slide
+    .notes
+      | - bower will create /public/vendor directory if it doesn't already exist
+    :markdown
+      ```json
+      {
+        "directory": "./public/vendor"
+      }
+      ```
+
+
+.slide
+  .notes
+    | - just like package.json, we have a bower.json to track front-end dependencies
+  h2
+    code bower.json
+
+  :markdown
+    ```
+    $ touch bower.json
+    ```
+
+
+  .slide
+    .notes
+      |   - bower will read packages from bower.json and install those
+      |   - now have /public/vendor/shoestring-css
+      |     - just some generic CSS I like to use on my projects
+    :markdown
+      ```json
+      {
+        "name": "app-name",
+        "version": "1.0.0",
+        "dependencies": {
+          "shoestring-css": "latest"
+        }
+      }
+      ```
+
+
+  .slide
+    .notes
+      | - note that you would use a bower.json file to _create_ a bower package for publication, same as we've just done. 
+      |   - You've created your first Bower package
+      |     - won't appear in the registry, but technically it's a bower package that another project could consume
+    :markdown
+      ```
+      $ bower install
+      ```
+
+
+
+.slide
+  .notes
+    | - sidebar on package managers and git
+    |   - probably a good idea to add node_modules and bower_components to .gitignore
+    |   - can bloat a git repo
+  h2 Note on package managers and Git
+
+  p It's a good idea to add <code>node_modules</code> and <code>bower_components</code> (or equivalent) to your <code>.gitignore</code>
+
+  :markdown
+    ```
+    # Dependency directory
+    # Deployed apps should consider commenting this line out:
+    # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+    node_modules
+
+    # Bower packages
+    public/vendor
+    ```
+
+
+
+.slide
+  .notes
+    | - using vendor assets
+    |   - update head of index.jade with reference to shoestring
+  h2 Using Bower packages
+
+  :markdown
+    ```jade
+    head
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      title= pageTitle
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      link(rel='stylesheet' href='/vendor/shoestring-css/shoestring.css')
+    ```
+
+
+  .slide
+    h3 Uh oh
+
+    img(src='http://s3-us-west-2.amazonaws.com/s3.drft.io/Screen+Shot+2014-09-29+at+7.30.30+AM.png')
+
+
+
+.slide
+  .notes
+    | - refresh localhost
+    | - shoestring.css comes back 404
+    | - use express.static
+  h2 Configuring Express to serve static files
+
+  :markdown
+    ```javascript
+    app.set('view engine', 'jade');
+
+    app.set('views', __dirname + '/views');
+
+    app.use(express.static(__dirname + '/../public'));
+    ```
+
+    Restart the app and refresh.
+
+
+  .slide
+    h3
+      em Glorious Helvetica Neue!
+
+
+
+.slide
+  .notes
+    | - review the flow of our app:
+    |   - continue with server-side to check off #3
+  h2 Flow of the app
+
+  :markdown
+    1. A user enters Sass code into a text area
+    2. The client-side Ember app will post the input to server via AJAX
+    3. The server will process the input and respond with a JSON object containing the rendered CSS output
+    4. Ember will render the returned JSON in a template on our page
+    5. __Profit__
+
+
+
+.slide
+  img.vcenter(src='http://s3.drft.io/tumblr_ms9m5y81nb1qgn992o1_1280.jpg')
+
+
+
+.slide
+  .notes
+    | - intro to TDD
+    |   - write code that tests your code before you write code
+  h1 Intro to TDD
+
+
+
+.slide
+  .notes
+    |   - helps you catch broken code before it ships
+    |   - frees you up to refactor application code without fear of breaking things
+    |   - red, green, refactor
+    |     - first you write a test that you know will fail, in this case because the application code you're testing doesn't exist
+    |     - then write your application code so that the test passes
+    |     - the refactor your code and clean up the campsite
+  img.vcenter(src='http://s3.drft.io/54121436.jpg')
+
+
+
+.slide
+  .notes
+    | - test tooling
+    |   - install mocha and supertest
+    |     - npm install --save-dev
+  h2 Tools for TDD
+
+  :markdown
+    ```
+    $ npm install --save-dev mocha
+    $ npm install --save-dev supertest
+    ```
+
+
+  .slide
+    .notes
+      | - saves as dev dependencies in package.json
+      | - dev dependencies aren't loaded in production environment
+
+    :markdown
+      ```javascript
+      "dependencies": {
+          "express": "^4.8.7",
+          "jade": "^1.6.0"
+      },
+      "devDependencies": {
+          "mocha": "^1.21.4",
+          "supertest": "^0.13.0"
+      }
+      ```
+
+
+
+.slide
+  .notes
+    | - npm test
+    |   - change test script in package.json to
+    |     - ./node_modules/mocha/bin/mocha
+    |   - now `npm test` will run the local mocha binary
+  h2
+    code npm test
+
+  :markdown
+    Edit `package.json`
+
+    ```json
+    "test": "./node_modules/mocha/bin/mocha"
+    ```
+
+
+  .slide
+    :markdown
+      ```
+      $ npm test
+      ```
+
+      Mocha will execute all scripts in `test/`.
+
+
+
+.slide
+  h2
+    code test/
+
+  :markdown
+    ```
+    $ mkdir test
+    $ touch test/test.js
+    ```
+
+
+  .slide
+    .notes
+      | - practice test
+      |   - edit test/test.js
+    :markdown
+      ```javascript
+      var assert = require("assert");
+
+      describe('When adding 1 and 1', function() {
+        it('should return 2', function() {
+          assert.equal((1 + 1), 2);
+        });
+      });
+      ```
+
+
+
+.slide
+  h2 Red, green...
+
+  :markdown
+    ```
+    $ npm test
+    ```
+
+
+  .slide
+    :markdown
+      ```
+      $ npm test
+
+      > bad-grizzly@0.0.0 test /Code/bad-grizzly
+      > ./node_modules/mocha/bin/mocha
+
+
+        When adding 1 and 1
+          ✓ should return 2
+
+
+        1 passing (5ms)
+      ```
+
+
+
+.slide
+  img.vcenter(src='http://s3.drft.io/1.jpg')
+
+
+
+.slide
+  .notes
+    | - change to `assert.equal((1 + 1), 3);`
+    | - run and watch it fail
+  h2 Red, green...
+
+  p Be suspicious if your test passes on the first try.
+
+
+  :markdown
+    Change line 3:
+
+    ```javascript
+    assert.equal((1 + 1), 3);
+    ```
+
+
+  .slide
+    :markdown
+      ```
+      $ npm test
+      ```
+
+
+
+.slide
+  h2 Red, green...
+
+  :markdown
+    ```
+      When adding 1 and 1
+        1) should return 2
+
+
+      0 passing (6ms)
+      1 failing
+
+      1) When adding 1 and 1 should return 2:
+         AssertionError: 2 == 3
+          at Context.<anonymous> (/Code/bad-grizzly/test/test.js:5:12)
+          at callFn (/Code/bad-grizzly/node_modules/mocha/lib/runnable.js:249:21)
+          at Test.Runnable.run (/Code/bad-grizzly/node_modules/mocha/lib/runnable.js:242:7)
+          at Runner.runTest (/Code/bad-grizzly/node_modules/mocha/lib/runner.js:373:10)
+          at /Code/bad-grizzly/node_modules/mocha/lib/runner.js:451:12
+          at next (/Code/bad-grizzly/node_modules/mocha/lib/runner.js:298:14)
+          at /Code/bad-grizzly/node_modules/mocha/lib/runner.js:308:7
+          at next (/Code/bad-grizzly/node_modules/mocha/lib/runner.js:246:23)
+          at Object._onImmediate (/Code/bad-grizzly/node_modules/mocha/lib/runner.js:275:5)
+          at processImmediate [as _immediateCallback] (timers.js:336:15)
+
+
+    npm ERR! Test failed.  See above for more details.
+    npm ERR! not ok code 0
+    ```
+
+
+
+.slide
+  .notes
+    | - real test
+    |   - paste code
+    |   - require supertest
+    |   - require our app
+    |   - supertest will actually run our and submit HTTP requests to just like if it were loaded in the browser
+    |     - like Express, supertest gives us methods named after HTTP verbs
+    |     - you call on a verb method with the desired route, and then state what we expect from a successful response
+    |       - in this case we call post on /compile and expect a status of 200
+  h2 Red, green...
+
+  :markdown
+    A real test.
+
+    ```javascript
+    var request = require('supertest');
+    var app = require('../app/index.js');
+
+    describe("POST /compile", function() {
+      it("responds successfully", function(done) {
+        request(app)
+          .post('/compile')
+          .expect(200, done);
+      });
+    });
+    ```
+
+
+  .slide
+    p SuperTest runs the app and simulates HTTP requests, just like we would make from the browser.
+
+
+
+.slide
+  h2 Red, green...
+
+  :markdown
+    ```
+    $ npm test
+    ```
+
+
+  .slide
+    :markdown
+      ```
+      The server is now listening on port 3000
+
+        POST /compile
+          1) responds successfully
+
+        0 passing (4ms)
+        1 failing
+
+        1) POST /compile responds successfully:
+           TypeError: Object #<Object> has no method 'address'
+            at Test.serverAddress (/Code/bad-grizzly/node_modules/supertest/lib/test.js:57:18)
+
+            ...
+
+      npm ERR! Test failed.  See above for more details.
+      npm ERR! not ok code 0
+      ```
+
+
+
+.slide
+  .notes
+    | - fails
+    |   - because we have not exported our app
+    |     - require('../app/index.js') isn't returning a usable object
+    |   - I ran into this the first time I tried writing tests like this
+    | - add module.exports to app
+  h2 Red, green...
+
+  :markdown
+    We need to `export` our app in `app/index.js`.
+
+    Edit line 2:
+
+    ```javascript
+    var app = module.exports = express();
+    ```
+
+    Now the app is a proper module and can be included into other scripts, like our test.
+
+
+
+.slide
+  h2 Red, green...
+
+  :markdown
+    ```
+    $ npm test
+    ```
+
+  .slide
+    .notes
+      | - now it fails because the server is returning 404
+      | - to be expected, because we have written our /compile route yet
+      | - this is the "red" in "red, green, refactor"
+    :markdown
+      ```
+      POST /compile
+        1) responds successfully
+
+
+      0 passing (18ms)
+      1 failing
+
+      1) POST /compile responds successfully:
+        Error: expected 200 "OK", got 404 "Not Found"
+      ```
+
+
+
+.slide
+  h2 Red, green..
+
+  :markdown
+    When practicing TDD, your tests should fail the first time, so you know that you have actually fixed the feature. This is the "red" in "red, green, refactor".
+
+
+  .slide
+    :markdown
+      The test fails because we don't have a `/compile` route. Add one:
+
+      ```javascript
+      app.post('/compile', function(req, res) {
+        res.status(200).end();
+      });
+      ```
+
+
+  .slide
+    :markdown
+      ```
+      $ npm test
+      ```
+
+
+
+.slide
+  img.vcenter(src='http://s3.drft.io/Cat-Ping-Pong-Fistbump.gif' style='width:80%;height:80%')
+
+
+
+.slide
+  .notes
+    | - we have a passing test, but it's not really doing anything
+    | - need to test submission and processing of input
+    | - move quickly as this part is either familiar or not pertinent to this exercise
+    | - install body-parser and node-sass
+    |   - npm install --save
+  h2 ...Refactor
+
+  p On its own, Express can't parse the body of a request.
+
+
+  .slide
+    .notes
+      | - need middleware
+      |   - node modules that sit either between the request or the response and the app
+      | - body-parser does this for us
+    :markdown
+      ```
+      $ npm install --save body-parser
+      $ npm install --save node-sass
+      ```
+
+      We'll also need `node-sass`.
+
+
+
+.slide
+  .notes
+    | - require node-sass and body-parser
+    |   - explain app.use(bodyParser.json());
+    |     - tells express to use body-parser middleware and configures body-parser to expect JSON encoded request body
+  h2 ...Refactor
+
+  :markdown
+    Add this, starting on line 3.
+
+    ```javascript
+    var nodeSass = require('node-sass');
+    var bodyParser = require('body-parser');
+
+    app.use(bodyParser.json());
+    ```
+
+
+
+.slide
+  .notes
+    | - paste route code
+    |   - process input and return compiled CSS
+    |   - if the render succeeds we respond with a JSON object
+    |   - if it fails, we respond with a status code of 500 and the error message
+    | - npm test
+    |   - fails because we aren't submitting any data
+  h2 A real route
+
+  :markdown
+    Replace `app.post('/compile')` with this:
+
+    ```javascript
+    app.post('/compile', function(req, res) {
+      var stats = {};
+
+      var css = nodeSass.render({
+        data: req.body.compiler.sass + ' ',
+        outputStyle: req.body.compiler.outputStyle,
+        stats: stats,
+
+        success: function(css) {
+          res.json({
+            compiler: {
+              css: css,
+              stats: stats
+            }
+          });
+        },
+
+        error: function(error) {
+          res.status(500).send(error);
+        }
+      });
+    });
+    ```
+
+
+
+.slide
+  .notes
+    | - new test code
+    |   - sending a JSON object, just as we would from the browser
+    |   - also setting the content-type of the request.
+    |   - we expect that the response will be JSON 
+    |   - we also expect that the body will contain a contain a key, `css`, with a certain value
+  h2 A complete test
+
+  p We need to submit some data with our test.
+
+  :markdown
+    ```javascript
+    request(app)
+      .post('/compile')
+      .send({
+        compiler: {
+          sass: '$red: #f00;\n.test {\n  color: $red;\n}',
+          outputStyle: 'compressed'
+        }
+      })
+      .set('Content-Type', 'application/json')
+      .expect(function(res) {
+        if(res.body.compiler.css != '.test{color:#f00;}') throw new Error('expected ".test{color:#f00;}", got "' + res.body.compiler.css + '"');
+      })
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+    ```
+
+
+
+.slide
+  h2 ..Refactor
+
+  :markdown
+    ```
+    $ npm test
+    ```
+
+
+  .slide
+    :markdown
+      ```
+        POST /compile
+          ✓ responds successfully (40ms)
+
+
+        1 passing (43ms)
+      ```
+
+
+  .slide
+    h3 YAY!
+
+
+
+.slide
+  img.vcenter(src='http://s3.drft.io/business-cat-03.jpg')
+
+
+
+.slide
+  .notes
+    | We'll see this again soon.
+  h2 Green
+
+  :markdown
+    Here's a closer look at the JSON the server is returning:
+
+    ```json
+    {
+      "compiler": {
+        "css": ".test{color:#f00;}",
+        "stats": {
+          "entry": "data",
+          "start": 1410121632247,
+          "includedFiles": [],
+          "end": 1410121632248,
+          "duration": 1
+        }
+      }
+    }
+    ```
+
+
+.slide
+  h1 One more refactor
+
+
+.slide
+  h2 Making Ember happy
+
+  :markdown
+    When it _creates_ a record, the Ember Data uses `POST`, but subsequent updates use `PUT`, which we have not accounted for.
+
+    We need to perform the same action with two different verbs.
+
+
+
+.slide
+  .notes
+    | - we aren't building a traditional REST app
+    |   - there's no CRUD
+    |     - if this were a blog app you might have `posts` that could be created, read, updated, and deleted
+    |     - but our request and response objects don't really need that kind of modeling
+    |
+    |   - using Ember though, and I wanted to build this the "Ember way"
+    |     - so we will use the Ember Data library and its RESTAdapter
+    |       - Ember data has opinions though.
+    |       - even though we aren't modeling our data on the server-side, we'll need to model it on the client side
+    |         - so ember data will treat our input like a model, complete with the CRUD methods
+    |         - one of Ember Data's quirks is that when it creates a record (submits our input for the first time) it will POST to /compile
+    |         - but on subsequent changes it's going to _update_ the "model" with a _PUT_ request to /compile
+    |
+    | - long story short, so, we need to refactor our /compile route so that it can respond to both POST and PUT
+    |   - which is easy to do because all the interesting functionality happens in the callback to post()
+    |     - show old code
+    |   - paste new code
+    |     - now our app will respond to both POST and PUT with the same function
+
+  h2 Refactor the route
+
+  :markdown
+    ```javascript
+    var compile = function(req, res) {
+      var stats = {};
+
+      var css = nodeSass.render({
+        data: req.body.compiler.sass,
+        outputStyle: req.body.compiler.outputStyle,
+        stats: stats,
+
+        success: function(css) {
+          res.json({
+            compiler: {
+              css: css,
+              stats: stats
+            }
+          });
+        },
+
+        error: function(error) {
+          res.status(500).send(error);
+        }
+      });
+    };
+
+    app.post('/compile', compile);
+    app.put('/compile', compile);
+    ```
+
+
+
+.slide
+  h3.vcenter With that, our server is complete. On to the client!
+
+
+
+.slide
+  .notes
+    | - you can start your node server in another terminal window and leave it running; everything from here on will be client-side
+  h1 Ember
+
+
+
+.slide
+  h2 Installing Ember
+
+  :markdown
+    Install Ember and Ember Data with Bower:
+
+    ```
+    $ bower install ember#~1.7.0 --save
+    $ bower install ember-data#~1.0.0-beta.9 --save
+    ```
+
+
+  .slide
+    .notes
+      | - Like npm, bower offers a `--save` option that will update bower.json for you
+      | - NOTE: we're specifying versions of Ember and Ember data here
+      |   - bower lets you specify with `$ bower install <package>#<version>`
+      |   - we’ll accept any patch-level version that is at least 1.0.0-beta.9, but not greater than 1.0
+      |   - I spent a week troubleshooting issues with an outdated version of Ember Data I received when I ran just `bower install ember-data`
+    :markdown
+      **NOTE:** The `#~1.0.0-beta.9` is very important. Bower lets you specify a version for a package by adding a `#` followed by the desired version.
+
+      ```
+      $ bower install <package>#<version>
+      ```
+
+
+    .slide
+      :markdown
+        I spent a week troubleshooting issues with an outdated version of Ember Data I received when I ran just `bower install ember-data`. I want to save you that grief.
+
+
+
+.slide
+  .notes
+    | - we need a file for our application-specifc JS
+    | - create public/js directory and js/app.js
+  h2
+    code app.js
+
+  :markdown
+    Need application-specific JavaScript.
+
+    ```
+    $ mkdir public/js
+    $ touch public/js/app.js
+    ```
+
+
+.slide
+  .notes
+    | - include the JS in index.jade
+    | - not including ember data yet
+  h2
+    code index.jade
+
+  :markdown
+    ```jade
+    doctype html
+    html
+      head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        title= pageTitle
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/vendor/shoestring-css/shoestring.css')
+
+      body
+
+        script(src='/vendor/jquery/dist/jquery.min.js')
+        script(src='/vendor/handlebars/handlebars.min.js')
+        script(src='/vendor/ember/ember.js')
+        script(src='/js/app.js')
+
+    ```
+
+
+
+.slide
+  .notes
+    | - create a new instance of Ember.Application and makes it available as App
+    | - similar to how we created our Node app with
+    |   - var app = express();
+  h2
+    code Ember.Create()
+
+  :markdown
+    Open `js/app.js` and add this:
+
+    ```javascript
+    var App = Ember.Application.create();
+    ```
+
+
+  .slide
+    .notes
+      | - html is nothing but script tags at this point
+    p You now have an Ember application.
+
+
+
+.slide
+  .notes
+    | - paste this into index.jade and refresh
+  h2
+    code index.jade
+
+  :markdown
+    Let's mock up our app.
+
+    ```jade
+    .left
+      h3 Input
+
+      textarea(name='sass')
+
+      select(name='outputStyle')
+        option(value='nested') Nested
+        option(value='compressed') Compressed
+
+    .right
+      h3 Output
+
+      pre
+        code
+
+      p
+    ```
+
+
+
+.slide
+  h1 Put some Handlebars on it
+
+
+
+.slide
+  .notes
+    | - let's make this more dynamic
+    |   - we wrap the content in a script tag, with a special type
+    |   - replaced the textarea with some Handlebars markup
+    |   - and we added some handlebars to our code tag
+  h2 Handlebars
+
+  :markdown
+    ```jade
+    script(type='text/x-handlebars')
+      .left
+        h3 Input
+
+        {{textarea value=sass}}
+        select(name='outputStyle')
+          option(value='nested') Nested
+          option(value='compressed') Compressed
+
+      .right
+        h3 Output
+
+        pre
+          code
+            {{sass}}
+        p
+    ```
+
+
+  .slide
+    .notes
+      | - the `text/x-handlebars` type attribute on the script tag tells Ember that this should be parsed with handlebars
+      |   - ember will render the contents of this tag when the page loads.
+    p Ember will render the contents of this script tag to the page when it loads.
+
+
+
+.slide
+  h2 Data binding
+
+  p Try typing something into our input field.
+
+
+  .slide
+    p With that simple markup we bound our input to another element on the page.
+
+
+  .slide
+    p Congratulations, you just wrote your first Ember template.
+
+
+
+.slide
+  h1 Ember 101
+
+
+
+.slide
+  .notes
+    | - let's pause and go over some core concepts of ember, then we'll get back to our app
+    | - Ember follows the Model-View-Controller pattern, similar to Rails
+    | - the concepts you find throughout most Ember app are:
+  h2 Ember 101
+
+
+  .slide
+    p Ember follows the Model-View-Controller pattern.
+
+
+  .slide
+    p Some core concepts:
+
+
+    // .slide
+    //   :markdown
+    //     * Routes (and the Router)
+    //     * Templates
+    //     * Models
+    //     * Controllers
+    //     * Views
+    //     * Components
+    //     * Helpers
+
+
+
+.slide
+  .notes
+    | - Routes and router
+    |   - routes are the urls for the various states of objects in your app
+    |     - say a blog post's edit state versus its read state
+    |       - those would be two different URLs
+    |   - Ember places significant importance on URLs
+    |   - a route links a model with its template
+    |   - the router is a manifest of the routes in your app 
+    |   - technically a route is optional
+    |     - we've already proven that with our simple example
+    |     - with no configuration, given a URL /foo, Ember will render a template foo with an instance of model Foo
+    |   - in practice you'll usually want to define your route explicitly
+  :markdown
+    ## Routes and the Router
+
+    Routes are the URLs for the various states of the objects in your app.
+
+    Ember places significant importance on the URL.
+
+    A route links a model with its template.
+
+    The router is a manifest of the routes in your app. It also keeps the URL in the browser in sync with your app.
+
+
+  .slide
+    :markdown
+      Technically, a route is optional, as we've already proven. However, in practice, you'll probably want to define a route explicitly.
+
+
+
+.slide
+  .notes
+    | - templates
+    |   - templates are the V in Ember's MVC
+    |   - it describes the UI for a model
+    |   - it's written in handlebars
+    |   - it updates itself as its model changes
+  :markdown
+    ## Templates
+
+    Templates are the V in Ember's MVC. A template describes the UI for a model, and is written in Handlebars.
+
+    Templates update themselves as their model's data changes.
+
+
+
+.slide
+  .notes
+    | - models
+    |   - models store the persistent state of objects in the app
+    |   - commonly model data is retrieved from a database via a REST API
+  :markdown
+    ## Models
+
+    Models store the persistent state of objects in our app. Commonly, a model's data is retrieved from a database through a REST API.
+
+
+
+.slide
+  .notes
+    | - controllers
+    |   - a controller acts as an intermediary between a model and a template
+    |   - it allows you to manipulate data either before it is displayed or before it is stored
+    |   - it is optional
+    |     - if you don't create one, Ember will make one for you in memory
+  :markdown
+    ## Controllers
+
+    A controller acts an intermediary between the model and template.
+
+    Allows you to manipulate data either before it is displayed or before it is stored.
+
+    Controllers are optional; if you don't create one, Ember will auto-generate one for you in memory.
+
+
+
+.slide
+  .notes
+    | - views
+    |   - despite the name, views are not the view in MVC
+    |   - handlebars templates are powerful enough to describe most of your UI
+    |     - you generally won't need these
+    |   - views are primarily used for complex, custom event handling
+    |     - can turn a click event into an application event
+    |   - views are also used for creating reusable components
+    |     - Ember includes a number of views for HTML elements such as form inputs and links
+  :markdown
+    ## Views
+
+    Views are primarily used for complex, custom event handling and creating reusable components.
+
+    Ember includes a number of views for HTML elements such as form inputs and links.
+
+
+
+.slide
+  .notes
+    | - components
+    |   - components are standalone views
+    |   - they enable you to build a reusable element and can help simplify your templates
+    |   - we won't be using these in our app
+  :markdown
+    ## Components
+
+    A component is a standalone view. It enables you to build reusable elements and can help simplify your templates.
+
+
+
+.slide
+  .notes
+    | - helpers
+    |   - Handlebars lets you "register" functions that modify data before display
+    |   - helpful for formatting data
+  :markdown
+    ## Helpers
+
+    Handlebars allows you to "register" helper functions that modify data before it's displayed. Useful for date formatting for example.
+
+
+
+.slide
+  h2 How the pieces fit together
+
+  img(src='http://s3.drft.io/ember-sketch.png')
+
+
+
+.slide
+  .notes
+    | - naming conventions
+    |   - Ember favors convention over configuration
+    |   - most obvious in naming things
+    |   - these conventions make it very easy to wire your app together without unnecessary boilerplate
+    |     - example is a URL
+    |         - show users url objects
+    |     - if you try to go against Embers conventions, you're going to have a bad time
+    |     - just let it happen
+  h2 Naming conventions
+  :markdown
+    Ember favors convention over configuration. Ember's naming conventions glue your app together without unnecessary boilerplate.
+
+    For a URL `/users`, Ember will look for these objects:
+
+    * `App.UsersRoute`
+    * `App.UsersController`
+    * and a template `users`
+
+    If you go against Ember's naming conventions, you're going to have a bad time. Just let it happen.
+
+
+  .slide
+    img(src='http://s3.drft.io/e200835ce01879328afc6502158c79cb.jpg')
+
+
+
+.slide
+  .notes
+    | - conventions make magic possible
+    | - we've seen some magic already
+  h2 Magic
+  :markdown
+    Conventions enable magic! We've already seen some of that magic happen with our simple template.
+
+
+  .slide
+    :markdown
+      Ember gives you some things for free:
+
+      * `App.ApplicationRoute`
+      * `App.ApplicationController`
+      * the `application` template
+
+
+  .slide
+    .notes
+      | - our app is leveraging these already
+      |   - show code
+      |   - our template doesn't have a name so Ember assumes it is the application tempalte
+      |   - Ember also gave us the ApplicationRoute and ApplicationController for free
+    :markdown
+      Our app is leveraging these conventions:
+
+      ```jade
+      script(type='text/x-handlebars')
+        .left
+          h3 Input
+      ```
+
+      Our template doesn't have a name, so Ember uses it as the `application` template. Ember also created a route and controller for us.
+
+
+
+.slide
+  .notes
+    | - now that we understand some conventions lets get back to our app
+  h1 Iterate
+
+
+.slide
+  .notes
+    | - we now know that we are using the application template by default
+    |   - let's be more specific
+    |     - paste code
+  h2 Moving beyond defaults
+
+  :markdown
+    Let's use the `index` template in `index.jade`:
+
+    ```jade
+    script(type='text/x-handlebars' id='index')
+      .left
+    ```
+
+
+  .slide
+    .notes
+      | - let's also add an App.IndexRoute
+      |   - paste code
+      |   - now we have a default value for your input
+    :markdown
+      While we're at it, let's add an `App.IndexRoute` with a model to `app.js`:
+
+      ```javascript
+      var App = Ember.Application.create();
+
+      App.IndexRoute = Ember.Route.extend({
+        model: function () {
+          return { };
+        }
+      });
+      ```
+
+
+
+.slide
+  .notes
+    | - let's rewrite our select menu using handlebars
+    |   - Ember.Select is a built-in view for rendering select elements
+    |   - it take an array of values and a string for the currently selected item
+  h2 Ember.Select
+
+  :markdown
+    ```jade
+    script(type='text/x-handlebars' id='index')
+      .left
+        h3 Input
+
+        {{textarea value=sass}}
+
+        {{view Ember.Select content=outputStyles value=selectedOutputStyle}}
+    ```
+
+
+  .slide
+    .notes
+      | - we'll need a controller to set up those variables
+      | - remember a controller is a bridge between the model and the view, and can be used to decorate the model with additional data.
+    :markdown
+      We'll need to create a controller to set up the values.
+
+      ```javascript
+      App.IndexController = Ember.ObjectController.extend({
+        outputStyles: ['nested', 'compressed'],
+
+        selectedOutputStyle: 'nested'
+      });
+      ```
+
+
+
+.slide
+  h1 Ember Data
+
+
+
+.slide
+  h2 Ember Data
+
+  :markdown
+    Add it to `index.jade`.
+
+    ```jade
+    script(src='/vendor/jquery/dist/jquery.min.js')
+    script(src='/vendor/handlebars/handlebars.min.js')
+    script(src='/vendor/ember/ember.js')
+    script(src='/vendor/ember-data/ember-data.js')
+    script(src='/js/app.js')
+    ```
+
+
+
+.slide
+  .notes
+    | - we need a better model
+    |   - for the most part ember is less opinionated about model names
+  h2 A more complete model
+
+  :markdown
+    ```javascript
+    var App = Ember.Application.create();
+
+    App.Compiler = DS.Model.extend({
+      sass: DS.attr('string'),
+      outputStyle: DS.attr('string'),
+      css: DS.attr('string'),
+      stats: DS.attr()
+    });
+    ```
+
+
+  .slide
+    .notes
+      | - notice how our model contains attributes for both the request and response?
+    p Note, this contains attributes for both the request and response.
+
+
+
+.slide
+  .notes
+    | - ember data expects that the object it hands off to the data store and the object it receives will be of the same shape
+    |   - but our /compiler route, isn't a standard data store
+    |   - the object it returns is different than the one it received
+  h2 API recap
+
+  .side-by-side
+    .half
+      p The objects that our API is expecting:
+
+      :markdown
+        ```json
+        // The request
+        {
+          "compiler": {
+            "sass": "$red: #f00;\n.test {\n  color: $red;\n}",
+            "outputStyle": "compressed"
+          }
+        }
+
+        // The response
+        {
+          "compiler": {
+            "css": ".test{color:#f00;}",
+            "stats": {
+              ...
+            }
+          }
+        }
+        ```
+
+
+    .half.slide
+      .notes
+        | - we can make ember happy by combining our request and response models
+        |   - our server will just ignore the properties it doesn't need
+        |   - likewise on the client-side, we'll just ignore the unnecessary properties in the response
+      p The object Ember will use:
+
+      :markdown
+        ```javascript
+        var App = Ember.Application.create();
+
+        App.Compiler = DS.Model.extend({
+          sass: DS.attr('string'),
+          outputStyle: DS.attr('string'),
+          css: DS.attr('string'),
+          stats: DS.attr()
+        });
+        ```
+
+
+
+.slide
+  .notes
+    | - we need to link this model to our route
+    |   - we have to do this manually because our model and route do not share a name
+    |   - `createRecord` returns an empty instance of our model
+  h2 Models in action
+
+  :markdown
+    Add this model to the route:
+
+    ```javascript
+    App.IndexRoute = Ember.Route.extend({
+      model: function () {
+        return this.store.createRecord('compiler');
+      }
+    });
+    ```
+
+
+  .slide
+    p This creates an empty instance of our model.
+
+
+
+.slide
+  h1 AJAX
+
+
+
+.slide
+  .notes
+    | by default, ember data will use its RESTAdapter
+    | but we need to make some minor modifications
+  h2
+    code RESTAdapter
+
+  p Ember Data's <code>RESTAdapter</code> tries to infer URLs from model names.
+
+
+  .slide
+    p The default path is the plural form of the model name.
+
+    p Given a model, <code>Post</code>, <code>RESTAdapter</code> would make requests to <code>/posts</code>
+
+
+  .slide
+    .notes
+      | - our route doesn't follow those conventions
+    p Given our <code>Compiler</code> model, it would try to use <code>/compilers</code>. But that won't work...
+
+
+
+.slide
+  h2 Setting the API endpoint
+
+  p Our model isn't conventional, so we need to set the URL explicitly.
+
+
+  .slide
+    .notes
+      | - fortunately, the rest adapter is designed to be flexible
+      | - we define our own `buildURL` method and force it to return the URL we want
+    :markdown
+      ```javascript
+      var App = Ember.Application.create();
+
+      App.ApplicationAdapter = DS.RESTAdapter.extend({
+        buildURL: function(type, id, record) {
+          return '/compile'
+        }
+      });
+      ```
+
+      By defining our own `buildURL` method we can force it to use the the path we've already built.
+
+
+
+.slide
+  .notes
+    | - need to do a little more plumbing before we can actually communicate with the server
+  h2 Action!
+
+  :markdown
+    Let's add a button to our form so that we can manually invoke the API call for debugging.
+
+    ```jade
+      {{view Ember.Select content=outputStyles value=selectedOutputStyle}}
+
+      <button {{action 'compile'}}> Go</button>
+
+    .right
+    ```
+
+    We use the built-in helper `action` which fires an event, `compile`, on click.
+
+
+
+.slide
+  h2 Action!
+
+  :markdown
+    Listen for the `compile` event in our controller:
+
+    ```javascript
+    App.IndexController = Ember.ObjectController.extend({
+      outputStyles: ['nested', 'compressed'],
+
+      selectedOutputStyle: 'nested',
+
+      actions: {
+        compile: function() {
+          alert("Button clicked");
+        }
+      }
+    });
+    ```
+
+
+
+.slide
+  h2 Action!
+
+  :markdown
+    Refresh, paste `.test { color: red; }` into the into the input, and click "Go". Yay!
+
+
+  .slide
+    :markdown
+      Now, let's actually `POST` input to the server:
+
+      ```javascript
+      actions: {
+        compile: function() {
+          this.get('model').save()
+            .then(function(response) {
+              console.log('Success: ', response);
+            });
+        }
+      }
+      ```
+
+
+
+.slide
+  h2 Action!
+
+  :markdown
+    Refresh. Paste `.test { color: red; }`. Click.
+
+
+  .slide
+    p Now in the console, we should see something like:
+
+    img(src='http://s3.drft.io/Screen%20Shot%202014-09-27%20at%204.24.13%20PM.png')
+
+
+
+.slide
+  .notes
+    | - now, let's insert the rendered CSS into our template
+  h2 Action!
+
+  :markdown
+    Let's show the CSS returned by the API:
+
+    ```jade
+    pre
+      code
+        {{css}}
+    ```
+
+
+  .slide
+    .notes
+      |   - notice, that's _all_ we have to do
+      |     - css is a property of our model and calling save() automatically updated the values in the template
+    p Our output is updated whenever we change the value of the input.
+
+
+
+.slide
+  .notes
+    |   - the API doesn't return a value for sass, and as we now know, save() updates the model, which updates the template
+    |   - when we click go, our input is cleared
+  h2 Better UX
+
+  :markdown
+    Because the API doesn't return a value for `sass`, the model updates itself with its blank default value.
+
+    When we click "Go", our input is cleared. We need our input to not be so tightly linked to the model.
+
+
+  .slide
+    .notes
+      |   - change textarea to {{textarea value=sassInput}}
+    :markdown
+      Let's decouple our input template from the model.
+
+      ```handlebars
+      {{textarea value=sassInput}}
+      ```
+
+
+    .slide
+      :markdown
+        Now, set the model attribute to the value in the template.
+
+        ```javascript
+        compile: function() {
+          this.set('sass', this.get('sassInput'));
+
+          this.get('model').save()
+            .then(function(response) {
+              console.log('Success: ', response);
+          });
+        }
+        ```
+
+        Now, as we click "Go" our input remains.
+
+
+
+.slide
+  .notes
+    | - accessing properties
+    |   - notice in templates we access vars directly? {{sassInput}}
+    |     - but in the controller, we use this.get('sassInput')
+  h2 Getters and setters
+
+  :markdown
+    In the template, we access our model's properties directly by name `{{sassInput}}`, `{{sass}}`.
+
+    But in our controller we access those properties with `this.get('sassInput')` or `this.set('sass')`. Why?
+
+
+  .slide
+    .notes
+      | - data binding is one of Embers most powerful features
+      |   - earlier, binding allowed us to mirror our textarea with about 3 lines of code
+      | - using get() and set() allows observing objects to be notified when a property changes and update itself appropriately
+      | - you _can_ access properties directly, but shouldn't do it
+      | - this leads us to...
+    :markdown
+      __Data binding__, one of Ember's most powerful features.
+
+      Earlier, binding allowed us—with three lines of code!—to mirror our textarea.
+
+      `get()` and `set()` notifies observing objects when a property changes.
+
+
+    .slide
+      p  Which leads us to...
+
+
+
+.slide
+  .notes
+    | - clicking buttons to send input is sooo 2003!
+    | - we really want our input to be able to send itself whenever its value changes
+  :markdown
+    ## Observing the form
+
+    Our input should send itself whenever it is changed.
+
+
+  .slide
+    .notes
+      | - we really want our input to be able to send itself whenever its value changes
+    :markdown
+      Wrap our `compile` action in an observer:
+
+      ```javascript
+      selectedOutputStyle: 'nested',
+
+      compileOnEntry: function() {
+        this.send('compile');
+      }.observes('sassInput'),
+      ```
+
+
+  .slide
+    :markdown
+      Refresh. Paste `$red: blue; .test { color: $red; }`.
+
+      Automatic updating FTW!
+
+
+
+.slide
+  h1 A few minor tweaks
+
+
+
+.slide
+  .notes
+    | - right now we aren't actually sending a value for outputStyle
+    |   - look at the network panel and see null for that property
+  h2
+    code outputStyle
+
+  :markdown
+    We aren't sending a value for `outputStyle`.
+
+
+  .slide
+    img(src='http://s3.drft.io/Screen%20Shot%202014-09-27%20at%205.25.45%20PM.png')
+
+
+  .slide
+    :markdown
+      Easy fix:
+
+      ```javascript
+      this.set('sass', this.get('sassInput'));
+      this.set('outputStyle', this.selectedOutputStyle);
+      ```
+
+
+  .slide
+    img(src='http://s3.drft.io/Screen%20Shot%202014-09-27%20at%205.28.32%20PM.png')
+
+
+
+.slide
+  .notes
+    | - we should observe selectedOutputStyle and recompile when it changes
+  h2 Observe the select menu
+
+  :markdown
+    We should observe `selectedOutputStyle` and recompile when that changes:
+
+
+  .slide
+    .notes
+      | - can fix this by wrapping save() in a conditional that checks if sassInput is empty
+    :markdown
+      ```javascript
+      compileOnEntry: function() {
+        this.send('compile');
+      }.observes('sassInput', 'selectedOutputStyle'),
+      ```
+
+
+
+.slide
+  .notes
+    | - back in the network panel, you may notice that Ember is making a request to /compile immediately after the page loads
+  h2 Unnecessary requests
+
+  p Ember is making a request to <code>/compile</code> immediately after the page loads.
+
+  img(src='http://s3.drft.io/Screen%20Shot%202014-09-27%20at%205.31.57%20PM.png')
+
+
+
+  .slide
+    :markdown
+      Wrap `save()` in a conditional that checks if `sassInput` is blank:
+
+      ```javascript
+      if(! Ember.isBlank(this.get('sassInput'))) {
+        this.get('model').save()
+          .then(function(response) {
+            console.log('Success: ', response);
+          });
+      }
+      ```
+
+
+
+.slide
+  .notes
+    | - we're only handling successful responses now
+  h2 Errors
+
+  p We should do something with unsuccessful responses.
+
+
+  .slide
+    .notes
+      | - save() returns a promise
+      |   - we've already supplied a success callback argument to then()
+      |   - now we add an error callback
+      |     - We need to add var self = this in order to call set() within the error handler
+    :markdown
+      `save()` returns a promise. We already have the "success" callback argument to `then()`, so all we have to do is add a "fail" callback:
+
+
+    .slide
+      :markdown
+        ```javascript
+        var self = this;
+
+        ...
+        
+        if(! Ember.isBlank(this.get('sassInput'))) {
+          this.get('model').save()
+            .then(function(response) {
+              console.log('Success: ', response);
+            },
+            function(err) {
+              console.log('Error: ', err);
+              self.set('css', err.responseText);
+            });
+        }
+        ```
+
+
+
+.slide
+  h1 One more thing
+
+
+
+.slide
+  .notes
+    | - additional routes
+    |   - so far we've only used the index route that Ember provides by convention
+    |   - time to define our own route
+    |   - Sassmeister has a feature where you can load a previously saved snippet as a github gist
+    |     - let's do something like that
+  h2 Routes
+
+  :markdown
+    Let's show a previously saved snippet of Sass, just like on SassMeister.com.
+
+    Add a route for `/gist`
+
+
+  .slide
+    .notes
+       | - we're adding a URL to the router's manifest
+    :markdown
+      ```javascript
+      var App = Ember.Application.create();
+
+      App.Router.map(function() {
+        this.resource('gist', { path: '/gist/:gist_id' });
+      });
+      ```
+
+
+
+.slide
+  .notes
+    | - if we change the hash, the browser fires a hashchange event which tells the route to change the state of the app
+  h2 Prettier URLs
+
+  :markdown
+    Ember's router uses URL fragments (hashes) to identify URLs.
+
+    Our app will now respond to a URL like `/#/gist/1`.
+
+
+  .slide
+    p Hashes are ugly.
+
+
+    .slide
+      p Ember makes it easy to change.
+
+      :markdown
+        ```javascript
+        App.Router.reopen({
+          location: 'history'
+        });
+        ```
+
+
+
+.slide
+  .notes
+    | - this requires a minor change to our server
+  h2 Prettier URLs
+
+  :markdown
+    If we visit `/gist/1` right now, our server will return 404.
+
+    Stop the server and modify the index route to this:
+
+    ```javascript
+    var index = function(req, res) {
+      res.render('index', {
+        pageTitle: 'Hello, ' + process.env.USER,
+        user: process.env.USER
+      });
+    };
+
+    app.get('/', index);
+    app.get('/gist/*', index);
+    ```
+
+
+  .slide
+    :markdown
+      Just as we refactored the `/compile` route to respond to both `POST` and `PUT`, we refactor `/` so we can reuse the functionality for `/gist/1`.
+
+
+
+.slide
+  h2 A template for every route
+
+  :markdown
+    We don't have a template for this route, so we won't seeing anything if go to `/gist/1`.
+
+
+  .slide
+    .notes
+      | - because we don't have a model associated with this route
+    :markdown
+      ```jade
+      script(type='text/x-handlebars' id='gist')
+        .left
+          h3 Sass
+
+        pre
+          code
+            {{sass}}
+
+        .right
+          h3 CSS
+
+          pre
+            code
+              {{css}}
+
+      script(src='/vendor/jquery/dist/jquery.min.js')
+      ```
+
+
+
+.slide
+  h2 And a model...
+
+  :markdown
+    We also don't have a model associated with this route.
+
+
+  .slide
+    :markdown
+      Refactor `App.Compiler`, replacing it with this:
+
+      ```javascript
+      var schema = {
+        sass: DS.attr('string'),
+        css: DS.attr('string'),
+        outputStyle: DS.attr('string'),
+        stats: DS.attr()
+      };
+
+      App.Compiler = DS.Model.extend(schema);
+
+      App.Gist = DS.Model.extend(schema);
+      ```
+
+
+  .slide
+    :markdown
+      Refactoring code is a crucial practice. Take every opportunity to break your code into reusable chunks. It keeps your codebase clean and maintainable.
+
+
+
+.slide
+  h2 The correct endpoint
+
+  p Still not seeing anything at <code>/gist/1</code>.
+
+
+  .slide
+    p Let's have a look at the console.
+
+    img(src='http://s3.drft.io/Screen%20Shot%202014-09-28%20at%207.04.37%20AM.png')
+
+
+  .slide
+    p Ember is trying to load the model with <code>GET /compile</code>, but that route only responds to <code>POST</code> and <code>PUT</code>.
+
+
+
+.slide
+  h2 The correct endpoint
+
+  :markdown
+    Our route is `/gist`; so Ember passes `gist` as the `type` argument to `buildURL`. We can conditionally return a different URL for different types of models.
+
+
+  .slide
+    :markdown
+      ```javascript
+      App.ApplicationAdapter = DS.RESTAdapter.extend({
+        buildURL: function(type, id, record) {
+          if(type == 'gist') return 'http://gist.drft.io/gists/' + id + '.json';
+
+          return '/compile';
+        }
+      });
+      ```
+
+      I created an Amazon S3 bucket that has a few JSON files that match the models we defined in our Ember app.
+
+
+
+.slide
+  h2 Routes FTW!
+
+  :markdown
+    Refresh, and we now see our template populated with JSON loaded from a remote server. Whee!
+
+
+
+.slide
+  .notes
+    | - Remember how Ember gives us an application template for free? 
+    |   - Let’s look a gift horse in the mouth and add our own application template.
+  h2 Application template
+
+  p Remember how Ember gives us an `application` template for free? Let's look a gift horse in the mouth and add our own `application` template.
+
+
+  .slide
+    :markdown
+      ```jade
+      body
+
+        script(type='text/x-handlebars')
+          nav
+            {{#link-to 'index'}}Home{{/link-to}}
+            {{#link-to 'gist' 1}}Gist 1{{/link-to}}
+            {{#link-to 'gist' 2}}Gist 2{{/link-to}}
+            {{#link-to 'gist' 3}}Gist 3{{/link-to}}
+
+          {{outlet}}
+      ```
+
+
+  .slide
+    .notes
+      |   - {{outlet}} is a placeholder for other templates
+      |     - router will update outlet when the state of the app changes
+      |   - {{#link-to}} is a built-in helper that builds links... to stuff.
+    :markdown
+      `{{outlet}}` is a placeholder for other templates.
+
+      `{{#link-to}}` is a built-in Ember helper that builds links... to stuff.
+
+
+
+.slide
+  h1 Fin
+
+
+
+.slide
+  h2 Congratulations
+
+  p You've just built a Node.js server with a REST API and an Ember front end. Along the way you used: the command line, npm, Node, bower, Express, LibSass, SCSS, HTTP verbs, ports, TDD, mocha, supertest, JSON, MVC, Jade, HTML, CSS, Ember, Ember Data, Handlebars, AJAX, URLs, and the history API.
+
+  p
+    strong And all in under 200 lines of code!
+
+
+
+.slide
+  img.vcenter(src='http://s3.drft.io/giphy.gif')
+
