@@ -48,9 +48,8 @@ html
       block content
         != yield
 
-    div#sidebar
-      block sidebar
-        != partial('/_sidebar')
+    block sidebar
+      != partial('/_sidebar')
 
     block javascript
       - if(javascript)

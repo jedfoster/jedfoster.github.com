@@ -243,7 +243,7 @@ article .mod_date {
   display: block;
   margin-bottom: 0;
 }
-.pg-notes header, .pg-notes main, .resume main {
+.pg-notes header, .pg-notes main, .pg-resume main {
   width: 100%;
 }
 
@@ -346,7 +346,7 @@ article.post {
   }
 }
 
-.resume {
+.pg-resume {
   header h3 {
     display: none;
 
@@ -695,33 +695,33 @@ article.post {
 }
 
 @media screen and (min-width: 768px) {
-  .resume .skills {
+  .pg-resume .skills {
     display: block;
     float: right;
     width: 23.404255319148936170%;
     margin-left: 2.12765957446808510638%;
   }
 
-  .resume .skills h2 {
+  .pg-resume .skills h2 {
     font-size: 1.25em;
     line-height: 1.2;
     margin-bottom: 1.2em;
   }
 
-  .resume .skills ul {
+  .pg-resume .skills ul {
     font-size: .875em;
     line-height: 1.725;
     margin-bottom: 1.725em;
   }
 
-  .resume .skills h3 {
+  .pg-resume .skills h3 {
     font-size: 1em;
     font-weight: bold;
     line-height: 1.5;
     margin-bottom: 0em;
   }
 
-  .resume .experience {
+  .pg-resume .experience {
     display: block;
     float: left;
     width: 74.468085106382978723%;
@@ -730,7 +730,7 @@ article.post {
 
 @media screen and (max-width: 767px) {
   // Column-ify only the first 2 lists.
-  .resume .skills ul:nth-of-type(-n+2) {
+  .pg-resume .skills ul:nth-of-type(-n+2) {
     padding-left: 0.5em;
     list-style-position: inside;
     -moz-column-count: 3;
