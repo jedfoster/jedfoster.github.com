@@ -98,6 +98,21 @@ header {
       }
     }
   }
+
+  svg {
+    fill: $alpha-gray;
+    font-family: "FuturaND-Bold", sans-serif;
+
+    a, a:visited {
+      @extend %background-transition;
+
+      fill: lighten($alpha-gray, 14);
+
+      &:hover, &:visited:hover {
+        fill: $href-hover-color;
+      }
+    }
+  }
 }
 
 

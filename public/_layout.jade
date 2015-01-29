@@ -32,13 +32,15 @@ html
   - bodyClass = bodyClass || (title ? 'pg-' + title.toLowerCase().replace(/\s/g, '-') : '')
   body(class=bodyClass)
     header
-      h1
-        a(href='/') Jed Foster
+      svg(width='959px' height='94px' viewBox='0 0 959 94' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
 
-      h2
-        span Code. 
-        span Design. 
-        span For the web.
+        g#Logo
+          a(xlink:href='/')
+            text#JED-FOSTER(font-size='114.56' x='0' y='90') JED FOSTER
+          g#CODE-DESIGN-FOR-THE-WEB(transform='translate(766.83, 0)' font-size='24.32')
+            text#CODE(x='113.2' y='22') CODE.
+            text#DESIGN(x='83.9' y='56') DESIGN.
+            text#FOR-THE-WEB(x='9.6' y='90') FOR THE WEB.
 
       nav
         block navigation
