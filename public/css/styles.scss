@@ -103,12 +103,13 @@ header {
     fill: $alpha-gray;
     font-family: "FuturaND-Bold", sans-serif;
 
-    a, a:visited {
+    a {
       @extend %background-transition;
 
       fill: lighten($alpha-gray, 14);
+      cursor: pointer;
 
-      &:hover, &:visited:hover {
+      &:hover {
         fill: $href-hover-color;
       }
     }

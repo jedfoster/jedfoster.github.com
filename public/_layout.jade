@@ -63,3 +63,17 @@ html
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
 
+      if(/^((?!chrome).)*safari/i.test(navigator.userAgent)) {
+        var logo = document.querySelector('#Logo a'),
+            href = logo.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
+
+        logo.removeAttributeNS('http://www.w3.org/1999/xlink', 'href');
+        logo.setAttribute('data-href', href);
+
+        logo.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          window.location = this.getAttribute('data-href');
+        });
+      }
+
