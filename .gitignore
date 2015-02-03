@@ -1,11 +1,11 @@
 .DS_Store
-.sass-cache/
+.sass-cache
 s3_website.yml
-Sass-Deck/
-_site/
-img/
-*/_site/
-tmp/
+Sass-Deck
+public/img/*
+!public/img/icons.svg
+_site
+tmp
 www
 bower_components
 node_modules
