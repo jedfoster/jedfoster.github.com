@@ -63,6 +63,12 @@ html
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
 
+      if(/Trident\/[567]\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537) {
+        var imported = document.createElement('script');
+        imported.src = '/js/svg4everybody.min.js';
+        document.head.appendChild(imported);
+      }
+
       if(/^((?!chrome).)*safari/i.test(navigator.userAgent)) {
         var logo = document.querySelector('#Logo a'),
             href = logo.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
