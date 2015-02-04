@@ -45,28 +45,40 @@ desc 'Compile the app\'s icons to an SVG sprite'
 task 'svg:sprite' do
   require 'nokogiri'
 
-  @doc = Nokogiri::XML::Document.new
+  Dir.mkdir 'public/img/svg' unless File.directory? 'public/img/svg'
 
-  @svg = @doc.add_child Nokogiri::XML::Node.new 'svg', @doc
+  def build_sprite dir
+    @doc = Nokogiri::XML::Document.new
 
-  @svg['xmlns'] = 'http://www.w3.org/2000/svg'
-  # @svg['width'] = @svg['height'] = 120
+    @svg = @doc.add_child Nokogiri::XML::Node.new 'svg', @doc
 
-  Dir.glob('svg/*.svg').each do |file|
-    node = Nokogiri::XML(File.open(file)).css('svg').first
+    @svg['xmlns'] = 'http://www.w3.org/2000/svg'
+    # @svg['width'] = @svg['height'] = 120
 
-    id = file.split('/')[1].split('.')[0]
+    Dir.glob("#{dir}/*.svg").each do |file|
+      node = Nokogiri::XML(File.open(file)).css('svg').first
 
-    symbol = Nokogiri::XML::Node.new 'symbol', @doc
-    symbol['viewBox'] = node['viewBox'] if node['viewBox']
-    symbol['id'] = id.downcase
-    # symbol << "<title>#{id}</title>"
-    symbol << node.children.to_xml.strip
+      id = file.split('/').last.split('.').first
 
-    @svg.add_child(symbol)
+      symbol = Nokogiri::XML::Node.new 'symbol', @doc
+      symbol['viewBox'] = node['viewBox'] if node['viewBox']
+      symbol['id'] = id.downcase
+      symbol << "<title>#{id}</title>" unless node.at 'title'
+      symbol << node.children.to_xml.strip
+
+      @svg.add_child symbol
+    end
+
+    File.open("public/img/#{dir}.svg", 'w') {|f| f.write(@doc.to_xml.gsub(/(\n|\t|\s{2,})/, '')) }
   end
 
-  File.open('public/img/icons.svg', 'w') {|f| f.write(@doc.to_xml.gsub(/(\n|\t|\s{2,})/, '')) }
+  dirs = Dir.glob('svg/*').select {|f| File.directory? f}
+
+  dirs.each do |dir|
+    build_sprite dir
+  end
+
+
 end
 
 
