@@ -1,12 +1,29 @@
 div#sidebar
   nav#socialLinks
-    a#twitter(href='http://twitter.com/jed_foster')
-      span Twitter
-    a#github(href='http://github.com/jedfoster')
-      span GitHub
-    a#gplus(href='https://plus.google.com/106006305598754927268')
-      span Google+
-    a#email(href='/contact')
-      span Contact
+    a(href='http://twitter.com/jed_foster')
+      svg
+        title Twitter
+        use(xlink:href='/img/icons.svg#twitter')
+
+    a(href='http://github.com/jedfoster')
+      svg
+        title GitHub
+        use(xlink:href='/img/icons.svg#github')
+
+    // a(href='https://plus.google.com/106006305598754927268')
+    //   svg
+    //     title Google+
+    //     use(xlink:href='/img/icons.svg#google')
+
+    a(href='http://www.linkedin.com/in/jedfoster')
+      svg
+        title LinkedIn
+        use(xlink:href='/img/icons.svg#linkedin')
+
+    a(href='/contact')
+      svg
+        title Contact
+        use(xlink:href='/img/icons.svg#contact')
 
   != partial('_twitter')
+

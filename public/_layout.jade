@@ -81,5 +81,21 @@ html
 
           window.location = this.getAttribute('data-href');
         });
+
+        var socialLinks = document.querySelectorAll('#socialLinks a');
+
+        Array.prototype.forEach.call(socialLinks, function(el, i){
+          var href = el.getAttribute('href');
+
+          el.removeAttribute('href');
+          el.setAttribute('data-href', href);
+
+          el.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            window.location = this.getAttribute('data-href');
+          });
+
+        });
       }
 

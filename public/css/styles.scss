@@ -26,36 +26,23 @@ svg {
     margin-right: 4.190909090909090909%;/* 9/220 */
     color: lighten($alpha-gray, 14);
     line-height: 1;
-    font-family: 'Icons';
-    font-style: normal;
-    speak: none;
 
     &:hover, &:active {
-      color: $href-hover-color;
+      svg {
+        fill: $href-hover-color;
+      }
     }
+  }
 
-    span {
-      display: none;
-    }
+  svg {
+    @extend %background-transition;
+
+    width: 1em;
+    height: 1em;
+    fill: lighten($alpha-gray, 14);
   }
 }
 
-
-#email:after {
-  content: "\26cd";
-}
-#twitter:after {
-  content: "\26ba";
-}
-#github:after {
-  content: "\26c7";
-}
-#flickr:after {
-  content: "\26c3";
-}
-#gplus:after {
-  content: "\26bd";
-}
 
 
 @import "twitter-feed";
