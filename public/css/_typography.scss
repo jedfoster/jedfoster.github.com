@@ -72,28 +72,11 @@ h5 {
 h6 {
   @extend %heading-6;
 }
-// h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
-//   margin: 0;
-// }
+
 p {
   margin: 0 0 1.5em;
 }
-// .left {
-//   float: left !important;
-// }
-// .right {
-//   float: right !important;
-// }
-// .left,.right {
-//   margin-bottom: 1.5em;
-// }
-// p .left, p .right {
-//   margin: 0 1.5em 1.5em 0;
-//   padding: 0;
-// }
-// p .right {
-//   margin: 0 0 1.5em 1.5em;
-// }
+
 
 %background-transition {
   -webkit-transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease, fill 0.25s ease;
@@ -149,15 +132,7 @@ ul {
 ol {
   list-style-type: decimal;
 }
-// dl {
-//   margin: 0 0 1.5em 0;
-// }
-// dl dt {
-//   font-weight: bold;
-// }
-// dd {
-//   margin-left: 1.5em;
-// }
+
 table {
   margin-bottom: 1.5em;
   width: 100%;
