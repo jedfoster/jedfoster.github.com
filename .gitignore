@@ -3,7 +3,7 @@
 s3_website.yml
 Sass-Deck
 public/img/*
-!public/img/svg/*
+!public/img/svg/
 _site
 tmp
 www
