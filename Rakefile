@@ -73,7 +73,7 @@ namespace 'svg' do
   end
 
   def data_uri file
-    fill = '#f0f'
+    fill = '#696969'
 
     node = Nokogiri::XML(File.open(file)).css('svg').first
     node['fill'] = fill

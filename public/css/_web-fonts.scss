@@ -157,12 +157,18 @@
   	content: "\e001";
   }
 }
-.Ruby {
-  @extend %icon-font;
 
-  &:before {
-  	content: "\e000";
-  }
+@import 'data/index';
+
+
+.Ruby {
+  // @extend %icon-font;
+
+  // &:before {
+  // 	content: "\e000";
+  // }
+
+  background: url(#{$ruby-data-uri});
 }
 .GitHub {
   @extend %icon-font;
