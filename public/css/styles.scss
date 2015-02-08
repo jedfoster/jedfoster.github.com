@@ -18,15 +18,11 @@ svg {
   @extend %nav;
 
   margin-bottom: 1.5em;
-  font-size: 3em;
 
   a {
-    width: 1em;
-    height: 1em;
+    width: 25% - 4.190909090909090909;
     border: 0;
     margin-right: 4.190909090909090909%;/* 9/220 */
-    color: lighten($alpha-gray, 14);
-    line-height: 1;
 
     &:hover, &:active {
       svg {
@@ -38,8 +34,6 @@ svg {
   svg {
     @extend %background-transition;
 
-    width: 1em;
-    height: 1em;
     fill: lighten($alpha-gray, 14);
   }
 }
