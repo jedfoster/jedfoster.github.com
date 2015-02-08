@@ -12,6 +12,7 @@ svg {
 @import "buttons-notices";
 @import "grid";
 @import "nav";
+@import 'icons';
 
 #socialLinks {
   @extend %nav;
