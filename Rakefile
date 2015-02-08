@@ -100,21 +100,17 @@ namespace 'svg' do
     require 'base64'
     require 'rack/utils'
 
-    Dir.mkdir 'public/css/data' unless File.directory? 'public/css/data'
-
-    imports = []
+    map = []
 
     Dir.glob("svg/work*/*.svg").each do |file|
       name = file.split('/').last.split('.').first
 
-      sass_var = "$#{name}-data-uri: '#{data_uri(file)}';"
+      sass_var = "#{name}: '#{data_uri(file)}'"
 
-      File.open("public/css/data/_#{name}.scss", 'w') {|f| f.write(sass_var) }
-
-      imports.push "@import '#{name}';"
+      map.push sass_var
     end
 
-    File.open('public/css/data/_index.scss', 'w') {|f| f.write(imports.join "\n") }
+    File.open('public/css/data/_index.scss', 'w') {|f| f.write("$data-uris: (\n  #{map.join(",\n  ")}\n);") }
   end
 end
 

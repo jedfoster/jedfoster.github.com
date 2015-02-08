@@ -161,6 +161,24 @@
 @import 'data/index';
 
 
+@each $placeholder, $content in $data-uris {
+  %#{$placeholder}-icon {
+
+    @each $value in $content {
+      @extend %data-uri-icon;
+
+      background: url(#{$value}) no-repeat left center;
+    }
+  }
+}
+
+%data-uri-icon {
+  background-size: 1em;
+  padding-left: 1.5em;
+}
+
+
+
 .Ruby {
   // @extend %icon-font;
 
