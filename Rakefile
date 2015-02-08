@@ -41,53 +41,88 @@ end
 
 
 
-desc 'Compile the app\'s icons to an SVG sprite'
-task 'svg:sprite' do
+namespace 'svg' do
   require 'nokogiri'
 
-  Dir.mkdir 'public/img/svg' unless File.directory? 'public/img/svg'
+  def build_sprite dir, ignore_title = false
+    document = Nokogiri::XML::Document.new
 
-  def build_sprite dir
-    @doc = Nokogiri::XML::Document.new
+    svg = document.add_child Nokogiri::XML::Node.new 'svg', document
 
-    @svg = @doc.add_child Nokogiri::XML::Node.new 'svg', @doc
-
-    @svg['xmlns'] = 'http://www.w3.org/2000/svg'
-    # @svg['width'] = @svg['height'] = 120
+    svg['xmlns'] = 'http://www.w3.org/2000/svg'
 
     Dir.glob("#{dir}/*.svg").each do |file|
       node = Nokogiri::XML(File.open(file)).css('svg').first
 
       id = file.split('/').last.split('.').first
 
-      symbol = Nokogiri::XML::Node.new 'symbol', @doc
+      symbol = Nokogiri::XML::Node.new 'symbol', document
       symbol['viewBox'] = node['viewBox'] if node['viewBox']
       symbol['id'] = id.downcase
-      symbol << "<title>#{id}</title>" unless node.at 'title'
+      symbol << "<title>#{id}</title>" unless node.at('title') || ignore_title
       symbol << node.children.to_xml.strip
 
-      @svg.add_child symbol
+      svg.add_child symbol
     end
 
-    File.open("public/img/#{dir}.svg", 'w') {|f| f.write(@doc.to_xml.gsub(/(\n|\t|\s{2,})/, '')) }
+    document
   end
 
-  dirs = Dir.glob('svg/*').select {|f| File.directory? f}
+  def write_sprite directory, document
+    File.open("public/img/#{directory}.svg", 'w') {|f| f.write(document.to_xml.gsub(/(\n|\t|\s{2,})/, '')) }
+  end
 
-  dirs.each do |dir|
-    build_sprite dir
+  def data_uri file
+    fill = '#f0f'
+
+    node = Nokogiri::XML(File.open(file)).css('svg').first
+    node['fill'] = fill
+
+    svg_string = node.to_xml.gsub /(\n|\t|\s{2,})/, ''
+
+    base64 = Base64.encode64(svg_string).gsub(/\s+/, '')
+    "data:image/svg+xml;base64,#{Rack::Utils.escape(base64)}"
+  end
+
+  desc 'Compile the app\'s icons to an SVG sprite'
+  task 'sprite' do
+    Dir.mkdir 'public/img/svg' unless File.directory? 'public/img/svg'
+
+    dirs = Dir.glob('svg/*').select {|f| File.directory? f}
+
+    dirs.each do |dir|
+      write_sprite dir, build_sprite(dir)
+    end
   end
 
 
+  task 'data' do
+    require 'base64'
+    require 'rack/utils'
+
+    Dir.mkdir 'public/css/data' unless File.directory? 'public/css/data'
+
+    imports = []
+
+    Dir.glob("svg/work*/*.svg").each do |file|
+      name = file.split('/').last.split('.').first
+
+      sass_var = "$#{name}-data-uri: '#{data_uri(file)}';"
+
+      File.open("public/css/data/_#{name}.scss", 'w') {|f| f.write(sass_var) }
+
+      imports.push "@import '#{name}';"
+    end
+
+    File.open('public/css/data/_index.scss', 'w') {|f| f.write(imports.join "\n") }
+  end
 end
-
 
 
 def get_stdin(message)
   print message
   STDIN.gets.chomp
 end
-
 
 
 class Utilities < Thor
