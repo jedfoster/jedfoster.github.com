@@ -49,36 +49,10 @@ header {
   margin-bottom: 1.45em;
   border-bottom: 1px solid $border-color;
 
-  h1 {
-    width: 74.468085106382978723%;/* 700/940 */
-    float:left;
-    font-size: 6.75em;
-    margin-bottom: -1.5em;
-    line-height: 1;
-  }
-
   a {
     color: lighten($alpha-gray, 14);
     display: inline-block;
     padding-top: 2px;
-  }
-
-  h2 {
-    width: 23.4104255319148936170%;/* 220/940 */
-    float:right;
-    text-align: right;
-    line-height: 1.33;
-    margin: 0 0 0.625em;
-    font-size: 1.5em;
-
-    span {
-      display: inline-block;
-      width: 100%;
-
-      &:last-child {
-        display: block;
-      }
-    }
   }
 
   svg {
@@ -401,23 +375,12 @@ article.post {
 
 @media screen and (max-width: 768px) {
 	body{
-    padding: 0.75em;
-	}
-	header h1 {
-		width: 100%;
-		float: none;
-	}
-	header h1 a {
-    display: inline;
-	}
-	header h2 {
-		width: 100%;
-		float: none;
-		clear: both;
+    // padding: 0.75em;
 	}
 	header nav{
 		float: none;
 		clear: both;
+    font-size: 1.75em;
 	}
 	nav ul, nav li {
     float: none;
@@ -440,18 +403,8 @@ article.post {
   h1 {
     font-size: 2.5em;
   }
-  header h1 {
-    margin-bottom: 0.1em;
-    font-size: 2.75em;
-  }
-  header h2 {
-    text-align: left;
-    margin-bottom: 0.75em;
-    font-size: 1.25em;
-    line-height: 1.5;
-  }
-  header h2 span {
-    display: inline;
+  header nav {
+    font-size: 1.5em;
   }
   .pg-notes header h1 {
     margin-bottom: 0.1em;
@@ -524,16 +477,6 @@ article.post {
 }
 
 @media screen and (min-width: 360px) and (max-width: 480px) {
-	header h1 {
-		font-size: 4.25em;
-	}
-	header h2 {
-		font-size: 1.5em;
-		line-height: 1.5;
-	}
-  header h2 span:last-child {
-    display: inline;
-  }
   .pg-work section img {
     margin-bottom: 1.5em;
   }
@@ -545,16 +488,6 @@ article.post {
 }
 
 @media screen and (min-width: 480px) and (max-width: 560px) {
-  header h1 {
-    font-size: 4.5em;
-  }
-  header h2 {
-    font-size: 2.5em;
-    line-height: 1.33;
-  }
-  header h2 span:last-child {
-    display: block;
-  }
   header nav ul {
     font-size: 2.5em;
   }
@@ -568,14 +501,6 @@ article.post {
 }
 
 @media screen and (min-width: 560px) and (max-width: 640px) {
-  header h1 {
-    font-size: 5.5em;
-  }
-  header h2 {
-    font-size: 2.5em;
-    line-height: 1.33;
-  }
-
   .pg-work section img {
     margin-bottom: 1.5em;
   }
@@ -595,31 +520,6 @@ article.post {
 @media screen and (min-width: 640px) and (max-width: 768px) {
   header {
     padding-bottom: 0.75em;
-  }
-  header h1 {
-    width: 74.468085106382978723%;/* 700/940 */
-    float: left;
-    font-size: 5.25em;
-    margin-bottom: -1.5em;
-  }
-  header h1 a {
-    display: inline-block;
-    padding-top: 2px;
-  }
-  header h2 {
-    width: 23.4104255319148936170%;/* 220/940 */
-    float: right;
-    text-align: right;
-    line-height: 1.33;
-    margin: 0 0 0.625em;
-    font-size: 1.2em;
-  }
-  header h2 span {
-    display: inline-block;
-    width: 100%;
-  }
-  header h2 span:last-child {
-    display: block;
   }
 
   nav {
@@ -653,44 +553,6 @@ article.post {
   }
 }
 
-@media screen and (min-width: 640px) and (max-width: 740px) {
-  header h1 {
-    font-size: 5.0em;
-  }
-
-  header h2 {
-    font-size: 1em;
-    line-height: 1.5;
-  }
-}
-
-@media screen and (min-width: 640px) and (max-width: 696px) {
-  header h1 {
-    font-size: 4.69em;
-  }
-
-  header h2 {
-    font-size: 1em;
-    line-height: 1.5;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 970px) {
-  header h1 {
-    width: 74.468085106382978723%;/* 700/940 */
-    float: left;
-    font-size: 5.5em;
-    margin-bottom: -1.5em;
-  }
-  header h2 {
-    width: 23.4104255319148936170%;/* 220/940 */
-    float:right;
-    text-align: right;
-    line-height: 1.33;
-    margin: 0 0 0.625em;
-    font-size: 1.2em;
-  }
-}
 
 @media screen and (min-width: 768px) {
   .pg-resume .skills {
@@ -841,15 +703,5 @@ article.post {
   main {
     width: 100%;
     margin-right: 0;
-  }
-  header h1 {
-    white-space: nowrap;
-    font-size: 5em;
-  }
-  header a {
-    text-decoration: none;
-  }
-  header h2 {
-    font-size: 1.1em;
   }
 }
