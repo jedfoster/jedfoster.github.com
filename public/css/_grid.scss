@@ -9,6 +9,21 @@ body {
   max-width: 940px;
 }
 
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%clearfix {
+  @include clearfix;
+}
+
 %column {
   float: left;
   margin-right: 2.12765957446808510638%; /* 20/940 */

@@ -16,6 +16,7 @@ svg {
 
 #socialLinks {
   @extend %nav;
+  @extend %clearfix;
 
   margin-bottom: 1.5em;
 
@@ -24,6 +25,8 @@ svg {
     height: 3em;
     border: 0;
     margin-right: 4.190909090909090909%;/* 9/220 */
+    display: block;
+    float: left;
 
     &:hover, &:active {
       svg {
@@ -40,12 +43,13 @@ svg {
 }
 
 
-
 @import "twitter-feed";
 
 header {
+  @extend %clearfix;
+
   width: 100%;
-  float: left;
+  
   padding: 1.5em 0 0.6em;
   margin-bottom: 1.45em;
   border-bottom: 1px solid $border-color;
@@ -74,41 +78,24 @@ header {
 }
 
 
-h2 a {
-  display: inline-block;
-}
-
 article header {
-	width: 100%;
-	float: none;
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
 article header h1 {
 	width: auto;
-	float: none;
 	font-size: 3em;
 	line-height: 1;
 	margin-bottom: 0.5em;
 }
 article header a {
-	color: auto;
-	display: inline-block;
 	padding: 0;
 }
 article header h2 {
-	width: auto;
-	float: none;
-	text-align: left;
 	font-size: 2em;
 	margin-bottom: 0.75em;
 	line-height: inherit;
-}
-
-footer {
-  clear: both;
-  width: 100%;
 }
 
 header nav {
@@ -135,6 +122,12 @@ main {
   @extend %span-6;
 
   overflow: auto;
+
+  @media screen and (max-width:640px) {
+    float: none;
+    width: 100%;
+    margin-right: 0%;
+  }
 }
 .span-half + .span-half {
   margin-right: 0;
@@ -195,10 +188,6 @@ article:last-child {
   margin-bottom: 0;
 }
 
-article h1 .date {
-  color: $bravo-gray;
-  font-size: 0.3em;
-}
 article .mod_date {
   @extend %secondary-font-family;
 
@@ -319,54 +308,7 @@ article.post {
   }
 }
 
-.pg-resume {
-  header h3 {
-    display: none;
-
-    @media print {
-      display: block;
-      float: left;
-      clear: both;
-      font-size: 1.45em;
-    }
-  }
-
-  h3 {
-    page-break-after: avoid;
-    page-break-before: always;
-  }
-
-  .employment {
-    page-break-inside: avoid;
-  }
-
-  @media print {
-    main h1 {
-      display: none;
-    }
-
-    .skills ul {
-      float: left;
-      width: 100%;
-
-      li {
-        width: 50%;
-        padding-right: 2em;
-        float: left;
-      }
-
-      & + * {
-        float: left;
-        width: 100%;
-        clear: both;
-      }
-    }
-    .employment {
-      clear: both;
-    }
-  }
-
-}
+@import 'resume';
 
 /**
  * Media queries for responsive design.
@@ -375,19 +317,8 @@ article.post {
  */
 
 @media screen and (max-width: 768px) {
-	body{
-    // padding: 0.75em;
-	}
 	header nav{
-		float: none;
-		clear: both;
     font-size: 1.75em;
-	}
-	nav ul, nav li {
-    float: none;
-	}
-	nav li {
-    line-height: 1.5;
 	}
 	main, #sidebar  {
 		width: 100%;
@@ -400,7 +331,7 @@ article.post {
 	}
 }
 
-@media screen and (max-width: 360px), screen and (max-width:640px) {
+@media screen and (max-width:640px) {
   h1 {
     font-size: 2.5em;
   }
@@ -419,197 +350,22 @@ article.post {
     }
     img {
       float: none;
-      clear: both;
       margin-right: 0;
-      margin-bottom: 1em;
-      width: 99%;
-    }
-    ul {
-      float: none;
-      clear: both;
       width: 100%;
     }
-  }
-  .pg-contact form {
-    width: 100%;
-    float: none;
-    clear: both;
-    margin-bottom: 1.5em;
-  }
-  .pg-contact label {
-    float: none;
-    clear: both;
-    width: 100%;
-    margin-right: 0;
-    text-align: left;
-  }
-  .pg-contact input, .pg-contact textarea {
-    width: 96%;
-  }
-  .pg-contact button[type="submit"] {
-    float: none;
-    margin-left: 0;
-  }
-  .pg-contact .error {
-    float: none;
-    clear: both;
-    margin-left: 0;
-    position: relative;
-  }
-  .pg-contact .message label {
-    height: auto;
-  }
-  .pg-work section li, .pg-contact p.success {
-    float: none;
-    clear: both;
+    ul, li {
+      float: none;
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
-  .span-half th {
-    padding-top: .375em;
-    padding-bottom: .375em;
-  }
   .pg-notes th {
     font-size: 0.8em;
     line-height: 1.625;
   }
-
 }
 
-@media screen and (min-width: 360px) and (max-width: 480px) {
-  .pg-work section img {
-    margin-bottom: 1.5em;
-  }
-  .pg-work section ul, .pg-work section li {
-    float: left;
-    clear: none;
-  }
-
-}
-
-@media screen and (min-width: 480px) and (max-width: 560px) {
-  header nav ul {
-    font-size: 2.5em;
-  }
-  .pg-work section img {
-    margin-bottom: 1.5em;
-  }
-  .pg-work section ul, .pg-work section li {
-    float: left;
-    clear: none;
-  }
-}
-
-@media screen and (min-width: 560px) and (max-width: 640px) {
-  .pg-work section img {
-    margin-bottom: 1.5em;
-  }
-  .pg-work section ul, .pg-work section li {
-    float: left;
-    clear: none;
-  }
-
-  .pg-contact form {
-    width: 100%;
-    float: none;
-    clear: both;
-    margin-bottom: 1.5em;
-  }
-}
-
-@media screen and (min-width: 640px) and (max-width: 768px) {
-  header {
-    padding-bottom: 0.75em;
-  }
-
-  nav {
-    width: 100%;
-    float: left;
-    margin-bottom: 1.5em;
-  }
-  nav ul {
-    list-style: none;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  nav li {
-    display: block;
-    float: left;
-    margin-right: 2.5em;
-  }
-  header nav {
-    margin-bottom: 0;
-  }
-  header nav ul {
-    font-size: 2em;
-  }
-  header nav a {
-    display: inline-block;
-  }
-  nav li.page-.home, nav ul ul, nav li.ancestor ul ul {
-    display: none;
-  }
-}
-
-
-@media screen and (min-width: 768px) {
-  .pg-resume .skills {
-    display: block;
-    float: right;
-    width: 23.404255319148936170%;
-    margin-left: 2.12765957446808510638%;
-  }
-
-  .pg-resume .skills h2 {
-    font-size: 1.25em;
-    line-height: 1.2;
-    margin-bottom: 1.2em;
-  }
-
-  .pg-resume .skills ul {
-    font-size: .875em;
-    line-height: 1.725;
-    margin-bottom: 1.725em;
-  }
-
-  .pg-resume .skills h3 {
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 1.5;
-    margin-bottom: 0em;
-  }
-
-  .pg-resume .experience {
-    display: block;
-    float: left;
-    width: 74.468085106382978723%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  // Column-ify only the first 2 lists.
-  .pg-resume .skills ul:nth-of-type(-n+2) {
-    padding-left: 0.5em;
-    list-style-position: inside;
-    -moz-column-count: 3;
-    -moz-column-gap: 1.5em;
-    -webkit-column-count: 3;
-    -webkit-column-gap: 1.5em;
-    column-count: 3;
-    column-gap: 1.5em;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .span-half {
-    float: none;
-    width: 100%;
-    margin-right: 0%;
-  }
-}
 
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
