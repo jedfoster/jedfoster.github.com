@@ -83,19 +83,9 @@ article header {
 	margin: 0;
 	border: 0;
 }
-article header h1 {
-	width: auto;
-	font-size: 3em;
-	line-height: 1;
-	margin-bottom: 0.5em;
-}
+
 article header a {
 	padding: 0;
-}
-article header h2 {
-	font-size: 2em;
-	margin-bottom: 0.75em;
-	line-height: inherit;
 }
 
 header nav {
@@ -174,10 +164,11 @@ main {
 }
 
 article {
+  @extend %clearfix;
+
   border-top: 1px solid $border-color;
   padding-top: 1.5em;
   margin-bottom: 1.5em;
-  clear: both;
 }
 
 article:only-child, article:first-child {
