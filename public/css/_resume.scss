@@ -1,3 +1,7 @@
+.pg-resume main {
+  @extend %full-width-main;
+}
+
 .pg-resume {
   header h3 {
     display: none;

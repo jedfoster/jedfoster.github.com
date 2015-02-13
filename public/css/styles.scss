@@ -108,6 +108,12 @@ main {
   text-align:center;
   margin-right: 0;
 }
+
+%full-width-main {
+  width: 100%;
+  float: none;
+}
+
 .span-half {
   @extend %span-6;
 
@@ -149,15 +155,9 @@ article .mod_date {
   line-height: 1.71428571428571428571em;
 }
 
-.pg-notes header, .pg-notes header h1, .pg-notes main {
-  float: none;
-}
 .pg-notes header h1 {
   display: block;
   margin-bottom: 0;
-}
-.pg-notes header, .pg-notes main, .pg-resume main {
-  width: 100%;
 }
 
 
