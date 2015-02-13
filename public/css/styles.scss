@@ -200,60 +200,6 @@ article .mod_date {
   width: 100%;
 }
 
-.pg-notes {
-  colgroup, tr {
-    @extend %background-transition;
-  }
-
-  .hover {
-    @extend %background-transition;
-
-    background: transparentize($alpha-color-charlie, 0.5);
-  }
-
-  th {
-    @extend %background-transition;
-    cursor: pointer;
-
-    &:active {
-      @extend %background-transition;
-      background: $bravo-color-bravo;
-    }
-    &.selected {
-      @extend %background-transition;
-
-      background: $bravo-color-charlie;
-    }
-  }
-
-  tr td:first-child {
-    @extend %background-transition;
-
-    cursor: pointer;
-
-    &:active {
-      @extend %background-transition;
-      background: $charlie-color-bravo;
-    }
-  }
-
-  .missed {
-    background: $delta-color-charlie;
-  }
-
-  .warning {
-    background: $fox-color-bravo;
-  }
-
-  .good {
-    background: $bravo-color-charlie;
-  }
-
-  p:last-child {
-    @extend .clear;
-    @extend .small;
-  }
-}
 
 
 .pg-blog article.link header a:after {
@@ -280,6 +226,7 @@ article.post {
 }
 
 
+@import 'notes';
 @import "clearing";
 
 
@@ -329,10 +276,6 @@ article.post {
   header nav {
     font-size: 1.5em;
   }
-  .pg-notes header h1 {
-    margin-bottom: 0.1em;
-    font-size: 4.5em;
-  }
   .pg-work section {
     section h1 {
       font-size: 1.5em;
@@ -349,12 +292,6 @@ article.post {
     }
   }
 }
-
-@media screen and (max-width: 480px) {
-  .pg-notes th {
-    font-size: 0.8em;
-    line-height: 1.625;
-  }
 }
 
 
