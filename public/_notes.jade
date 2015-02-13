@@ -1,36 +1,15 @@
-doctype html
-html(manifest='/notes.manifest')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+extends _layout.jade
 
-    - title = title || ''
-    title= title
+block header
+  h1
+    a(href='/') Notes
 
-    - if(description)
-      - var attributes = {content: description};
-      meta(name='description')&attributes(attributes)
+block navigation
+  //- no-op
 
-    meta(name='author' lang='en' content='Jed Foster')
-    link(rel='author' href='/humans.txt')
+block sidebar
+  //- no-op
 
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-
-    link(rel='shortcut icon' href='/favicon.ico')
-    link(rel='apple-touch-icon-precomposed' href='/apple-touch-icon-precomposed.png')
-    link(rel='apple-touch-icon-precomposed' sizes='72x72' href='/apple-touch-icon-72x72-precomposed.png')
-    link(rel='apple-touch-icon-precomposed' sizes='114x114' href='/apple-touch-icon-114x114-precomposed.png')
-
-    link(rel='stylesheet' href='/css/styles.css')
-
-  body(class=('pg-' + title.toLowerCase().replace(/\s/g, '-') ))
-    header
-      h1
-        a(href='/') Notes
-
-    main(role='main')
-      != yield
-
-    - if(javascript)
-      != javascript
+block global-javascript
+  //- no-op
 

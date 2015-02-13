@@ -32,15 +32,16 @@ html
   - bodyClass = bodyClass || (title ? 'pg-' + title.toLowerCase().replace(/\s/g, '-') : '')
   body(class=bodyClass)
     header
-      svg(width='959px' height='94px' viewBox='0 0 959 94' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+      block header
+        svg(width='959px' height='94px' viewBox='0 0 959 94' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
 
-        g#Logo
-          a(xlink:href='/')
-            text#JED-FOSTER(font-size='114.56' x='0' y='90') JED FOSTER
-          g#CODE-DESIGN-FOR-THE-WEB(transform='translate(766.83, 0)' font-size='24.32')
-            text#CODE(x='113.2' y='22') CODE.
-            text#DESIGN(x='83.9' y='56') DESIGN.
-            text#FOR-THE-WEB(x='9.6' y='90') FOR THE WEB.
+          g#Logo
+            a(xlink:href='/')
+              text#JED-FOSTER(font-size='114.56' x='0' y='90') JED FOSTER
+            g#CODE-DESIGN-FOR-THE-WEB(transform='translate(766.83, 0)' font-size='24.32')
+              text#CODE(x='113.2' y='22') CODE.
+              text#DESIGN(x='83.9' y='56') DESIGN.
+              text#FOR-THE-WEB(x='9.6' y='90') FOR THE WEB.
 
       block headerExtras
 
@@ -59,63 +60,64 @@ html
       - if(javascript)
         != javascript
 
-    script.
-      var _gaq=[['_setAccount','UA-24822554-1'],['_trackPageview'],['_setDomainName', '.jedfoster.com']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
+    block global-javascript
+      script.
+        var _gaq=[['_setAccount','UA-24822554-1'],['_trackPageview'],['_setDomainName', '.jedfoster.com']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
 
-      if(/Trident\/[567]\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537) {
-        var imported = document.createElement('script');
-        imported.src = '/js/svg4everybody.min.js';
-        document.head.appendChild(imported);
-      }
+        if(/Trident\/[567]\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537) {
+          var imported = document.createElement('script');
+          imported.src = '/js/svg4everybody.min.js';
+          document.head.appendChild(imported);
+        }
 
-      if(/^((?!chrome).)*safari/i.test(navigator.userAgent)) {
-        var logo = document.querySelector('#Logo a'),
-            href = logo.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
+        if(/^((?!chrome).)*safari/i.test(navigator.userAgent)) {
+          var logo = document.querySelector('#Logo a'),
+              href = logo.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
 
-        logo.removeAttributeNS('http://www.w3.org/1999/xlink', 'href');
-        logo.setAttribute('data-href', href);
+          logo.removeAttributeNS('http://www.w3.org/1999/xlink', 'href');
+          logo.setAttribute('data-href', href);
 
-        logo.addEventListener('click', function(e) {
-          e.preventDefault();
-
-          window.location = this.getAttribute('data-href');
-        });
-
-        var socialLinks = document.querySelectorAll('#socialLinks a');
-
-        Array.prototype.forEach.call(socialLinks, function(el, i){
-          var href = el.getAttribute('href');
-
-          el.removeAttribute('href');
-          el.setAttribute('data-href', href);
-
-          el.addEventListener('click', function(e) {
+          logo.addEventListener('click', function(e) {
             e.preventDefault();
 
             window.location = this.getAttribute('data-href');
           });
 
-        });
-      }
+          var socialLinks = document.querySelectorAll('#socialLinks a');
 
-      window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-          t = window.twttr || {};
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-       
-        t._e = [];
-        t.ready = function(f) {
-          t._e.push(f);
-        };
-       
-        return t;
-      }(document, "script", "twitter-wjs"));
+          Array.prototype.forEach.call(socialLinks, function(el, i){
+            var href = el.getAttribute('href');
+
+            el.removeAttribute('href');
+            el.setAttribute('data-href', href);
+
+            el.addEventListener('click', function(e) {
+              e.preventDefault();
+
+              window.location = this.getAttribute('data-href');
+            });
+
+          });
+        }
+
+        window.twttr = (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+         
+          t._e = [];
+          t.ready = function(f) {
+            t._e.push(f);
+          };
+         
+          return t;
+        }(document, "script", "twitter-wjs"));
 
 
