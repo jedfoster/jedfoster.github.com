@@ -145,47 +145,8 @@ article:last-child {
   margin-bottom: 0;
 }
 
-article .mod_date {
-  @extend %secondary-font-family;
 
-  color: $bravo-gray;
-  font-size: 0.875em;
-  display: block;
-  width: 100%;
-  line-height: 1.71428571428571428571em;
-}
-
-.pg-notes header h1 {
-  display: block;
-  margin-bottom: 0;
-}
-
-
-
-.pg-blog article.link header a:after {
-  font-family: 'Icons';
-  speak: none;
-  padding-left:0.4em;
-  content: '\26e2';
-}
-
-ol.posts {
-  list-style:none;
-  padding:0;
-}
-
-article.post {
-  border-bottom: 1px solid $border-color;
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em;
-  clear: both;
-}
-.entry-content img {
-  max-width: 100%;
-  margin-bottom: 1.5em;
-}
-
-
+@import 'blog';
 @import 'work';
 @import 'notes';
 @import "clearing";

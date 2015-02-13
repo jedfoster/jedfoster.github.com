@@ -23,19 +23,19 @@ block content
 
   article.post
     header
-      time.published.mod_date(datetime=helpers.xmlSchemaDate(date) pubdate)
+      time.published(datetime=helpers.xmlSchemaDate(date) pubdate)
         = helpers.shortDate(date) 
 
       - if(link)
         h1
-          a.entry-title(href=link)
+          a(href=link)
             = title
           | &nbsp;→
       - else
-        h1.entry-title
+        h1
           = title
 
-    - className = 'entry-content' + (link ? ' link' : '')
+    - className = link ? 'link' : ''
     div#post(class=className)
       != yield
 
@@ -46,9 +46,8 @@ block content
       ol.posts
         - for post in helpers.relatedPosts(posts, public.blog._data[current.source])
           li
-            span.date
-              = helpers.shortDate(post.date)
-              | 
+            = helpers.shortDate(post.date)
+            | 
             a(href=post.url)
               = post.title
 

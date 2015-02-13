@@ -15,7 +15,7 @@ section.posts.hfeed
 
     article(class=className)
       header
-        time.published.mod_date(datetime=helpers.xmlSchemaDate(post.date) pubdate)
+        time.published(datetime=helpers.xmlSchemaDate(post.date) pubdate)
           = helpers.shortDate(post.date)
 
         - if(post.link)
@@ -31,6 +31,6 @@ section.posts.hfeed
         = post.content
       - else
         - if(post.description)
-          p.entry-summary
+          p
             = post.description
 
