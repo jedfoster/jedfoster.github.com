@@ -123,46 +123,6 @@ main {
   margin-right: 0;
 }
 
-.pg-work section {
-  @extend %span-12;
-
-	margin-bottom:1.5em;
-	border-top:1px solid $border-color;
-	padding-top:2.95em;
-
-  &:first-of-type {
-    border: 0;
-    padding: 0;
-  }
-
-  h1 {
-    @extend %heading-4;
-  }
-
-  img {
-    float: left;
-    -webkit-box-shadow: 1px 2px 4px transparentize($alpha-gray, 0.5);
-    box-shadow: 1px 2px 4px transparentize($alpha-gray, 0.5);
-    margin-right: 2.857142857142857142%;
-    margin-bottom: 1.5em;
-    width: 54.29%; /* 380/700 */
-  }
-
-  ul {
-    @extend %span-4;
-
-    list-style: none;
-    padding-left: 0;
-    margin-right:0;
-  }
-
-  li {
-    float: left;
-    display: block;
-    margin-right: 1.25em;
-  }
-}
-
 article {
   @extend %clearfix;
 
@@ -226,6 +186,7 @@ article.post {
 }
 
 
+@import 'work';
 @import 'notes';
 @import "clearing";
 @import 'readmore';
@@ -259,24 +220,7 @@ article.post {
   header nav {
     font-size: 1.5em;
   }
-  .pg-work section {
-    section h1 {
-      font-size: 1.5em;
-      line-height: 1;
-      margin-bottom: 1em;
-    }
-    img {
-      float: none;
-      margin-right: 0;
-      width: 100%;
-    }
-    ul, li {
-      float: none;
-    }
-  }
 }
-}
-
 
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
    consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
