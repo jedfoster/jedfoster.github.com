@@ -1,0 +1,30 @@
+[role='banner']
+  padding: 1.5em 0 0.6em
+  margin-bottom: 1.45em
+  border-bottom: 1px solid $border-color
+
+  svg
+    fill: $gray-1
+    font-family: $heading-font-family
+    margin-bottom: 1em
+
+    a
+      fill: lighten($gray-1, 14)
+
+      &:hover
+        fill: $link-hover-color
+
+  a
+    @extend %heading-2
+
+    color: lighten($gray-1, 14)
+    display: inline-block
+    margin-right: 2.5em
+    margin-bottom: 0
+  
+    &:last-child
+      margin-right: 0
+
+    &:hover, &:active
+      text-decoration: none
+

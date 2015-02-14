@@ -1,14 +1,3 @@
-/* default grid */
-html
-  padding: 0 1.25em
-
-
-body
-  width: 100%
-  margin: 0 auto
-  max-width: em($grid-max-width)
-
-
 %futura
   font-family: $heading-font-family
   text-transform: uppercase
@@ -17,12 +6,10 @@ body
 %heading-1
   text-transform: uppercase
   letter-spacing: 1px
-  line-height: 1
-  margin-bottom: 0
-
-%heading-2
   line-height: 1.25
   margin-bottom: 0.25em
+
+%heading-2
 
 %heading-3
   line-height: 1.5
@@ -37,8 +24,6 @@ body
   margin-bottom: 1.5em
 
 %heading-6
-  line-height: 1.25
-  margin-bottom: 0.25em
 
 %background-transition
   $transition-properties: background-color, border-color, color, text-shadow, fill
@@ -51,118 +36,11 @@ body
   transition-timing-function: ease
   transition-property: $transition-properties
 
-th
-  font-weight: normal
-  text-align: left
 
-th, td
-  padding: .375em .75em
+%tablet-full-width
+  @media screen and (max-width: 768px)
+    @include clearfix
 
-tbody tr:nth-child(even):last-child
-  td
-    padding-bottom: 1.2em
-
-
-a, button
-  @extend %background-transition
-
-  cursor: pointer
-
-a
-  &:focus, 
-  &:hover,
-  &:active
-    color: $link-hover-color
-
-a.button, button
-  @extend %futura
-  
-  &.negative
-    @include button($error-buttons)
-  
-  &.positive
-    @include button($success-buttons)
-
-
-
-%alert
-  font-weight: $font-weight-bold
-
-.info
-  @include alert($info-alert)
-
-.notice
-  @include alert($notice-alert)
-
-.error
-  @include alert($error-alert)
-
-.success
-  @include alert($success-alert)
-
-
-
-
-[role='banner']
-  padding: 1.5em 0 0.6em
-  margin-bottom: 1.45em
-  border-bottom: 1px solid $border-color
-
-  svg
-    fill: $gray-1
-    font-family: $heading-font-family
-    margin-bottom: 1em
-
-    a
-      fill: lighten($gray-1, 14)
-
-      &:hover
-        fill: $link-hover-color
-
-  a
-    @extend %heading-2
-
-    color: lighten($gray-1, 14)
-    display: inline-block
-    margin-right: 2.5em
-    margin-bottom: 0
-  
-    &:last-child
-      margin-right: 0
-
-    &:hover, &:active
-      text-decoration: none
-
-[role='main']
-  @extend %three-quarters
-
-[role='complimentary']
-  @extend %one-quarter
-
-  margin-right: 0
-
-
-.social
-  @extend %clearfix
-
-  margin-bottom: 1.5em
-
-  a
-    @extend %one-quarter
-
-    height: 3em
-    border: 0
-    display: block
-
-    &:hover, &:active
-      svg
-        fill: $link-hover-color
-
-  svg
-    @extend %background-transition
-
-    fill: lighten($gray-1, 14)
-
-
-
+    width: 100%
+    float: none
 

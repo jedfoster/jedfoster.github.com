@@ -1,0 +1,46 @@
+/* default grid */
+html
+  padding: 0 1.25em
+
+
+body
+  width: 100%
+  margin: 0 auto
+  max-width: em($grid-max-width)
+
+
+th
+  font-weight: normal
+  text-align: left
+
+th, td
+  padding: .375em .75em
+
+tbody tr:nth-child(even):last-child
+  td
+    padding-bottom: 1.2em
+
+
+a, button
+  @extend %background-transition
+
+  cursor: pointer
+
+a
+  &:focus, 
+  &:hover,
+  &:active
+    color: $link-hover-color
+
+a.button, button
+  @extend %futura
+  @extend %button
+  
+  &.negative
+    @include button($error-buttons)
+  
+  &.positive
+    @include button($success-buttons)
+
+
+
