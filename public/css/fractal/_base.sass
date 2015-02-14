@@ -9,7 +9,10 @@ body
   max-width: 940px
 
 
-
+%futura
+  font-family: $heading-font-family
+  text-transform: uppercase
+  letter-spacing: 1px
 
 %heading-1
   text-transform: uppercase
@@ -94,4 +97,13 @@ a
   &:hover,
   &:active
     color: $link-hover-color
+
+a.button, button
+  @extend %futura
+  
+  &.negative
+    @include button($error-buttons)
+  
+  &.positive
+    @include button($success-buttons)
 
