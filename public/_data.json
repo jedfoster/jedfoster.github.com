@@ -7,11 +7,12 @@
   },
   "style-guide": {
     "title": "Style Guide",
-    "css": "<link rel='stylesheet' href='/css/fractal/style-guide.css'>"
+    "css": "<link rel='stylesheet' href='/css/fractal/style-guide.css'>",
+    "javascript": "<script>(function(document) { var elements = document.querySelectorAll('body > *'); Array.prototype.forEach.call(elements, function(el, i) { el.classList.add('showgrid'); });})(document);</script>"
   },
   "notes": {
     "title": "Notes",
-    "js": "<script src='/js/notes.js'></script>",
+    "javascript": "<script src='/js/notes.js'></script>",
     "layout": "_notes"
   },
   "code": {
