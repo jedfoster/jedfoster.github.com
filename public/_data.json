@@ -7,7 +7,7 @@
   },
   "style-guide": {
     "title": "Style Guide",
-    "css": "<link rel='stylesheet' href='/css/style-guide.css'>"
+    "css": "<link rel='stylesheet' href='/css/fractal/style-guide.css'>"
   },
   "notes": {
     "title": "Notes",
