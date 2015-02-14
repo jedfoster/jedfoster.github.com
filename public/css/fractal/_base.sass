@@ -37,7 +37,16 @@ body
   line-height: 1.25
   margin-bottom: 0.25em
 
+%background-transition
+  $transition-properties: background-color, border-color, color, text-shadow, fill
 
+  -webkit-transition-duration: 0.25s
+  -webkit-transition-timing-function: ease
+  -webkit-transition-property: $transition-properties
+
+  transition-duration: 0.25s
+  transition-timing-function: ease
+  transition-property: $transition-properties
 
 th
   font-weight: normal
@@ -72,4 +81,17 @@ th
 
     &:hover, &:active
       text-decoration: none
+
+
+
+a, button
+  @extend %background-transition
+
+  cursor: pointer
+
+a
+  &:focus, 
+  &:hover,
+  &:active
+    color: $link-hover-color
 
