@@ -1,13 +1,85 @@
-/* default grid */
 html
   padding: 0 1.25em
-
 
 body
   width: 100%
   margin: 0 auto
   max-width: em($grid-max-width)
 
+h1
+  @extend %heading-1
+
+h2
+  @extend %heading-2
+
+h3
+  @extend %heading-3
+
+h4
+  @extend %heading-4
+
+h5
+  @extend %heading-5
+
+p
+  @extend %standard-text
+
+a
+  @extend %background-transition
+
+  color: $link-color
+  cursor: pointer
+
+  &:focus, 
+  &:hover,
+  &:active
+    color: $link-hover-color
+
+// button
+//   @extend %background-transition
+
+// select
+//   @extend %form-element-select
+
+// //input[type='datetime'],
+// //input[type='datetime-local'],
+// //input[type='date'],
+// //input[type='month'],
+// //input[type='time'],
+// //input[type='week'],
+// //input[type='url'],
+// //input[type='search'],
+// //input[type='color']
+
+// input[type='text'],
+// input[type='password'],
+// input[type='email'],
+// input[type='tel'],
+// input[type='number']
+//   @extend %form-element
+
+// input[type=number]::-webkit-inner-spin-button,
+// input[type=number]::-webkit-outer-spin-button
+//   -webkit-appearance: none
+//   margin: 0
+
+// button, a.button
+//   @extend %futura
+//   @extend %button
+
+//   @include button
+
+hr
+  @extend %horizontal-rule
+
+ul, ol, table
+  @extend %standard-text
+
+table
+  width: 100%
+
+tbody tr:nth-child(odd)
+  @extend %zebra
 
 th
   font-weight: normal
@@ -20,11 +92,12 @@ tbody tr:nth-child(even):last-child
   td
     padding-bottom: 1.2em
 
+img
+  max-width: 100%
 
-a, button
-  @extend %background-transition
-
-  cursor: pointer
+svg
+  width: 100%
+  height: 100%
 
 header
   a
@@ -32,30 +105,13 @@ header
 
     &:hover, &:active
       text-decoration: none
-
-a
-  &:focus, 
-  &:hover,
-  &:active
-    color: $link-hover-color
-
-a.button, button
-  @extend %futura
-  @extend %button
   
-  &.negative
-    @include button($error-buttons)
-  
-  &.positive
-    @include button($success-buttons)
-
 time
   @extend %futura
 
   font-size: 0.75em
   line-height: 1.7
   color: $gray-2
-
 
 article
   border-top: 1px solid $border-color

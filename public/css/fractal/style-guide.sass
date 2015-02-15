@@ -14,3 +14,14 @@ $include-normalize: false
     background: url('/img/grid_16px@2x.png') repeat
     background-size: 80px 24px
 
+a.button, button
+  @extend %futura
+  @extend %button
+
+  @include button
+ 
+  &.negative
+    @include button($error-buttons)
+  
+  &.positive
+    @include button($success-buttons)

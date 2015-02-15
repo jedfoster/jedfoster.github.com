@@ -17,10 +17,14 @@
   a
     @extend %futura
 
-    font-size: em($heading-2)
+    font-size: em($heading-3)
     display: inline-block
-    margin-right: 2.5em
+    margin-right: 1.5em
 
     &:last-child
       margin-right: 0
+
+    @media screen and (min-width: 768px)
+      font-size: em($heading-2)
+      margin-right: 2.5em
 
