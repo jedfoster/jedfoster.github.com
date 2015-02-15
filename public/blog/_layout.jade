@@ -23,7 +23,7 @@ block content
 
   article.post
     header
-      time.published(datetime=helpers.xmlSchemaDate(date) pubdate)
+      time(datetime=helpers.xmlSchemaDate(date) pubdate)
         = helpers.shortDate(date) 
 
       - if(link)
