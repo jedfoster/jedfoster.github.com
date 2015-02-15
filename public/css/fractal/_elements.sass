@@ -26,6 +26,13 @@ a, button
 
   cursor: pointer
 
+header
+  a
+    color: lighten($gray-1, 14)
+
+    &:hover, &:active
+      text-decoration: none
+
 a
   &:focus, 
   &:hover,
@@ -42,5 +49,10 @@ a.button, button
   &.positive
     @include button($success-buttons)
 
+time
+  @extend %futura
 
+  font-size: 0.75em
+  line-height: 1.7
+  color: $gray-2
 

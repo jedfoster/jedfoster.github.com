@@ -6,7 +6,7 @@
   svg
     fill: $gray-1
     font-family: $heading-font-family
-    margin-bottom: 1em
+    margin-bottom: 0.5em
 
     a
       fill: lighten($gray-1, 14)
@@ -15,17 +15,12 @@
         fill: $link-hover-color
 
   a
-    @extend %heading-2
+    @extend %futura
 
-    color: lighten($gray-1, 14)
+    font-size: em($heading-2)
     display: inline-block
     margin-right: 2.5em
-    margin-bottom: 0
-  
+
     &:last-child
       margin-right: 0
-
-    &:hover, &:active
-      color: $link-hover-color
-      text-decoration: none
 
