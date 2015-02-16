@@ -1,4 +1,4 @@
-@import '../../data/index';
+@import '../data/index';
 
 @each $placeholder, $content in $data-uris {
   %#{$placeholder}-icon {
