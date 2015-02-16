@@ -21,10 +21,13 @@ block content
     - title = title || public.blog._data[current.path[3]].title
     - link = link || public.blog._data[current.path[3]].link
 
+  - if(! date)
+    - date = public.blog._data[current.path[1]].date
+
   article.post
     header
       time(datetime=helpers.xmlSchemaDate(date) pubdate)
-        = helpers.shortDate(date) 
+        = helpers.shortDate(date)
 
       - if(link)
         h1
