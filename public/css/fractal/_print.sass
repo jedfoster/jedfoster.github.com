@@ -1,0 +1,59 @@
+@media print
+  /* -- HTML5 Boilerplate's print stles --
+  *
+    background: transparent !important
+    color: #444 !important
+    text-shadow: none !important
+    filter: none !important
+    -ms-filter: none !important
+  a, a:visited
+    color: #666 !important
+    text-decoration: underline
+  a[href]:after
+    content: " (" attr(href) ")"
+    font-size: 50%
+    .print-hide &, header &
+      content: ""
+      display: none
+  a[href^="#"]:after
+    content: ""
+  pre, blockquote
+    border: 1px solid $border-color
+    page-break-inside: avoid
+  thead
+    display: table-header-group
+  tr, img
+    page-break-inside: avoid
+  @page
+    margin: 0.7cm 0.7cm
+
+  p, h2, h3
+    orphans: 3
+    widows: 3
+  h1, h2, h3
+    page-break-after: avoid
+  /* -- Blueprint's print styles --
+  hr
+    background: $border-color
+    color: $border-color
+    width: 100%
+    height: 2px
+    margin: 2em 0
+    padding: 0
+    border: none
+  code
+    font: .9em "Menlo", Monaco, "Courier New", Courier, monospace
+  header, a img
+    border: none
+  blockquote
+    margin: 1.5em
+    padding: 1em
+    font-style: italic
+    font-size: .9em
+  .print-hide
+    display: initial
+  .hide, #sidebar, header nav
+    display: none
+  main
+    width: 100%
+    margin-right: 0
