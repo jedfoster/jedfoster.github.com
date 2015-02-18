@@ -1,4 +1,4 @@
-article#text.showgrid
+article#text
   :markdown
     # H1 Futura ND Bold
 
@@ -10,7 +10,7 @@ article#text.showgrid
 
     ##### H5 Futura ND Bold
 
-    ###### H6 (Undefined)
+    ###### H6 Futura ND Bold
 
     ---
 
@@ -29,6 +29,7 @@ article#text.showgrid
     | -------- | -------- |
     | A1       | B1       |
     | A2       | B2       |
+    | A3       | B3       |
     | A3       | B3       |
 
 
@@ -62,7 +63,7 @@ article#alerts
     | Info <a>Link</a>
 
 
-article#notes-tables.showgrid
+article#notes-tables
   div.span-half
     :markdown
       ### Morning
@@ -88,7 +89,7 @@ article#notes-tables.showgrid
       *These trips will wait for Sounder connections before departing
 
 
-article#portfolio-piece.pg-work.showgrid
+article#portfolio-piece.page-work
   section
     img(src='http://jedfoster.com/img/portfolio/sites/roughdraft-2-sm.png')
 
@@ -113,22 +114,22 @@ article#portfolio-piece.pg-work.showgrid
       li.PHP PHP
 
 
-article#blog-post-lists.showgrid
+article#blog-post-lists
   section.posts
     article
       header
-        time.published.mod_date(datetime="2013-02-22T16:01:00-08:00" pubdate="")
+        time.published(datetime="2013-02-22T16:01:00-08:00" pubdate="")
           | Feb 22, 2013
 
         h2
           a(rel="bookmark" href="/blog/unbomb-dot-rake")
             | Standard Blog Post
 
-      p.entry-summary Flowery summary ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      p Flowery summary ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     article.link
       header
-        time.published.mod_date(datetime="2013-11-13T00:00:00-08:00" pubdate="")
+        time.published(datetime="2013-11-13T00:00:00-08:00" pubdate="")
           | Nov 13, 2013
 
         h2
@@ -142,7 +143,7 @@ article#blog-post-lists.showgrid
       p Commenty comment
 
 
-article#forms.showgrid
+article#forms
   form
     label Your Email:
     input(type="email" value="Mr. Lorem Ipsum")
@@ -160,49 +161,74 @@ article#forms.showgrid
 
 
 article#colors
-  h1.clear Gray
+  h3 Reds
 
-  .foo
-    .alpha-gray
-    .bravo-gray
-    .charlie-gray
-
-
-  h1.clear Blue
-
-  .foo
-    .alpha-color
-    .alpha-color-bravo
-    .alpha-color-charlie
+  .red-1
+  .red-2
+  .red-3
 
 
-  h1.clear Green
+  h3 Oranges
 
-  .foo
-    .bravo-color
-    .bravo-color-bravo
-    .bravo-color-charlie
-
-
-  h1.clear Yellow
-
-  .foo
-    .charlie-color
-    .charlie-color-bravo
-    .charlie-color-charlie
+  .orange-1
+  .orange-2
+  .orange-3
 
 
-  h1.clear Red
+  h3 Yellows
 
-  .foo
-    .delta-color
-    .delta-color-bravo
-    .delta-color-charlie
+  .yellow-1
+  .yellow-2
+  .yellow-3
 
 
-  h1.clear Purple
+  h3 Greens
 
-  .foo
-    .echo-color
-    .echo-color-bravo
-    .echo-color-charlie
+  .green-1
+  .green-2
+  .green-3
+
+
+  h3 Blues
+
+  .blue-1
+  .blue-2
+  .blue-3
+
+
+  h3 Purples
+
+  .purple-1
+  .purple-2
+  .purple-3
+
+
+  h3 Grays
+
+  .gray-1
+  .gray-2
+  .gray-3
+
+  .white
+  .black
+
+
+  section
+    h2 Semantic palette
+
+    // .info-color
+    // .warning-color
+    // .danger-color
+    // .error-color
+    // .success-color
+
+    .text-color
+    .link-color
+    .link-hover-color
+    .border-color
+    .form-element-background
+    .form-element-border
+    .form-element-color
+    .form-element-active-border
+    .form-element-active-color
+

@@ -1,0 +1,31 @@
+.page-work
+  section
+    @extend %clearfix
+
+    margin-bottom: 1.5em
+    border-top: 1px solid $border-color
+    padding-top: 2.95em
+
+    &:first-of-type
+      border: 0
+      padding: 0
+
+    img
+      width: 99.5%
+      margin-bottom: 1.5em
+      box-shadow: 1px 2px 4px transparentize($gray-1, 0.5)
+
+      @media screen and (min-width: 640px)
+        @include grid-unit
+
+        width: grid-unit-width(5, 9)
+
+    h1
+      @extend %heading-4
+
+    ul
+      list-style: none
+
+    li
+      display: inline-block
+      margin-right: 1.25em

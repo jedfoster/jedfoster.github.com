@@ -1,0 +1,122 @@
+.page-resume
+  [role='banner']
+    h3
+      display: none
+
+      @media print
+        display: block
+        font-size: 1.5em
+
+        *
+          font-size: inherit
+          margin-right: 0.4em
+
+    @media print
+      border: 0
+      margin-bottom: 1.5em
+
+  [role='main']
+    float: none
+    width: 100%
+    margin-right: 0
+
+  @media screen
+    .print-hide
+      display: none
+
+  @media screen and (min-width: 768px)
+    .experience
+      float: left
+      width: grid-unit-width(3, 4)
+
+    .skills
+      float: right
+      width: grid-unit-width(1, 4) - $gutter
+      margin-left: $gutter * 2
+
+      h2
+        font-size: 1.25em
+        line-height: 1.2
+        margin-bottom: 1.2em
+
+      h3
+        font-size: 1em
+        line-height: 1.5
+        margin-bottom: 0
+
+      ul
+        font-size: .875em
+        line-height: 1.725
+        margin-bottom: 1.725em
+
+  @media screen and (min-width: 490px) and (max-width: 767px)
+    // Column-ify only the first 2 lists.
+    .skills ul:nth-of-type(-n+2)
+      padding-left: 0.5em
+      list-style-position: inside
+      -moz-column-count: 3
+      -moz-column-gap: 1.5em
+      -webkit-column-count: 3
+      -webkit-column-gap: 1.5em
+      column-count: 3
+      column-gap: 1.5em
+
+  @media print
+
+
+    .experience
+      margin-top: 1.5em
+      margin-bottom: 3em
+      
+
+    .skills
+      margin-bottom: 4.5em
+      // Insert break before "Intangibles"
+      h3:nth-of-type(4)
+        page-break-before: left
+
+
+      // Comma-separate the first two lists, since CSS columns don't work in print
+      ul:nth-of-type(-n+2)
+        list-style: none
+
+        li
+          display: inline-block
+
+          &:after
+            content: ', '
+
+          &:last-child
+            &:before
+              content: 'and '
+            &:after
+              content: ''
+
+    .open-source
+      margin-bottom: 4.5em
+
+      // Comma-separate first 10 items in the SassMeister list
+      ul:nth-of-type(1)
+        li:nth-of-type(-n+10)
+          display: inline-block
+          list-style: none
+
+          &:after
+            content: ', '
+
+        li:nth-of-type(10)
+          margin-bottom: 1.5em
+          &:before
+            content: 'and '
+          &:after
+            content: ''
+
+    h3:nth-of-type(4), .history
+      // page-break-before: right
+
+    .history h3
+      page-break-after: avoid
+      margin-top: 3em
+
+      &:first-of-type
+        margin-top: initial

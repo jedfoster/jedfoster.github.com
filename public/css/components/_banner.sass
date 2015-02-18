@@ -1,0 +1,31 @@
+[role='banner']
+  padding: 1.5em 0 0.6em
+  margin-bottom: 1.45em
+  border-bottom: 1px solid $border-color
+
+  svg
+    fill: $gray-1
+    font-family: $heading-font-family
+    margin-bottom: 0.5em
+    text-transform: uppercase
+
+    a
+      fill: $header-link-color
+
+      &:hover
+        fill: $link-hover-color
+
+  a
+    @extend %futura
+
+    font-size: em($heading-3)
+    display: inline-block
+    margin-right: 1.5em
+
+    &:last-child
+      margin-right: 0
+
+    @media screen and (min-width: 768px)
+      font-size: em($heading-2)
+      margin-right: 2.5em
+
