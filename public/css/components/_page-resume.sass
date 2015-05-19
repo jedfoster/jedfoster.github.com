@@ -62,26 +62,22 @@
       column-gap: 1.5em
 
   @media print
-
-
     .experience
       margin-top: 1.5em
       margin-bottom: 3em
       
-
     .skills
-      margin-bottom: 4.5em
+      margin-bottom: 3em
       // Insert break before "Intangibles"
       h3:nth-of-type(4)
         page-break-before: left
-
 
       // Comma-separate the first two lists, since CSS columns don't work in print
       ul:nth-of-type(-n+2)
         list-style: none
 
         li
-          display: inline-block
+          display: inline
 
           &:after
             content: ', '
@@ -93,7 +89,7 @@
               content: ''
 
     .open-source
-      margin-bottom: 4.5em
+      margin-bottom: 3em
 
       // Comma-separate first 10 items in the SassMeister list
       ul:nth-of-type(1)
@@ -111,12 +107,13 @@
           &:after
             content: ''
 
-    h3:nth-of-type(4), .history
-      // page-break-before: right
+    .history
+      h3:nth-of-type(2)
+        page-break-before: left
 
-    .history h3
-      page-break-after: avoid
-      margin-top: 3em
+      h3
+        page-break-after: avoid
+        margin-top: 2em
 
-      &:first-of-type
-        margin-top: initial
+        &:first-of-type
+          margin-top: initial
