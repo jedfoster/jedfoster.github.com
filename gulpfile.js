@@ -34,6 +34,7 @@ global.helpers = {
 };
 
 gulp.task('serve', function() {
+  console.log('Server starting at http://localhost:9000');
   harp.server(__dirname + '/public', {
     port: 9000
   })
