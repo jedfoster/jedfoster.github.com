@@ -6,7 +6,7 @@
   "dependencies": {
     "gulp": "^3.8.10",
     "gulp-uglify": "^1.0.2",
-    "harp": "https://github.com/jedfoster/harp/tarball/ea71b535febb2d81ab5c9a027ae41fe65db3dcd5",
+    "harp": "^0.20.3",
     "moment": "^2.9.0",
     "router-stupid": "~0.7.0"
   },

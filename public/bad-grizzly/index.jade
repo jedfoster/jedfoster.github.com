@@ -1364,7 +1364,7 @@
     |   - there's no CRUD
     |     - if this were a blog app you might have `posts` that could be created, read, updated, and deleted
     |     - but our request and response objects don't really need that kind of modeling
-    |
+
     |   - using Ember though, and I wanted to build this the "Ember way"
     |     - so we will use the Ember Data library and its RESTAdapter
     |       - Ember data has opinions though.
@@ -1372,7 +1372,7 @@
     |         - so ember data will treat our input like a model, complete with the CRUD methods
     |         - one of Ember Data's quirks is that when it creates a record (submits our input for the first time) it will POST to /compile
     |         - but on subsequent changes it's going to _update_ the "model" with a _PUT_ request to /compile
-    |
+
     | - long story short, so, we need to refactor our /compile route so that it can respond to both POST and PUT
     |   - which is easy to do because all the interesting functionality happens in the callback to post()
     |     - show old code
