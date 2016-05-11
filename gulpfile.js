@@ -1,7 +1,7 @@
 var gulp   = require('gulp'),
-    harp   = require('harp'),
-    moment = require('moment'),
-    uglify = require('gulp-uglify');
+    moment = require('moment');
+
+require('dotenv').config();
 
 
 // this line, although dirty, ensures that Harp templates
@@ -33,34 +33,29 @@ global.helpers = {
   }
 };
 
-gulp.task('serve', function() {
-  console.log('Server starting at http://localhost:9000');
-  harp.server(__dirname + '/public', {
-    port: 9000
-  }, function() { /* no-op */ })
-});
 
-gulp.task('build', function(done) {
-  process.env.NODE_ENV = 'production';
 
-  harp.compile(__dirname + '/public', __dirname + '/www', function(errors) {
-    if(errors) {
-      console.log(JSON.stringify(errors, null, 2));
-      process.exit(1);
-    }
-    
-    return gulp.src(__dirname + '/www/js/*.js')
-      .pipe(uglify({
-        mangle: true,
-        compress: true,
-        preserveComments: 'some'
-      }))
-      .pipe(gulp.dest(__dirname + '/www/js'));
-  });
-});
 
-// Alias `gulp build` as `gulp compile`
-gulp.task('compile', ['build']);
 
-gulp.task('default', ['serve']);
+
+
+
+
+/*
+  gulpfile.js
+  ===========
+  Rather than manage one giant configuration file responsible
+  for creating multiple tasks, each task has been broken out into
+  its own file in gulp/tasks. Any files in that directory get
+  automatically required below.
+
+  To add a new task, simply add a new task file that directory.
+  gulp/tasks/default.js specifies the default set of tasks to run
+  when you run `gulp`.
+*/
+
+var requireDir = require('require-dir');
+
+// Require all tasks in gulp/tasks, including subfolders
+requireDir('./gulp/tasks', { recurse: true });
 
