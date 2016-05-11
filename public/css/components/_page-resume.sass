@@ -68,9 +68,9 @@
       
     .skills
       margin-bottom: 3em
-      // Insert break before "Intangibles"
-      h3:nth-of-type(4)
-        page-break-before: left
+      // Insert break before "Perpetual Interests"
+      h3:nth-of-type(3)
+        page-break-before: always
 
       // Comma-separate the first two lists, since CSS columns don't work in print
       ul:nth-of-type(-n+2)
@@ -108,6 +108,8 @@
             content: ''
 
     .history
+      page-break-before: always
+      
       h3:nth-of-type(2)
         page-break-before: left
 
