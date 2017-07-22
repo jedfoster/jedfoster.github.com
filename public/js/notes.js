@@ -1,48 +1,20 @@
-$('table').each(function() {
-  i = 0;
-  l = $('th', this).length;
-  colgroups = '';
-
-  while (i < l) {
-    colgroups += '<colgroup/>';
-    i++;
-  }
-
-  $(this).prepend(colgroups);
-});
-
-var colors = {
-  missed: '',
-  warning: '',
-  good: ''
-};
-
-$(['missed', 'warning', 'good']).each(function(k, value) {
-  var div = document.createElement('div');
-
-  div.className = value;
-  document.getElementsByTagName("body")[0].appendChild(div);
-
-  colors[value] = window.getComputedStyle(div).backgroundColor; 
-
-  document.getElementsByTagName("body")[0].removeChild(div);
-});
-
-var rgb2hex = function(rgb) {
+function rgb2hex(rgb) {
   rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d\.]+))?\)$/);
-  function hex(x) {
-    return ("0" + parseInt(x).toString(16)).slice(-2);
-  }
-  return (hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3])).toUpperCase();
-};
 
-var mix = function(color_1, color_2, weight) {
+  function hex(x) {
+    return ('0' + parseInt(x).toString(16)).slice(-2);
+  }
+
+  return (hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3])).toUpperCase();
+}
+
+function mix(color_1, color_2, weight) {
   function d2h(d) { return d.toString(16); }
   function h2d(h) { return parseInt(h, 16); }
 
   weight = (typeof(weight) !== 'undefined') ? weight : 50;
 
-  var color = "#";
+  var color = '#';
 
   for(var i=0; i <= 5; i+=2) {
     var v1 = h2d(color_1.substr(i, 2)),
@@ -54,24 +26,22 @@ var mix = function(color_1, color_2, weight) {
     }
     color += val;
   }
-    
+
   return color;
-};
+}
 
-var now = new Date();
-var date = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
+function elementIndex(element) {
+  return Array.prototype.indexOf.call(element.parentNode.children, element);
+}
 
-//var momnt = moment(date + ' 3:47 PM', "YYYY-MM-DD HH:mm A");
-
-
-var getThreshold = function(time, warn, miss, min, max) {
+function getThreshold(time, warn, miss, min, max) {
   var minThreshold =  moment().clone().subtract(min, 'minutes'), // before
       maxThreshold =  moment().clone().add(max, 'minutes'); // after
 
   if(time.isAfter(minThreshold) && time.isBefore(maxThreshold)) {
     var scale_point = 100,
         diff = 0;
-    
+
     var warnThreshold = time.clone().subtract(warn, 'minutes'),
         missThreshold = time.clone().subtract(miss, 'minutes');
 
@@ -84,7 +54,7 @@ var getThreshold = function(time, warn, miss, min, max) {
 
       return mix(rgb2hex(colors['good']), rgb2hex(colors['warning']), scale_point);
     }
-  
+
     else if(moment().isBefore(missThreshold)) {
       diff = moment().diff(missThreshold, 'minutes') * -1;
 
@@ -96,128 +66,141 @@ var getThreshold = function(time, warn, miss, min, max) {
     }
 
     else {
-      return colors['missed']      
+      return colors['missed'];
     }
   }
-  
+
   return '';
-};  
+}
 
-var updateThresholds = function() {
-  //console.log('called');
+function updateThresholds() {
+  // console.log('called');
 
-  $('time').each(function() {
-    var $this = $(this);
+  document.querySelectorAll('time').forEach(function(el) {
+    var color = getThreshold( moment(el.getAttribute('datetime')), el.getAttribute('data-warn'), el.getAttribute('data-miss'), el.getAttribute('data-min'), el.getAttribute('data-max')  );
 
-    var color = getThreshold( moment($this.attr('datetime')), $this.data('warn'), $this.data('miss'), $this.data('min'), $this.data('max')  );
-    $($(this).parent()[0]).css('backgroundColor', color);
+    el.parentElement.style.backgroundColor = color;
   });
 
   window.setTimeout(updateThresholds, 6000);
-};
+}
 
 
-$('#morning td:nth-child(2)').each(function() {
-  var time = moment(date + ' ' + $(this).text().trim() + ' AM', "YYYY-MM-DD HH:mm A"),
-      warn = 25,
-      miss = 17;
- 
-  var timeHTML = $('<time />')
-                    .attr('datetime', time.format("YYYY-MM-DDTHH:mm"))
-                    .data('warn', warn)
-                    .data('miss', miss)
-                    .data('min', 35)
-                    .data('max', 45)
-                    .html($(this).text().trim());
-  $(this).html(timeHTML);
+document.querySelectorAll('table').forEach(function(el) {
+  i = 0;
+  l = el.querySelectorAll('th').length;
+
+  colgroups = '';
+
+  while (i < l) {
+    colgroups += '<colgroup/>';
+    i++;
+  }
+
+  el.insertAdjacentHTML('afterbegin', colgroups);
 });
 
+var colors = {};
 
-$('#evening td:first-child').each(function() {
-  var time = moment(date + ' ' + $(this).text().trim() + ' PM', "YYYY-MM-DD HH:mm A"),
-      warn = 10,
-      miss = 4;
+['missed', 'warning', 'good'].forEach(function(value) {
+  var div = document.createElement('div');
 
-  var timeHTML = $('<time />')
-                    .attr('datetime', time.format("YYYY-MM-DDTHH:mm"))
-                    .data('warn', warn)
-                    .data('miss', miss)
-                    .data('min', 20)
-                    .data('max', 25)
-                    .html($(this).text().trim());
-  $(this).html(timeHTML);
+  div.className = value;
+  document.body.appendChild(div);
+
+  colors[value] = window.getComputedStyle(div).backgroundColor;
+
+  document.body.removeChild(div);
 });
 
+var now = new Date();
+var date = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
+
+[
+  {
+    selector: '#morning td:nth-child(2)',
+    meridian: 'AM',
+    warn: 25,
+    miss: 17,
+    min: 35,
+    max: 45
+  },
+  {
+    selector: '#evening td:first-child',
+    meridian: 'PM',
+    warn: 10,
+    miss: 4,
+    min: 20,
+    max: 25
+  }
+].forEach(function setTimeAttrs(config) {
+  console.log(config, document.querySelectorAll(config.selector));
+  document.querySelectorAll(config.selector).forEach(function(el) {
+    var time = moment(date + ' ' + el.innerText.trim() + ' ' + config.meridian, 'YYYY-MM-DD HH:mm A');
+
+    var timeHTML = document.createElement('time');
+    timeHTML.setAttribute('datetime', time.format('YYYY-MM-DDTHH:mm'));
+    timeHTML.setAttribute('data-warn', config.warn);
+    timeHTML.setAttribute('data-miss', config.miss);
+    timeHTML.setAttribute('data-min', config.min);
+    timeHTML.setAttribute('data-max', config.max);
+
+    timeHTML.innerHTML = el.innerText.trim();
+    el.innerHTML = timeHTML.outerHTML;
+  });
+});
 
 updateThresholds();
 
+document.body.addEventListener('click', function(event) {
+  if (event.target.nodeName.toLowerCase !== 'th' && !event.target.closest('th')) {
+    return;
+  }
 
-$('th').on('click', function(event) {
-  $(this).toggleClass('selected');
+  var element = event.target.closest('th');
+
+  element.classList.toggle('selected');
 });
 
+document.body.addEventListener('click', function(event) {
+  if (event.target.nodeName.toLowerCase !== 'td' && !event.target.closest('td')) {
+    return;
+  }
 
-$('td').on('click', function(event) {
-  var parentTable = $(this).parents('table');
+  var row, columns, bodytxt, city, location,
+      element = event.target.closest('td'),
+      indx = elementIndex(element),
+      parentTable = event.target.closest('table');
 
-  if($(this).index() == 0) {
-    var row = $(this);
-    var columns = $('th.selected', parentTable);
+  if(indx === 0) {
+    row = element;
+    columns = parentTable.querySelectorAll('th.selected');
   }
   else {
-    var row = $($(this).parent().children()[0]);
-    var columns = $($('th', parentTable)[$(this).index()]);
+    row = element.parentElement.children[0];
+    columns = [parentTable.querySelectorAll('th')[indx]];
   }
 
-  bodytxt = 'On the ' + row.text().trim() + '. ';
+  bodytxt = 'On the ' + row.innerText.trim() + '. ';
 
-  if(columns.length < 1) {
-    columns = $('th', parentTable);
+  if(!columns || columns.length < 1) {
+    columns = parentTable.querySelectorAll('th');
   }
 
-  $(columns).each(function(key) {
-    city = $(this).text().trim();
+  columns.forEach(function(el) {
+    city = el.innerText.trim();
 
-    if (city.match(/#497|Train/) || $(this).index() == 0) {
+    if (city.match(/#497|Train/)) {
       return;
     }
 
-    bodytxt += city + ' ' + $(row.parent().children()[$(this).index()]).text().trim() + '. ';
+    bodytxt += city + ' ' + row.parentElement.children[elementIndex(el)].innerText.trim() + '. ';
+    el.classList.remove('selected');
   });
 
-  columns.removeClass('selected');
-
-  var location = 'sms://253.218.8202;body=' + (bodytxt); //.replace(/ /, '%20').replace(/:/, '%3A'));
+  location = 'sms://253.218.8202;body=' + (bodytxt); //.replace(/ /, '%20').replace(/:/, '%3A'));
 
   // console.log(location);
 
   window.location = location;
-});
-
-
-$("table").delegate('td', 'mouseover mouseleave touchenter touchleave', function(e) {
-  if (e.type == 'mouseover' || e.type == 'touchenter') {
-    $(this).parent().addClass("hover");
-
-    if($(this).index() > 0) {
-      $(this).parents('table').children("colgroup").eq($(this).index()).addClass("hover");
-    }
-  }
-  else {
-    $(this).parent().removeClass("hover");
-
-    if($(this).index() > 0) {
-      $(this).parents('table').children("colgroup").eq($(this).index()).removeClass("hover");
-    }
-  }
-});
-
-
-$("table").delegate('th', 'mouseover mouseleave touchenter touchleave', function(e) {
-  if (e.type == 'mouseover' || e.type == 'touchenter') {
-    $(this).parents('table').children("colgroup").eq($(this).index()).addClass("hover");
-  }
-  else {
-    $(this).parents('table').children("colgroup").eq($(this).index()).removeClass("hover");
-  }
 });

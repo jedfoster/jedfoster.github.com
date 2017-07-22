@@ -12,7 +12,7 @@
   },
   "notes": {
     "title": "Notes",
-    "javascript": "<script src='/js/notes.js'></script>",
+    "javascript": "<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script><script src='/js/notes.js'></script>",
     "layout": "_notes"
   },
   "code": {
