@@ -1,0 +1,95 @@
+$alpha-color-charlie:   #dff4ff
+$bravo-color-bravo:     #c6d880
+$bravo-color-charlie:   #e6efc2
+$charlie-color-bravo:   #ffd324
+$charlie-color-charlie: #fff6bf
+$delta-color-charlie:   #fbe3e4
+$fox-color-bravo:    mix($charlie-color-charlie, $delta-color-charlie) //#ffb885;
+
+%small
+  font-size: .8em
+  margin-bottom: 1.875em
+  line-height: 1.875em
+
+.flex-container
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-content: flex-start
+  align-items: flex-start
+
+  @media screen and (max-width: 640px)
+    flex-wrap: wrap
+    
+.span-half
+  order: 0
+  align-self: flex-start
+  flex-basis: 48.93617021276595744680%  // 460/940
+  max-width: 48.93617021276595744680%
+  overflow: auto
+
+  @media screen and (max-width: 640px)
+    max-width: 100%
+    flex-basis: 100%
+
+.page-notes
+  main
+    width: 100%
+
+  header h1
+    margin-bottom: 0
+
+  colgroup, tr, th, td
+    @extend %background-transition
+
+  table
+    overflow-x: hidden
+    overflow-y: auto
+
+  th, tr
+    &:active
+      background: $bravo-color-bravo
+
+    &:hover 
+      background: transparentize($alpha-color-charlie, 0.5)
+
+    &.selected
+      background: $bravo-color-charlie
+
+  td, th 
+    position: relative
+  
+    &:hover:after 
+      content: ""
+      position: absolute
+      background: transparentize($alpha-color-charlie, 0.5)
+      left: 0
+      top: -5000px
+      height: 10000px
+      width: 100%
+      z-index: -1
+
+  .missed
+    background: $delta-color-charlie
+
+  .warning
+    background: $fox-color-bravo
+
+  .good
+    background: $bravo-color-charlie
+
+  p:last-child
+    @extend %small
+
+  @media screen and (max-width: 640px)
+    header h1
+      margin-bottom: 0.1em
+      font-size: 4.5em
+
+  @media screen and (max-width: 480px)
+    th
+      font-size: 0.8em
+      line-height: 1.625
+
+
